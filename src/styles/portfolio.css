@@ -1,0 +1,195 @@
+/*
+ * Portfolio design system.
+ * Light: Stripe's palette (blurple #533afd, navy ink, blue-tinted neutrals) set with Notion's
+ * reading rhythm (Inter, 15–16px body at 1.6, opacity-like text steps, hairlines, soft stacked shadows).
+ * Dark: Linear's surface ladder, text ramp and translucent hairlines, keeping Stripe's brand hue.
+ * Every value below comes from the getdesign specs captured from stripe.com, notion.so and linear.app.
+ * Variables are prefixed --pf- so they never collide with the shadcn tokens in default_theme.css.
+ */
+
+:root {
+  color-scheme: light;
+  --pf-font-sans: 'Inter', 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --pf-font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+
+  --pf-canvas: #ffffff;
+  --pf-rail: #f8fafd;
+  --pf-surface: #ffffff;
+  --pf-surface-2: #f8fafd;
+  --pf-surface-3: #e5edf5;
+  --pf-hover: rgba(6, 27, 49, 0.05);
+  --pf-line: #e5edf5;
+  --pf-line-strong: #d4dee9;
+
+  --pf-ink: #061b31;
+  --pf-ink-2: #3c4f69;
+  --pf-ink-3: #64748d;
+  --pf-ink-4: #7d8ba4;
+
+  --pf-brand: #533afd;
+  --pf-brand-hover: #4032c8;
+  --pf-brand-ink: #533afd;
+  --pf-brand-soft: #e8e9ff;
+  --pf-brand-line: #d6d9fc;
+  --pf-on-brand: #ffffff;
+
+  --pf-dot-brand: #533afd;
+  --pf-dot-orange: #fe991b;
+  --pf-dot-green: #00b261;
+  --pf-dot-red: #d8351e;
+  --pf-success: #006f3a;
+  --pf-success-soft: #b6f2c7;
+  --pf-danger: #d8351e;
+
+  --pf-shadow-card: 0 0.175px 1.041px rgba(0, 0, 0, 0.012), 0 0.8px 2.925px rgba(0, 0, 0, 0.02),
+    0 2.025px 7.847px rgba(0, 0, 0, 0.027), 0 4px 18px rgba(0, 0, 0, 0.04);
+  --pf-shadow-pop: 0 16px 32px rgba(50, 50, 93, 0.12), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --pf-shadow-tab: 0 1px 2px rgba(6, 27, 49, 0.08), 0 0 0 1px var(--pf-line);
+}
+
+html.dark {
+  color-scheme: dark;
+  --pf-canvas: #08090a;
+  --pf-rail: #0f1011;
+  --pf-surface: #0f1011;
+  --pf-surface-2: #141516;
+  --pf-surface-3: #191a1b;
+  --pf-hover: rgba(255, 255, 255, 0.05);
+  --pf-line: rgba(255, 255, 255, 0.08);
+  --pf-line-strong: rgba(255, 255, 255, 0.12);
+
+  --pf-ink: #f7f8f8;
+  --pf-ink-2: #d0d6e0;
+  --pf-ink-3: #8a8f98;
+  --pf-ink-4: #62666d;
+
+  --pf-brand: #533afd;
+  --pf-brand-hover: #665efd;
+  --pf-brand-ink: #9a9afe;
+  --pf-brand-soft: rgba(88, 43, 226, 0.2);
+  --pf-brand-line: rgba(75, 49, 208, 0.5);
+
+  --pf-dot-brand: #7f7dfc;
+  --pf-success: #27a644;
+  --pf-success-soft: rgba(42, 170, 71, 0.07);
+  --pf-danger: #eb5757;
+
+  --pf-shadow-card: 0 0 0 transparent;
+  --pf-shadow-pop: 0 4px 24px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  --pf-shadow-tab: 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  /* Linear's weights read better as white-on-black text than the usual 500/600. */
+  --font-weight-medium: 510;
+  --font-weight-semibold: 590;
+}
+
+/* Before React mounts, match the OS theme so dark-mode visitors don't get a white flash. */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    background: #08090a;
+  }
+}
+
+@theme inline {
+  --color-canvas: var(--pf-canvas);
+  --color-rail: var(--pf-rail);
+  --color-surface: var(--pf-surface);
+  --color-surface-2: var(--pf-surface-2);
+  --color-surface-3: var(--pf-surface-3);
+  --color-hover: var(--pf-hover);
+  --color-line: var(--pf-line);
+  --color-line-strong: var(--pf-line-strong);
+  --color-ink: var(--pf-ink);
+  --color-ink-2: var(--pf-ink-2);
+  --color-ink-3: var(--pf-ink-3);
+  --color-ink-4: var(--pf-ink-4);
+  --color-brand: var(--pf-brand);
+  --color-brand-hover: var(--pf-brand-hover);
+  --color-brand-ink: var(--pf-brand-ink);
+  --color-brand-soft: var(--pf-brand-soft);
+  --color-brand-line: var(--pf-brand-line);
+  --color-on-brand: var(--pf-on-brand);
+  --color-success: var(--pf-success);
+  --color-success-soft: var(--pf-success-soft);
+  --color-danger: var(--pf-danger);
+  --shadow-card: var(--pf-shadow-card);
+  --shadow-pop: var(--pf-shadow-pop);
+  --shadow-tab: var(--pf-shadow-tab);
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--pf-font-sans);
+    font-feature-settings: 'cv01', 'ss03';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--pf-canvas);
+    color: var(--pf-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--pf-brand);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--pf-brand) 24%, transparent);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--pf-line-strong) transparent;
+  }
+}
+
+/* Page change: short rise-and-fade on Stripe's ease-out curve. */
+.pf-enter {
+  animation: pf-enter 320ms cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+@keyframes pf-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Stripe's gradient ribbon, reduced to a soft glow behind the home hero (colours sampled from stripe.com). */
+.pf-aurora {
+  background:
+    radial-gradient(38% 46% at 70% 30%, rgba(254, 153, 27, 0.32), transparent 70%),
+    radial-gradient(34% 42% at 88% 52%, rgba(254, 136, 188, 0.3), transparent 72%),
+    radial-gradient(40% 50% at 58% 66%, rgba(83, 58, 253, 0.2), transparent 72%),
+    radial-gradient(36% 44% at 50% 18%, rgba(192, 202, 247, 0.45), transparent 72%);
+  filter: blur(12px);
+}
+
+html.dark .pf-aurora {
+  opacity: 0.4;
+}
+
+/* Avatar ring in the same ribbon colours. */
+.pf-ring {
+  background: conic-gradient(from 200deg, #533afd, #c0caf7, #fe991b, #fe88bc, #fa707a, #533afd);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pf-enter {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
