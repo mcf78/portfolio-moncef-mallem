@@ -1,29 +1,53 @@
-# Construit le site et le publie sur GitHub Pages à chaque push sur la branche main.
+# Construit le site et le publie sur GitHub Pages :
+#  - à chaque envoi sur la branche main (tes modifications) ;
+#  - chaque matin, après avoir collecté les nouveaux articles de la veille technologique.
 name: Déploiement GitHub Pages
 
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '17 5 * * *' # tous les jours vers 7 h (heure de Paris)
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write # pour enregistrer l'archive de veille dans le dépôt
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
+
+      - name: Collecter la veille technologique
+        if: github.event_name != 'push'
+        run: node scripts/veille/collecter.mjs
+
+      - name: Archiver les nouveaux articles dans le dépôt
+        if: github.event_name != 'push'
+        run: |
+          if git diff --quiet -- public/veille; then
+            echo "Aucun nouvel article."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/veille
+          git commit -m "Veille : mise à jour automatique"
+          git pull --rebase origin main && git push || echo "Archive non envoyée, nouvel essai au prochain passage."
+
       - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v5

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head><title>Veille technologique — Moncef MALLEM</title></head>
+  <body>
+    <outline text="Sécurisation de l'IA" title="Sécurisation de l'IA">
+      <outline type="rss" text="Simon Willison — prompt injection" title="Simon Willison — prompt injection" xmlUrl="https://simonwillison.net/tags/prompt-injection.atom" htmlUrl="https://simonwillison.net/tags/prompt-injection/"/>
+      <outline type="rss" text="Embrace The Red" title="Embrace The Red" xmlUrl="https://embracethered.com/blog/index.xml" htmlUrl="https://embracethered.com/blog/"/>
+      <outline type="rss" text="OWASP GenAI Security Project" title="OWASP GenAI Security Project" xmlUrl="https://genai.owasp.org/feed/" htmlUrl="https://genai.owasp.org/"/>
+      <outline type="rss" text="Google Security Blog" title="Google Security Blog" xmlUrl="https://security.googleblog.com/feeds/posts/default" htmlUrl="https://security.googleblog.com/"/>
+      <outline type="rss" text="arXiv — sécurité (cs.CR)" title="arXiv — sécurité (cs.CR)" xmlUrl="https://rss.arxiv.org/rss/cs.CR" htmlUrl="https://arxiv.org/list/cs.CR/recent"/>
+      <outline type="rss" text="The Hacker News" title="The Hacker News" xmlUrl="https://feeds.feedburner.com/TheHackersNews" htmlUrl="https://thehackernews.com/"/>
+      <outline type="rss" text="CERT-FR (ANSSI)" title="CERT-FR (ANSSI)" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="https://www.cert.ssi.gouv.fr/"/>
+      <outline type="rss" text="Le Monde Informatique — Sécurité" title="Le Monde Informatique — Sécurité" xmlUrl="https://www.lemondeinformatique.fr/flux-rss/thematique/securite/rss.xml" htmlUrl="https://www.lemondeinformatique.fr/securite/"/>
+    </outline>
+    <outline text="Blockchain, IOTA &amp; NFT" title="Blockchain, IOTA &amp; NFT">
+      <outline type="rss" text="IOTA Foundation" title="IOTA Foundation" xmlUrl="https://blog.iota.org/rss/" htmlUrl="https://blog.iota.org/"/>
+      <outline type="rss" text="Ethereum Foundation" title="Ethereum Foundation" xmlUrl="https://blog.ethereum.org/feed.xml" htmlUrl="https://blog.ethereum.org/"/>
+      <outline type="rss" text="Cointelegraph — NFT" title="Cointelegraph — NFT" xmlUrl="https://cointelegraph.com/rss/tag/nft" htmlUrl="https://cointelegraph.com/tags/nft"/>
+      <outline type="rss" text="Rekt News (piratages DeFi)" title="Rekt News (piratages DeFi)" xmlUrl="https://rekt.news/rss/feed.xml" htmlUrl="https://rekt.news/"/>
+      <outline type="rss" text="CoinDesk" title="CoinDesk" xmlUrl="https://www.coindesk.com/arc/outboundfeeds/rss/" htmlUrl="https://www.coindesk.com/"/>
+      <outline type="rss" text="The Block" title="The Block" xmlUrl="https://www.theblock.co/rss.xml" htmlUrl="https://www.theblock.co/"/>
+      <outline type="rss" text="Journal du Coin" title="Journal du Coin" xmlUrl="https://journalducoin.com/feed/" htmlUrl="https://journalducoin.com/"/>
+      <outline type="rss" text="Cryptoast" title="Cryptoast" xmlUrl="https://cryptoast.fr/feed/" htmlUrl="https://cryptoast.fr/"/>
+    </outline>
+  </body>
+</opml>

@@ -1,0 +1,3308 @@
+{
+ "miseAJour": "2026-10-16T11:57:18.673Z",
+ "derniereCollecte": "2026-10-16T11:57:30.660Z",
+ "domaines": {
+  "ia": {
+   "nom": "Sécurisation de l'IA",
+   "depuis": "2023-01-01",
+   "motsCles": [
+    "prompt injection",
+    "jailbreak",
+    "LLM security",
+    "AI security",
+    "adversarial attack",
+    "data poisoning",
+    "AI agent security",
+    "MCP vulnerability",
+    "deepfake"
+   ]
+  },
+  "blockchain": {
+   "nom": "Blockchain, IOTA & NFT",
+   "depuis": "2025-01-01",
+   "motsCles": [
+    "IOTA",
+    "NFT",
+    "blockchain",
+    "Ethereum upgrade",
+    "stablecoin",
+    "DeFi hack",
+    "crypto hack",
+    "MiCA"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "nom": "Simon Willison — prompt injection",
+   "domaine": "ia",
+   "site": "https://simonwillison.net/tags/prompt-injection/",
+   "flux": "https://simonwillison.net/tags/prompt-injection.atom",
+   "ok": true,
+   "articles": 30
+  },
+  {
+   "nom": "Embrace The Red",
+   "domaine": "ia",
+   "site": "https://embracethered.com/blog/",
+   "flux": "https://embracethered.com/blog/index.xml",
+   "ok": true,
+   "articles": 94
+  },
+  {
+   "nom": "OWASP GenAI Security Project",
+   "domaine": "ia",
+   "site": "https://genai.owasp.org/",
+   "flux": "https://genai.owasp.org/feed/",
+   "ok": true,
+   "articles": 10
+  },
+  {
+   "nom": "Google Security Blog",
+   "domaine": "ia",
+   "site": "https://security.googleblog.com/",
+   "flux": "https://security.googleblog.com/feeds/posts/default",
+   "ok": true,
+   "articles": 5
+  },
+  {
+   "nom": "arXiv — sécurité (cs.CR)",
+   "domaine": "ia",
+   "site": "https://arxiv.org/list/cs.CR/recent",
+   "flux": "https://rss.arxiv.org/rss/cs.CR",
+   "ok": true,
+   "articles": 1
+  },
+  {
+   "nom": "The Hacker News",
+   "domaine": "ia",
+   "site": "https://thehackernews.com/",
+   "flux": "https://feeds.feedburner.com/TheHackersNews",
+   "ok": true,
+   "articles": 2
+  },
+  {
+   "nom": "CERT-FR (ANSSI)",
+   "domaine": "ia",
+   "site": "https://www.cert.ssi.gouv.fr/",
+   "flux": "https://www.cert.ssi.gouv.fr/feed/",
+   "ok": true,
+   "articles": 0
+  },
+  {
+   "nom": "Le Monde Informatique — Sécurité",
+   "domaine": "ia",
+   "site": "https://www.lemondeinformatique.fr/securite/",
+   "flux": "https://www.lemondeinformatique.fr/flux-rss/thematique/securite/rss.xml",
+   "ok": true,
+   "articles": 2
+  },
+  {
+   "nom": "IOTA Foundation",
+   "domaine": "blockchain",
+   "site": "https://blog.iota.org/",
+   "flux": "https://blog.iota.org/rss/",
+   "ok": true,
+   "articles": 13
+  },
+  {
+   "nom": "Ethereum Foundation",
+   "domaine": "blockchain",
+   "site": "https://blog.ethereum.org/",
+   "flux": "https://blog.ethereum.org/feed.xml",
+   "ok": true,
+   "articles": 31
+  },
+  {
+   "nom": "Cointelegraph — NFT",
+   "domaine": "blockchain",
+   "site": "https://cointelegraph.com/tags/nft",
+   "flux": "https://cointelegraph.com/rss/tag/nft",
+   "ok": true,
+   "articles": 3
+  },
+  {
+   "nom": "Rekt News (piratages DeFi)",
+   "domaine": "blockchain",
+   "site": "https://rekt.news/",
+   "flux": "https://rekt.news/rss/feed.xml",
+   "ok": true,
+   "articles": 6
+  },
+  {
+   "nom": "CoinDesk",
+   "domaine": "blockchain",
+   "site": "https://www.coindesk.com/",
+   "flux": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+   "ok": true,
+   "articles": 2
+  },
+  {
+   "nom": "The Block",
+   "domaine": "blockchain",
+   "site": "https://www.theblock.co/",
+   "flux": "https://www.theblock.co/rss.xml",
+   "ok": true,
+   "articles": 2
+  },
+  {
+   "nom": "Journal du Coin",
+   "domaine": "blockchain",
+   "site": "https://journalducoin.com/",
+   "flux": "https://journalducoin.com/feed/",
+   "ok": true,
+   "articles": 2
+  },
+  {
+   "nom": "Cryptoast",
+   "domaine": "blockchain",
+   "site": "https://cryptoast.fr/",
+   "flux": "https://cryptoast.fr/feed/",
+   "ok": true,
+   "articles": 2
+  }
+ ],
+ "articles": [
+  {
+   "id": "323402c4d60f6470",
+   "domaine": "blockchain",
+   "titre": "OpenAI says research model spent another wallet’s testnet ETH without authorization on coding task",
+   "url": "https://www.theblock.co/news/business/2026-10-16-openai-says-research-model-spent-another-wallets-testnet-eth-without-authorization-on-coding-task-418798",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-16T11:34:54.000Z"
+  },
+  {
+   "id": "7de019ab3bdef161",
+   "domaine": "blockchain",
+   "titre": "Circle targets 40 new markets as stablecoin demand grows globally",
+   "url": "https://www.coindesk.com/business/2026/10/16/circle-targets-40-new-markets-as-stablecoin-demand-grows-globally",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-16T10:54:35.000Z"
+  },
+  {
+   "id": "fdf97aa9e36d36a0",
+   "domaine": "blockchain",
+   "titre": "Quantum Alliance forms amid warnings 6.4 million bitcoin face future quantum threat",
+   "url": "https://www.coindesk.com/tech/2026/10/16/experts-agree-quantum-computers-could-put-satoshi-s-bitcoin-at-risk-but-not-on-what-s-next",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-16T10:52:26.000Z"
+  },
+  {
+   "id": "7c4d6f3891ff7b36",
+   "domaine": "blockchain",
+   "titre": "G7, IA et stablecoins : les 3 chantiers stablecoins ignorés par les ministres des Finances",
+   "url": "https://journalducoin.com/economie/g7-ia-stablecoins-3-chantiers-ignores-ministres-finances/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-16T10:30:00.000Z"
+  },
+  {
+   "id": "8d4b7d637108501b",
+   "domaine": "blockchain",
+   "titre": "Google demonstrates quantum computing breakthrough as observers weigh Q-day implications",
+   "url": "https://www.theblock.co/news/web3/2026-10-16-google-quantum-computing-breakthrough-418787",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-16T10:13:32.000Z"
+  },
+  {
+   "id": "16657d851dda2480",
+   "domaine": "blockchain",
+   "titre": "Les victimes d’arnaques bancaires doivent être remboursées par leur banque, même en cas de « négligence grave »",
+   "url": "https://cryptoast.fr/victimes-arnaques-bancaires-remboursees-banque-meme-negligence-grave/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-16T10:00:41.000Z"
+  },
+  {
+   "id": "1fef0b246b2fdf53",
+   "domaine": "blockchain",
+   "titre": "Bitcoin : Google réduit par 40 les erreurs quantiques",
+   "url": "https://journalducoin.com/bitcoin/bitcoin-quantique-google-etats-magiques-willow-40-fois/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-16T10:00:00.000Z"
+  },
+  {
+   "id": "cbb35632255da67f",
+   "domaine": "blockchain",
+   "titre": "Ledger piégés : un escroc se fait voler 60 BTC à son tour",
+   "url": "https://cryptoast.fr/ledger-pieges-escroc-vole-60-btc-chainalysis/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-16T08:00:43.000Z"
+  },
+  {
+   "id": "9c528709e455ec8f",
+   "domaine": "ia",
+   "titre": "CERT-In Warns AI Agents Accessed Sensitive Data at Indian Organizations During Testing",
+   "url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-16T06:53:09.000Z"
+  },
+  {
+   "id": "3ccd0efc3b998468",
+   "domaine": "ia",
+   "titre": "CascadeLedger: Counterfactual Auditing of Information and Resource Integrity in LLM Cascades",
+   "url": "https://arxiv.org/abs/2610.20668",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-16T04:00:00.000Z"
+  },
+  {
+   "id": "ce372361920a308b",
+   "domaine": "ia",
+   "titre": "Prompt injection in HTTP headers: what 217M web responses show",
+   "url": "https://www.signalscorps.com/blog/prompt-injection-in-http-headers/",
+   "source": "signalscorps.com",
+   "origine": "Hacker News",
+   "date": "2026-10-15T14:36:22.000Z"
+  },
+  {
+   "id": "bd52e5c19b4ec5a8",
+   "domaine": "ia",
+   "titre": "Fake AI Attacks Spread Across US Companies: How MSSPs Can Stop Incidents Early",
+   "url": "https://thehackernews.com/2026/10/fake-ai-attacks-spread-across-us.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-15T11:46:59.000Z"
+  },
+  {
+   "id": "3ef98b9b51a32c81",
+   "domaine": "ia",
+   "titre": "Containment and monitoring failures are to blame for AI hacking reports: experts",
+   "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+   "source": "csoonline.com",
+   "origine": "Hacker News",
+   "date": "2026-10-14T17:45:23.000Z"
+  },
+  {
+   "id": "49a80645589f3e97",
+   "domaine": "blockchain",
+   "titre": "Who Is Planting Backdoors in Ledger Crypto Wallets?",
+   "url": "https://www.zetter-zeroday.com/who-is-planting-backdoors-in-ledger-crypto-wallets/",
+   "source": "zetter-zeroday.com",
+   "origine": "Hacker News",
+   "date": "2026-10-14T09:37:24.000Z"
+  },
+  {
+   "id": "be188035e3347154",
+   "domaine": "ia",
+   "titre": "Visual Studio Copilot and SSMS Remote Code Execution (CVE-2026-103572)",
+   "url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-10-13T22:00:40.000Z"
+  },
+  {
+   "id": "56ec8f70f019f81a",
+   "domaine": "blockchain",
+   "titre": "IOTA & TWIN Progress Update Q3 2026",
+   "url": "https://blog.iota.org/update-q3-2026/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-10-13T12:55:20.000Z"
+  },
+  {
+   "id": "b470837498074987",
+   "domaine": "blockchain",
+   "titre": "Blur is shutting down its website, so why are NFT collectors cheering?",
+   "url": "https://cointelegraph.com/news/blur-is-shutting-down-its-website-so-why-are-nft-collectors-cheering?utm_source=rss_feed&utm_medium=rss_tag_nft&utm_campaign=rss_partner_inbound",
+   "source": "cointelegraph.com",
+   "origine": "Cointelegraph — NFT",
+   "date": "2026-10-13T05:38:37.000Z"
+  },
+  {
+   "id": "7df20fd77a9be1b1",
+   "domaine": "ia",
+   "titre": "Détecteur d'IA : Google ouvre SynthID Detector au grand public",
+   "url": "https://www.lemondeinformatique.fr/actualites/lire-detecteur-d-ia-google-ouvre-synthid-detector-au-grand-public-100842.html",
+   "source": "lemondeinformatique.fr",
+   "origine": "Le Monde Informatique — Sécurité",
+   "date": "2026-10-09T11:55:34.000Z"
+  },
+  {
+   "id": "a59e2f7f599f1ea9",
+   "domaine": "ia",
+   "titre": "GenAI and Agentic AI Exploit Roundup Q3 2026",
+   "url": "https://genai.owasp.org/2026/10/08/genai-and-agentic-ai-exploit-roundup-q3-2026/?utm_source=rss&utm_medium=rss&utm_campaign=genai-and-agentic-ai-exploit-roundup-q3-2026",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2026-10-08T12:07:03.000Z"
+  },
+  {
+   "id": "2e6eb081fcd83f51",
+   "domaine": "ia",
+   "titre": "Microsoft pointe la montée en puissance des attaques assistées par l'IA",
+   "url": "https://www.lemondeinformatique.fr/actualites/lire-microsoft-pointe-la-montee-en-puissance-des-attaques-assistees-par-l-ia-100829.html",
+   "source": "lemondeinformatique.fr",
+   "origine": "Le Monde Informatique — Sécurité",
+   "date": "2026-10-05T07:36:09.000Z"
+  },
+  {
+   "id": "194397a04bd6a7a2",
+   "domaine": "blockchain",
+   "titre": "Porsche’s ‘long haul’ Web3 project ends in less than four years",
+   "url": "https://cointelegraph.com/news/porsche-shuts-down-web3-project-911-nft?utm_source=rss_feed&utm_medium=rss_tag_nft&utm_campaign=rss_partner_inbound",
+   "source": "cointelegraph.com",
+   "origine": "Cointelegraph — NFT",
+   "date": "2026-10-02T09:18:52.000Z"
+  },
+  {
+   "id": "b2b6ad0613363b3b",
+   "domaine": "ia",
+   "titre": "Greg Kroah-Hartman – Security in the LLM Age [video]",
+   "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
+   "source": "youtube.com",
+   "origine": "Hacker News",
+   "date": "2026-10-02T02:51:27.000Z"
+  },
+  {
+   "id": "fc7d0647ce335985",
+   "domaine": "ia",
+   "titre": "From SELECT to SYSADMIN with SQL Copilot (CVE-2026-65669)",
+   "url": "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-09-30T21:00:40.000Z"
+  },
+  {
+   "id": "a5dc859f599a443d",
+   "domaine": "blockchain",
+   "titre": "Glamsterdam Testnet Announcement",
+   "url": "https://blog.ethereum.org/en/2026/09/17/glamsterdam-testnet-announcement",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-09-28T00:00:00.000Z"
+  },
+  {
+   "id": "26fd9b5c0928e78a",
+   "domaine": "blockchain",
+   "titre": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+   "url": "https://cointelegraph.com/news/magic-eden-nft-whitehat-vulnerability?utm_source=rss_feed&utm_medium=rss_tag_nft&utm_campaign=rss_partner_inbound",
+   "source": "cointelegraph.com",
+   "origine": "Cointelegraph — NFT",
+   "date": "2026-09-25T09:48:53.000Z"
+  },
+  {
+   "id": "a65d75cf3e1b2ef5",
+   "domaine": "ia",
+   "titre": "Security auditing in the age of (good enough) AI",
+   "url": "https://blog.trailofbits.com/2026/09/18/auditing-in-the-age-of-good-enough-ai/",
+   "source": "blog.trailofbits.com",
+   "origine": "Hacker News",
+   "date": "2026-09-21T21:53:01.000Z"
+  },
+  {
+   "id": "e44394e3a9ce90cb",
+   "domaine": "ia",
+   "titre": "The Implications of Linguistic Illegibility for LLM Security",
+   "url": "https://arxiv.org/abs/2609.02852",
+   "source": "arxiv.org",
+   "origine": "Hacker News",
+   "date": "2026-09-18T19:00:06.000Z"
+  },
+  {
+   "id": "d2dac5bd8b69231d",
+   "domaine": "ia",
+   "titre": "Self-generated prompt injections in compaction summaries",
+   "url": "https://simonwillison.net/2026/Sep/17/compaction-summaries/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-09-17T20:57:55.000Z"
+  },
+  {
+   "id": "7b4eb3bef6bd2b4f",
+   "domaine": "blockchain",
+   "titre": "EF Protocol: The Hegotá EIP Opinion Post and Tier List",
+   "url": "https://blog.ethereum.org/en/2026/09/07/protocol-hegota-eips",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-09-07T00:00:00.000Z"
+  },
+  {
+   "id": "a46706ba4bf58e30",
+   "domaine": "blockchain",
+   "titre": "EF Protocol: Current and Emerging Priorities",
+   "url": "https://blog.ethereum.org/en/2026/09/07/protocol-priorities",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-09-07T00:00:00.000Z"
+  },
+  {
+   "id": "99cd89afd13b727e",
+   "domaine": "ia",
+   "titre": "OWASP GenAI Security Project Unveils 2026 Top 10 for LLM Applications, New Agent Control Standard and Sponsors as Community Tops 30,000 Members",
+   "url": "https://genai.owasp.org/2026/09/01/owasp-genai-security-project-unveils-2026-top-10-for-llm-applications-new-agent-control-standard-and-sponsors-as-community-tops-30000-members/?utm_source=rss&utm_medium=rss&utm_campaign=owasp-genai-security-project-unveils-2026-top-10-for-llm-applications-new-agent-control-standard-and-sponsors-as-community-tops-30000-members",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2026-09-01T23:36:47.000Z"
+  },
+  {
+   "id": "ee367c341021f0fe",
+   "domaine": "ia",
+   "titre": "Meta Security Researcher's AI Agent Accidentally Deleted Her Emails",
+   "url": "https://au.pcmag.com/ai/116091/meta-security-researchers-ai-agent-accidentally-deleted-her-emails",
+   "source": "au.pcmag.com",
+   "origine": "Hacker News",
+   "date": "2026-08-31T07:23:47.000Z"
+  },
+  {
+   "id": "ad8111a7bebfee7d",
+   "domaine": "ia",
+   "titre": "Breaking Claude Code Opus 5 Auto Mode",
+   "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-08-27T22:50:25.000Z"
+  },
+  {
+   "id": "477859e866eb1363",
+   "domaine": "blockchain",
+   "titre": "Glamsterdam Repricing Impact for Smart Contract Developers",
+   "url": "https://blog.ethereum.org/en/2026/08/24/glamsterdam-repricing-testing",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-08-24T00:00:00.000Z"
+  },
+  {
+   "id": "078b38f354f7089b",
+   "domaine": "blockchain",
+   "titre": "Raising machine-checked security benchmarks to advance hash-based SNARKs through agentic collaboration",
+   "url": "https://blog.ethereum.org/en/2026/08/20/better-codes-challenge",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-08-20T00:00:00.000Z"
+  },
+  {
+   "id": "f5ebf64d7a5a4918",
+   "domaine": "ia",
+   "titre": "Recovering Encrypted LLM Reasoning Traces",
+   "url": "https://embracethered.com/blog/posts/2026/recovering-encrypted-llm-thoughts/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-08-17T03:06:29.000Z"
+  },
+  {
+   "id": "cfb137a40e4a6050",
+   "domaine": "ia",
+   "titre": "Person Hides Prompt Injection in Legal Filing Telling AI to Side with Them",
+   "url": "https://www.404media.co/person-hides-prompt-injection-in-legal-filing-telling-ai-to-side-with-them/",
+   "source": "404media.co",
+   "origine": "Hacker News",
+   "date": "2026-08-13T19:04:52.000Z"
+  },
+  {
+   "id": "27fbbda563dff575",
+   "domaine": "ia",
+   "titre": "Stealing Reasoning Traces from Proprietary LLM APIs",
+   "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-08-11T22:40:45.000Z"
+  },
+  {
+   "id": "353d32c9058005f3",
+   "domaine": "ia",
+   "titre": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+   "url": "https://simonwillison.net/2026/Aug/8/auto-mode/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-08-08T22:36:03.000Z"
+  },
+  {
+   "id": "107b5951a1984dc2",
+   "domaine": "ia",
+   "titre": "Incident Report: unsanctioned agent behaviour during cyber testing",
+   "url": "https://simonwillison.net/2026/Aug/5/incident-report/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-08-05T23:32:06.000Z"
+  },
+  {
+   "id": "76a3e314a3ddb81d",
+   "domaine": "ia",
+   "titre": "Security Incident INC-2026-07-28-01 – UK AI Security Institute [pdf]",
+   "url": "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6a724858f7db25c81487016d_Security%20Incident%20INC-2026-07-28-01.pdf",
+   "source": "cdn.prod.website-files.com",
+   "origine": "Hacker News",
+   "date": "2026-08-04T21:52:58.000Z"
+  },
+  {
+   "id": "c8fc397083a82e92",
+   "domaine": "ia",
+   "titre": "LLM Heist: Hijacking LiteLLM for Traffic Interception, Key Theft, and Tool-Call Injection",
+   "url": "https://embracethered.com/blog/posts/2026/hijacking-litellm-for-fun-and-profit/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-08-03T16:00:00.000Z"
+  },
+  {
+   "id": "4ba952f7303c8594",
+   "domaine": "blockchain",
+   "titre": "A National Health Authority, Live and Verifiable on IOTA",
+   "url": "https://blog.iota.org/extrimian-incucai-iota/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-07-30T12:55:41.000Z"
+  },
+  {
+   "id": "7249c1d1eed0fb82",
+   "domaine": "ia",
+   "titre": "AI Worming through Word",
+   "url": "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-07-29T18:43:03.000Z"
+  },
+  {
+   "id": "e12d77bb6b706049",
+   "domaine": "ia",
+   "titre": "Google's Beyond Zero: Enterprise Security for the AI Era",
+   "url": "https://spawn-queue.acm.org/doi/10.1145/3819083",
+   "source": "spawn-queue.acm.org",
+   "origine": "Hacker News",
+   "date": "2026-07-28T09:59:13.000Z"
+  },
+  {
+   "id": "baff99e5538f979b",
+   "domaine": "ia",
+   "titre": "Quoting Boris Cherny",
+   "url": "https://simonwillison.net/2026/Jul/25/boris-cherny/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-07-25T00:42:59.000Z"
+  },
+  {
+   "id": "b93866dd3e4f1ec7",
+   "domaine": "ia",
+   "titre": "Tech Workers Face Evaporating Financial Security as AI Transforms Industry",
+   "url": "https://www.adn.com/nation-world/2026/07/19/the-biggest-winners-of-the-american-economy-fear-theyre-sinking-fast/",
+   "source": "adn.com",
+   "origine": "Hacker News",
+   "date": "2026-07-20T02:45:14.000Z"
+  },
+  {
+   "id": "36c988ecc59ced1c",
+   "domaine": "ia",
+   "titre": "Autonomous AI Intrusions Are Here: Lessons from the Hugging Face Compromise",
+   "url": "https://embracethered.com/blog/posts/2026/ai-intrusion-are-now-real/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-07-20T01:00:00.000Z"
+  },
+  {
+   "id": "1ecf83652ff32896",
+   "domaine": "ia",
+   "titre": "VulnHunter: Capital One's agentic AI code security tool",
+   "url": "https://www.capitalone.com/tech/open-source/announcing-vulnhunter/",
+   "source": "capitalone.com",
+   "origine": "Hacker News",
+   "date": "2026-07-17T12:42:12.000Z"
+  },
+  {
+   "id": "b2312a80b81d9909",
+   "domaine": "ia",
+   "titre": "From Indirect Prompt Injection to DNS Exfiltration in macOS Terminal",
+   "url": "https://embracethered.com/blog/posts/2026/macos-terminal-dillma-dns-exfil-ansi-escape-code-fix/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-07-16T09:13:18.000Z"
+  },
+  {
+   "id": "bc789278dcc68bba",
+   "domaine": "ia",
+   "titre": "How I tricked Claude into leaking your deepest, darkest secrets",
+   "url": "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-07-15T14:21:54.000Z"
+  },
+  {
+   "id": "3f2e23901999c0a7",
+   "domaine": "ia",
+   "titre": "Guardian Angels: LLM Personalization for Productivity and Security",
+   "url": "https://gwern.net/guardian-angel",
+   "source": "gwern.net",
+   "origine": "Hacker News",
+   "date": "2026-07-14T12:50:29.000Z"
+  },
+  {
+   "id": "9b054cab6b157b20",
+   "domaine": "blockchain",
+   "titre": "The triage is the product: running AI agents against Ethereum's protocol code",
+   "url": "https://blog.ethereum.org/en/2026/07/09/triage-is-the-product",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-07-09T00:00:00.000Z"
+  },
+  {
+   "id": "c00dcd2091f0f449",
+   "domaine": "ia",
+   "titre": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
+   "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+   "source": "noma.security",
+   "origine": "Hacker News",
+   "date": "2026-07-08T05:25:35.000Z"
+  },
+  {
+   "id": "8fe7f5b1af0fe076",
+   "domaine": "blockchain",
+   "titre": "IOTA & TWIN Progress Update: Q2 2026",
+   "url": "https://blog.iota.org/update-q2-2026/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-07-01T12:55:00.000Z"
+  },
+  {
+   "id": "0759becdfa71750c",
+   "domaine": "ia",
+   "titre": "What happened after 2,000 people tried to hack my AI assistant",
+   "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-06-26T18:33:14.000Z"
+  },
+  {
+   "id": "f851d4068c51a572",
+   "domaine": "ia",
+   "titre": "Incident Report: CVE-2026-LGTM",
+   "url": "https://simonwillison.net/2026/Jun/26/incident-report/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-06-26T17:58:54.000Z"
+  },
+  {
+   "id": "a77233fef8eef853",
+   "domaine": "ia",
+   "titre": "Prompt Injection as Role Confusion",
+   "url": "https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-06-22T23:59:53.000Z"
+  },
+  {
+   "id": "2f2302ed2d6f8a20",
+   "domaine": "ia",
+   "titre": "Fable ban was never about a jailbreak?",
+   "url": "https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/",
+   "source": "techcrunch.com",
+   "origine": "Hacker News",
+   "date": "2026-06-16T15:27:56.000Z"
+  },
+  {
+   "id": "e933db5c50c21e97",
+   "domaine": "ia",
+   "titre": "Feds freaked over Fable 5 after 'fix this code', not jailbreak, say researchers",
+   "url": "https://www.theregister.com/security/2026/06/15/feds-freaked-over-fable-5-after-simple-fix-this-code-prompt-not-jailbreak-says-researcher/5255827",
+   "source": "theregister.com",
+   "origine": "Hacker News",
+   "date": "2026-06-16T09:26:09.000Z"
+  },
+  {
+   "id": "19b353bda0da7d25",
+   "domaine": "ia",
+   "titre": "Claude Fable is relentlessly proactive",
+   "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-06-11T23:35:17.000Z"
+  },
+  {
+   "id": "bbd0034890510d64",
+   "domaine": "blockchain",
+   "titre": "Business Records That Cross Every Boundary",
+   "url": "https://blog.iota.org/iota-audit-trails/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-06-11T12:55:38.000Z"
+  },
+  {
+   "id": "778a8137e2828daa",
+   "domaine": "ia",
+   "titre": "OpenAI Help: Lockdown Mode",
+   "url": "https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-06-05T23:56:40.000Z"
+  },
+  {
+   "id": "a624985121951d9f",
+   "domaine": "ia",
+   "titre": "Hackers Simply Asked Meta AI to Give Them Access to High-Profile Instagram Accounts. It Worked",
+   "url": "https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-06-01T21:14:47.000Z"
+  },
+  {
+   "id": "74186f7ac3ecef40",
+   "domaine": "ia",
+   "titre": "Microsoft Copilot Cowork Exfiltrates Files",
+   "url": "https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-05-26T15:36:48.000Z"
+  },
+  {
+   "id": "afac35bfb852ccb8",
+   "domaine": "blockchain",
+   "titre": "Stablecoins Are Private Money. That's Why They're a Risk to the Economy",
+   "url": "https://www.wsj.com/finance/currencies/stablecoins-are-private-money-thats-why-theyre-a-risk-to-the-economy-d3498171",
+   "source": "wsj.com",
+   "origine": "Hacker News",
+   "date": "2026-05-25T20:02:09.000Z"
+  },
+  {
+   "id": "195bdd92bac59472",
+   "domaine": "ia",
+   "titre": "Deepfakes Tore a High School Apart",
+   "url": "https://www.404media.co/radnor-high-school-pennsylvania-ai-deepfakes-child-sexual-abuse-material/",
+   "source": "404media.co",
+   "origine": "Hacker News",
+   "date": "2026-05-22T07:52:15.000Z"
+  },
+  {
+   "id": "d4fb4f20596660c1",
+   "domaine": "ia",
+   "titre": "Google I/O, Gemini Spark, Antigravity",
+   "url": "https://simonwillison.net/2026/May/20/google-io/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-05-20T15:32:17.000Z"
+  },
+  {
+   "id": "4f36a154f76ee807",
+   "domaine": "blockchain",
+   "titre": "Kenya, Morocco, and Nigeria Lead First ADAPT Implementations",
+   "url": "https://blog.iota.org/first-adapt-implementations/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-05-19T13:25:52.000Z"
+  },
+  {
+   "id": "ba6c0ec36513f3b7",
+   "domaine": "ia",
+   "titre": "Access to frontier AI will soon be limited by economic and security constraints",
+   "url": "https://writing.antonleicht.me/p/cut-off",
+   "source": "writing.antonleicht.me",
+   "origine": "Hacker News",
+   "date": "2026-05-15T01:08:04.000Z"
+  },
+  {
+   "id": "439cc00ba1797933",
+   "domaine": "ia",
+   "titre": "Memory Is a Feature. It Is Also an Attack Surface",
+   "url": "https://genai.owasp.org/2026/05/13/memory-is-a-feature-it-is-also-an-attack-surface/?utm_source=rss&utm_medium=rss&utm_campaign=memory-is-a-feature-it-is-also-an-attack-surface",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2026-05-14T01:05:44.000Z"
+  },
+  {
+   "id": "abf6db15c9753d35",
+   "domaine": "blockchain",
+   "titre": "Protocol Cluster Updates: May 2026",
+   "url": "https://blog.ethereum.org/en/2026/05/11/protocol-update-may-26",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-05-11T00:00:00.000Z"
+  },
+  {
+   "id": "a58fcfbc02550143",
+   "domaine": "blockchain",
+   "titre": "Why Starfish Matters",
+   "url": "https://blog.iota.org/why-starfish-matters/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-05-07T15:55:15.000Z"
+  },
+  {
+   "id": "3c13150808d35c74",
+   "domaine": "ia",
+   "titre": "Copirate 365 at DEF CON: Plundering in the Depths of Microsoft Copilot (CVE-2026-24299)",
+   "url": "https://embracethered.com/blog/posts/2026/defcon-talk-copirate-365/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-05-04T13:00:00.000Z"
+  },
+  {
+   "id": "4ec706fe60b31efd",
+   "domaine": "blockchain",
+   "titre": "I got infected with a crypto-miner via misconfigured qBittorrent",
+   "url": "https://blog.vasi.li/well-i-got-hacked/",
+   "source": "blog.vasi.li",
+   "origine": "Hacker News",
+   "date": "2026-05-01T23:32:01.000Z"
+  },
+  {
+   "id": "f7aa4c330be7f1c8",
+   "domaine": "ia",
+   "titre": "The gay jailbreak technique (2025)",
+   "url": "https://github.com/Exocija/ZetaLib/blob/main/The%20Gay%20Jailbreak/The%20Gay%20Jailbreak.md",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2026-05-01T16:59:35.000Z"
+  },
+  {
+   "id": "c9ab83e5d8324b8a",
+   "domaine": "blockchain",
+   "titre": "Starfish on Mainnet: Reliable Blockchain Consensus for Global Trade",
+   "url": "https://blog.iota.org/starfish-mainnet-release/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-04-28T12:55:20.000Z"
+  },
+  {
+   "id": "dc226528a77682bf",
+   "domaine": "ia",
+   "titre": "AI threats in the wild: The current state of prompt injections on the web",
+   "url": "http://security.googleblog.com/feeds/820776653483778595/comments/default",
+   "source": "security.googleblog.com",
+   "origine": "Google Security Blog",
+   "date": "2026-04-23T21:38:00.001Z"
+  },
+  {
+   "id": "400218d5a6bce091",
+   "domaine": "ia",
+   "titre": "Kernel code removals driven by LLM-created security reports",
+   "url": "https://lwn.net/Articles/1068928/",
+   "source": "lwn.net",
+   "origine": "Hacker News",
+   "date": "2026-04-22T11:48:07.000Z"
+  },
+  {
+   "id": "1e681113e8be7c76",
+   "domaine": "ia",
+   "titre": "Breaking Opus 4.7 with ChatGPT (Hacking Claude's Memory)",
+   "url": "https://embracethered.com/blog/posts/2026/breaking-opus-4.7-with-chatgpt/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-04-17T23:00:58.000Z"
+  },
+  {
+   "id": "030db83f1121cbaa",
+   "domaine": "blockchain",
+   "titre": "MasterZ × IOTA Hackathon Crosses the Finishing Line",
+   "url": "https://blog.iota.org/masterz-hackathon-finale/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-04-17T12:55:58.000Z"
+  },
+  {
+   "id": "5aa8ed415e04c832",
+   "domaine": "ia",
+   "titre": "FinBot CTF Is Live: A Hands-On Companion to the OWASP GenAI Security Project",
+   "url": "https://genai.owasp.org/2026/04/14/finbot-ctf-is-live-a-hands-on-companion-to-the-owasp-genai-security-project/?utm_source=rss&utm_medium=rss&utm_campaign=finbot-ctf-is-live-a-hands-on-companion-to-the-owasp-genai-security-project",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2026-04-15T06:15:10.000Z"
+  },
+  {
+   "id": "7fdf72498a7285fe",
+   "domaine": "ia",
+   "titre": "OWASP GenAI Exploit Round-up Report Q1 2026",
+   "url": "https://genai.owasp.org/2026/04/14/owasp-genai-exploit-round-up-report-q1-2026/?utm_source=rss&utm_medium=rss&utm_campaign=owasp-genai-exploit-round-up-report-q1-2026",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2026-04-15T05:55:44.000Z"
+  },
+  {
+   "id": "9238df6175692744",
+   "domaine": "ia",
+   "titre": "Apple App Store threatened to remove Grok over deepfakes: Letter",
+   "url": "https://www.nbcnews.com/tech/tech-news/apple-threat-remove-grok-app-store-deepfake-letter-musk-x-ai-rcna331677",
+   "source": "nbcnews.com",
+   "origine": "Hacker News",
+   "date": "2026-04-14T23:41:43.000Z"
+  },
+  {
+   "id": "41b92a7a1443c75d",
+   "domaine": "ia",
+   "titre": "N-Day-Bench – Can LLMs find real vulnerabilities in real codebases?",
+   "url": "https://ndaybench.winfunc.com",
+   "source": "ndaybench.winfunc.com",
+   "origine": "Hacker News",
+   "date": "2026-04-13T21:54:03.000Z"
+  },
+  {
+   "id": "e768190f9bf9462d",
+   "domaine": "blockchain",
+   "titre": "Orobo & IOTA: Trusted Product Data for Trade",
+   "url": "https://blog.iota.org/orobo-trusted-product-data/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-04-09T12:55:40.000Z"
+  },
+  {
+   "id": "ce8458ff65dc83fb",
+   "domaine": "blockchain",
+   "titre": "Transparent When You Want It, Private When You Need It",
+   "url": "https://www.rekt.news/transparent-when-you-want-it",
+   "source": "rekt.news",
+   "origine": "Rekt News (piratages DeFi)",
+   "date": "2026-04-09T00:00:00.000Z"
+  },
+  {
+   "id": "b48ece5385df188e",
+   "domaine": "ia",
+   "titre": "My university uses prompt injection to catch cheaters",
+   "url": "https://varun.ch/til/prompt-injection-catch-cheaters/",
+   "source": "varun.ch",
+   "origine": "Hacker News",
+   "date": "2026-04-05T21:57:52.000Z"
+  },
+  {
+   "id": "bb1651e2a9f3b318",
+   "domaine": "ia",
+   "titre": "Google Workspace’s continuous approach to mitigating indirect prompt injections",
+   "url": "http://security.googleblog.com/feeds/7611943504123181983/comments/default",
+   "source": "security.googleblog.com",
+   "origine": "Google Security Blog",
+   "date": "2026-04-02T16:00:00.003Z"
+  },
+  {
+   "id": "d992f6992c9f2d89",
+   "domaine": "blockchain",
+   "titre": "IOTA Q1 2026 Progress Update",
+   "url": "https://blog.iota.org/q12026-progress-update/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-04-02T14:55:19.000Z"
+  },
+  {
+   "id": "9c9ac62625ef0a38",
+   "domaine": "ia",
+   "titre": "Auto mode for Claude Code",
+   "url": "https://simonwillison.net/2026/Mar/24/auto-mode-for-claude-code/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-03-24T23:57:33.000Z"
+  },
+  {
+   "id": "d109914afcb27f40",
+   "domaine": "ia",
+   "titre": "MacBook M5 Pro and Qwen3.5 = Local AI Security System",
+   "url": "https://www.sharpai.org/benchmark/",
+   "source": "sharpai.org",
+   "origine": "Hacker News",
+   "date": "2026-03-20T16:41:42.000Z"
+  },
+  {
+   "id": "c2f41df0d42cbe64",
+   "domaine": "ia",
+   "titre": "A rogue AI led to a serious security incident at Meta",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/897528/meta-rogue-ai-agent-security-incident",
+   "source": "theverge.com",
+   "origine": "Hacker News",
+   "date": "2026-03-19T18:59:02.000Z"
+  },
+  {
+   "id": "3ffa4e99273a3415",
+   "domaine": "ia",
+   "titre": "Snowflake Cortex AI Escapes Sandbox and Executes Malware",
+   "url": "https://simonwillison.net/2026/Mar/18/snowflake-cortex-ai/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-03-18T17:43:49.000Z"
+  },
+  {
+   "id": "933f245482719591",
+   "domaine": "ia",
+   "titre": "OWASP GenAI Security Project Expands AI Security Frameworks Ahead of RSA 2026, Celebrates Continued Sponsor Support",
+   "url": "https://genai.owasp.org/2026/03/17/owasp-genai-security-project-expands-ai-security-frameworks-ahead-of-rsa-2026-celebrates-continued-sponsor-support/?utm_source=rss&utm_medium=rss&utm_campaign=owasp-genai-security-project-expands-ai-security-frameworks-ahead-of-rsa-2026-celebrates-continued-sponsor-support",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2026-03-18T05:09:20.000Z"
+  },
+  {
+   "id": "31c376ab134a0e00",
+   "domaine": "ia",
+   "titre": "My fireside chat about agentic engineering at the Pragmatic Summit",
+   "url": "https://simonwillison.net/2026/Mar/14/pragmatic-summit/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-03-14T18:19:38.000Z"
+  },
+  {
+   "id": "c4721591b09411cc",
+   "domaine": "ia",
+   "titre": "Hardening Firefox with Anthropic's Red Team",
+   "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+   "source": "anthropic.com",
+   "origine": "Hacker News",
+   "date": "2026-03-06T11:53:18.000Z"
+  },
+  {
+   "id": "b137f8f8d147bed3",
+   "domaine": "ia",
+   "titre": "Clinejection — Compromising Cline's Production Releases just by Prompting an Issue Triager",
+   "url": "https://simonwillison.net/2026/Mar/6/clinejection/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-03-06T02:39:04.000Z"
+  },
+  {
+   "id": "bde01f3aa5f4906b",
+   "domaine": "blockchain",
+   "titre": "Build Now Contest Reveals Builder Momentum",
+   "url": "https://blog.iota.org/build-now-masterz-hackathon/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-02-26T13:55:31.000Z"
+  },
+  {
+   "id": "db75c6961fe6815b",
+   "domaine": "ia",
+   "titre": "NIST Seeking Public Comment on AI Agent Security (Deadline: March 9, 2026)",
+   "url": "https://www.federalregister.gov/documents/2026/01/08/2026-00206/request-for-information-regarding-security-considerations-for-artificial-intelligence-agents",
+   "source": "federalregister.gov",
+   "origine": "Hacker News",
+   "date": "2026-02-24T01:31:09.000Z"
+  },
+  {
+   "id": "1021fcaed788a917",
+   "domaine": "blockchain",
+   "titre": "Why Privacy Matters More Than Ever in 2026",
+   "url": "https://www.rekt.news/why-privacy-matters-2026",
+   "source": "rekt.news",
+   "origine": "Rekt News (piratages DeFi)",
+   "date": "2026-02-23T00:00:00.000Z"
+  },
+  {
+   "id": "04bd6e7c4cb0c4f4",
+   "domaine": "blockchain",
+   "titre": "IOTA Launches Expert Advisory Board to Accelerate Trade Initiative",
+   "url": "https://blog.iota.org/iota-expert-advisory-board/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-02-19T13:55:42.000Z"
+  },
+  {
+   "id": "0d4240e71383a88e",
+   "domaine": "blockchain",
+   "titre": "Protocol Priorities Update for 2026",
+   "url": "https://blog.ethereum.org/en/2026/02/18/protocol-priorities-update-2026",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-02-18T00:00:00.000Z"
+  },
+  {
+   "id": "3c7196d1cb73271b",
+   "domaine": "blockchain",
+   "titre": "Ethereum Protocol Studies 2026",
+   "url": "https://blog.ethereum.org/en/2026/02/17/ethereum-protocol-studies-26",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-02-17T00:00:00.000Z"
+  },
+  {
+   "id": "45f6bf39c2ccc221",
+   "domaine": "blockchain",
+   "titre": "Joint Industry Response to FCA CP25/40 in the UK",
+   "url": "https://blog.iota.org/response-fca-2540/",
+   "source": "blog.iota.org",
+   "origine": "IOTA Foundation",
+   "date": "2026-02-12T15:56:42.000Z"
+  },
+  {
+   "id": "ca5ab42116c7ac5d",
+   "domaine": "blockchain",
+   "titre": "Containers, cloud, blockchain, AI – all the same old BS, says veteran Red Hatter",
+   "url": "https://www.theregister.com/2026/02/08/waves_of_tech_bs/",
+   "source": "theregister.com",
+   "origine": "Hacker News",
+   "date": "2026-02-09T06:24:35.000Z"
+  },
+  {
+   "id": "392301618f3abc6f",
+   "domaine": "ia",
+   "titre": "Google Translate apparently vulnerable to prompt injection",
+   "url": "https://www.lesswrong.com/posts/tAh2keDNEEHMXvLvz/prompt-injection-in-google-translate-reveals-base-model",
+   "source": "lesswrong.com",
+   "origine": "Hacker News",
+   "date": "2026-02-07T17:04:49.000Z"
+  },
+  {
+   "id": "e89cafb82def4db3",
+   "domaine": "ia",
+   "titre": "Psychometric Jailbreaks Reveal Internal Conflict in Frontier Models",
+   "url": "https://arxiv.org/abs/2512.04124",
+   "source": "arxiv.org",
+   "origine": "Hacker News",
+   "date": "2026-02-05T18:21:53.000Z"
+  },
+  {
+   "id": "e8811d08d975d573",
+   "domaine": "ia",
+   "titre": "OpenAI Explains URL-Based Data Exfiltration Mitigations in New Paper",
+   "url": "https://embracethered.com/blog/posts/2026/data-exfiltration-mitigation-paper-by-openai/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2026-02-05T06:59:30.000Z"
+  },
+  {
+   "id": "efb0c4390be80126",
+   "domaine": "blockchain",
+   "titre": "Y Combinator will let founders receive funds in stablecoins",
+   "url": "https://fortune.com/2026/02/03/famed-startup-incubator-y-combinator-to-let-founders-receive-funds-in-stablecoins/",
+   "source": "fortune.com",
+   "origine": "Hacker News",
+   "date": "2026-02-03T18:28:48.000Z"
+  },
+  {
+   "id": "7f7594633bda1b0e",
+   "domaine": "ia",
+   "titre": "OpenClaw: When AI Agents Get Full System Access. Security nightmare?",
+   "url": "https://innfactory.ai:443/en/blog/openclaw-ai-agent-security/",
+   "source": "innfactory.ai",
+   "origine": "Hacker News",
+   "date": "2026-02-01T11:06:29.000Z"
+  },
+  {
+   "id": "a32ec4d7598c5e05",
+   "domaine": "ia",
+   "titre": "Autonomous cars, drones cheerfully obey prompt injection by road sign",
+   "url": "https://www.theregister.com/2026/01/30/road_sign_hijack_ai/",
+   "source": "theregister.com",
+   "origine": "Hacker News",
+   "date": "2026-01-31T20:48:33.000Z"
+  },
+  {
+   "id": "8d7d9f06d68ffd18",
+   "domaine": "ia",
+   "titre": "Moltbook is the most interesting place on the internet right now",
+   "url": "https://simonwillison.net/2026/Jan/30/moltbook/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-01-30T16:43:23.000Z"
+  },
+  {
+   "id": "6df7a1a71aaac6cb",
+   "domaine": "ia",
+   "titre": "Claude Cowork Exfiltrates Files",
+   "url": "https://simonwillison.net/2026/Jan/14/claude-cowork-exfiltrates-files/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-01-14T22:15:22.000Z"
+  },
+  {
+   "id": "7854f26a33a1fdb1",
+   "domaine": "ia",
+   "titre": "Superhuman AI Exfiltrates Emails",
+   "url": "https://simonwillison.net/2026/Jan/12/superhuman-ai-exfiltrates-emails/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-01-12T22:24:54.000Z"
+  },
+  {
+   "id": "add55797fcbbc42e",
+   "domaine": "ia",
+   "titre": "First impressions of Claude Cowork, Anthropic's general agent",
+   "url": "https://simonwillison.net/2026/Jan/12/claude-cowork/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2026-01-12T21:46:13.000Z"
+  },
+  {
+   "id": "f1ebaa928f86d6dc",
+   "domaine": "blockchain",
+   "titre": "Betterment Hacked by Crypto Scam",
+   "url": "https://bsky.app/profile/ericrie.se/post/3mbzlov44sc23",
+   "source": "bsky.app",
+   "origine": "Hacker News",
+   "date": "2026-01-09T22:56:21.000Z"
+  },
+  {
+   "id": "665d66b213317bf0",
+   "domaine": "ia",
+   "titre": "Eurostar AI vulnerability: When a chatbot goes off the rails",
+   "url": "https://www.pentestpartners.com/security-blog/eurostar-ai-vulnerability-when-a-chatbot-goes-off-the-rails/",
+   "source": "pentestpartners.com",
+   "origine": "Hacker News",
+   "date": "2026-01-04T20:52:52.000Z"
+  },
+  {
+   "id": "159fb7b7f4508c5e",
+   "domaine": "ia",
+   "titre": "Agentic ProbLLMs: Exploiting AI Computer-Use And Coding Agents (39C3 Video + Slides)",
+   "url": "https://embracethered.com/blog/posts/2025/39c3-agentic-probllms-exploiting-computer-use-and-coding-agents/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-12-31T05:20:58.000Z"
+  },
+  {
+   "id": "6c3eafb3453e32d7",
+   "domaine": "ia",
+   "titre": "Using Claude in Chrome to navigate out the Cloudflare dashboard",
+   "url": "https://simonwillison.net/2025/Dec/22/claude-chrome-cloudflare/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2025-12-22T16:10:30.000Z"
+  },
+  {
+   "id": "f0935633df2d3dff",
+   "domaine": "blockchain",
+   "titre": "Hegota Upgrade EIP Proposal Timelines",
+   "url": "https://blog.ethereum.org/en/2025/12/22/hegota-timeline",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-12-22T00:00:00.000Z"
+  },
+  {
+   "id": "2f56ab7a679ab6a6",
+   "domaine": "ia",
+   "titre": "Evolving AI Transparency: The Journey of the AIBOM Generator and Its New Home at OWASP",
+   "url": "https://genai.owasp.org/2025/12/18/evolving-ai-transparency-the-journey-of-the-aibom-generator-and-its-new-home-at-owasp/?utm_source=rss&utm_medium=rss&utm_campaign=evolving-ai-transparency-the-journey-of-the-aibom-generator-and-its-new-home-at-owasp",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2025-12-18T21:50:49.000Z"
+  },
+  {
+   "id": "783a79fe6541b021",
+   "domaine": "blockchain",
+   "titre": "Shipping an L1 zkEVM #2: The Security Foundations",
+   "url": "https://blog.ethereum.org/en/2025/12/18/zkevm-security-foundations",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-12-18T00:00:00.000Z"
+  },
+  {
+   "id": "902da6270c630fac",
+   "domaine": "ia",
+   "titre": "The Normalization of Deviance in AI",
+   "url": "https://simonwillison.net/2025/Dec/10/normalization-of-deviance/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2025-12-10T20:18:58.000Z"
+  },
+  {
+   "id": "a44f54161f87d5e7",
+   "domaine": "ia",
+   "titre": "OWASP Top 10 for Agentic Applications – The Benchmark for Agentic Security in the Age of Autonomous AI",
+   "url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/?utm_source=rss&utm_medium=rss&utm_campaign=owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2025-12-10T07:55:07.000Z"
+  },
+  {
+   "id": "3529750fc973afcd",
+   "domaine": "ia",
+   "titre": "OWASP GenAI Security Project Releases Top 10 Risks and Mitigations for Agentic AI Security",
+   "url": "https://genai.owasp.org/2025/12/09/owasp-genai-security-project-releases-top-10-risks-and-mitigations-for-agentic-ai-security/?utm_source=rss&utm_medium=rss&utm_campaign=owasp-genai-security-project-releases-top-10-risks-and-mitigations-for-agentic-ai-security",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2025-12-10T07:55:01.000Z"
+  },
+  {
+   "id": "9679642042ec89ea",
+   "domaine": "ia",
+   "titre": "Architecting Security for Agentic Capabilities in Chrome",
+   "url": "http://security.googleblog.com/feeds/5444043768676554819/comments/default",
+   "source": "security.googleblog.com",
+   "origine": "Google Security Blog",
+   "date": "2025-12-08T18:03:00.001Z"
+  },
+  {
+   "id": "8e5d32c9a19afc01",
+   "domaine": "ia",
+   "titre": "Prompt Injection via Poetry",
+   "url": "https://www.wired.com/story/poems-can-trick-ai-into-helping-you-make-a-nuclear-weapon/",
+   "source": "wired.com",
+   "origine": "Hacker News",
+   "date": "2025-12-03T18:01:11.000Z"
+  },
+  {
+   "id": "8dc3b6f34d445598",
+   "domaine": "ia",
+   "titre": "Claude 4.5 Opus' Soul Document",
+   "url": "https://simonwillison.net/2025/Dec/2/claude-soul-document/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2025-12-02T00:35:02.000Z"
+  },
+  {
+   "id": "881f1943d0bd545a",
+   "domaine": "blockchain",
+   "titre": "AI agents find $4.6M in blockchain smart contract exploits",
+   "url": "https://red.anthropic.com/2025/smart-contracts/",
+   "source": "red.anthropic.com",
+   "origine": "Hacker News",
+   "date": "2025-12-01T23:44:51.000Z"
+  },
+  {
+   "id": "4182c57a0bb7ee0e",
+   "domaine": "ia",
+   "titre": "Google Antigravity Exfiltrates Data",
+   "url": "https://simonwillison.net/2025/Nov/25/google-antigravity-exfiltrates-data/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2025-11-25T20:47:50.000Z"
+  },
+  {
+   "id": "a4d59c8853271035",
+   "domaine": "ia",
+   "titre": "Google Antigravity exfiltrates data via indirect prompt injection attack",
+   "url": "https://www.promptarmor.com/resources/google-antigravity-exfiltrates-data",
+   "source": "promptarmor.com",
+   "origine": "Hacker News",
+   "date": "2025-11-25T18:31:16.000Z"
+  },
+  {
+   "id": "c2ce7beda3f747e0",
+   "domaine": "ia",
+   "titre": "Claude Opus 4.5, and why evaluating new LLMs is increasingly difficult",
+   "url": "https://simonwillison.net/2025/Nov/24/claude-opus/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2025-11-24T19:37:07.000Z"
+  },
+  {
+   "id": "02b5a478fd72474f",
+   "domaine": "ia",
+   "titre": "Adversarial poetry as a universal single-turn jailbreak mechanism in LLMs",
+   "url": "https://arxiv.org/abs/2511.15304",
+   "source": "arxiv.org",
+   "origine": "Hacker News",
+   "date": "2025-11-20T12:01:26.000Z"
+  },
+  {
+   "id": "2b8fa516e622010d",
+   "domaine": "ia",
+   "titre": "Measuring the impact of AI scams on the elderly",
+   "url": "https://simonlermen.substack.com/p/can-ai-models-be-jailbroken-to-phish",
+   "source": "simonlermen.substack.com",
+   "origine": "Hacker News",
+   "date": "2025-11-20T00:32:17.000Z"
+  },
+  {
+   "id": "2cdeec2ac08bf0d2",
+   "domaine": "ia",
+   "titre": "AI Slop vs. OSS Security",
+   "url": "https://devansh.bearblog.dev/ai-slop/",
+   "source": "devansh.bearblog.dev",
+   "origine": "Hacker News",
+   "date": "2025-11-06T12:05:12.000Z"
+  },
+  {
+   "id": "06ce8becd5940a40",
+   "domaine": "blockchain",
+   "titre": "Fusaka Mainnet Announcement",
+   "url": "https://blog.ethereum.org/en/2025/11/06/fusaka-mainnet-announcement",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-11-06T00:00:00.000Z"
+  },
+  {
+   "id": "a4c22753e4ba4492",
+   "domaine": "ia",
+   "titre": "MCP Colors: Systematically deal with prompt injection risk",
+   "url": "https://simonwillison.net/2025/Nov/4/mcp-colors/",
+   "source": "simonwillison.net",
+   "origine": "Simon Willison — prompt injection",
+   "date": "2025-11-04T16:52:21.000Z"
+  },
+  {
+   "id": "f902783b0b9935b5",
+   "domaine": "ia",
+   "titre": "New prompt injection papers: Agents rule of two and the attacker moves second",
+   "url": "https://simonwillison.net/2025/Nov/2/new-prompt-injection-papers/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2025-11-02T23:11:22.000Z"
+  },
+  {
+   "id": "d85b3f42033d87ad",
+   "domaine": "ia",
+   "titre": "Claude Pirate: Abusing Anthropic's File API For Data Exfiltration",
+   "url": "https://embracethered.com/blog/posts/2025/claude-abusing-network-access-and-anthropic-api-for-data-exfiltration/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-10-28T15:36:30.000Z"
+  },
+  {
+   "id": "96a23d3ad0984d06",
+   "domaine": "ia",
+   "titre": "MCP-Scanner – Scan MCP Servers for vulnerabilities",
+   "url": "https://github.com/cisco-ai-defense/mcp-scanner",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2025-10-27T17:18:39.000Z"
+  },
+  {
+   "id": "17aefe0aa648ff1b",
+   "domaine": "blockchain",
+   "titre": "How blocks are chained in a blockchain",
+   "url": "https://www.johndcook.com/blog/2025/10/27/blockchain/",
+   "source": "johndcook.com",
+   "origine": "Hacker News",
+   "date": "2025-10-27T16:27:50.000Z"
+  },
+  {
+   "id": "df13c923b5ea8738",
+   "domaine": "ia",
+   "titre": "The security paradox of local LLMs",
+   "url": "https://quesma.com/blog/local-llms-security-paradox/",
+   "source": "quesma.com",
+   "origine": "Hacker News",
+   "date": "2025-10-22T12:48:01.000Z"
+  },
+  {
+   "id": "8ac7d74727103ff1",
+   "domaine": "blockchain",
+   "titre": "Fusaka Update – Transaction Gas Limit Cap arrives with EIP-7825",
+   "url": "https://blog.ethereum.org/en/2025/10/21/fusaka-gascap-update",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-10-21T00:00:00.000Z"
+  },
+  {
+   "id": "5ea80efb45606e81",
+   "domaine": "blockchain",
+   "titre": "PayPal's crypto partner mints $300T of stablecoins in 'technical error'",
+   "url": "https://www.cnbc.com/2025/10/16/paypals-crypto-partner-mints-300-trillion-stablecoins-in-technical-error.html",
+   "source": "cnbc.com",
+   "origine": "Hacker News",
+   "date": "2025-10-16T11:35:30.000Z"
+  },
+  {
+   "id": "0f702b8d44a61670",
+   "domaine": "blockchain",
+   "titre": "Fusaka Update - Information for Blob users",
+   "url": "https://blog.ethereum.org/en/2025/10/15/fusaka-blob-update",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-10-15T00:00:00.000Z"
+  },
+  {
+   "id": "c926e4299b37776c",
+   "domaine": "blockchain",
+   "titre": "Feds: Brothers stole $25M in crypto in 12 seconds. Defense: outsmarted bots",
+   "url": "https://www.businessinsider.com/crypto-brothers-peraire-bueno-trial-heist-ethereum-blockchain-arguments-2025-10",
+   "source": "businessinsider.com",
+   "origine": "Hacker News",
+   "date": "2025-10-13T10:56:23.000Z"
+  },
+  {
+   "id": "61b268a56622fb1d",
+   "domaine": "blockchain",
+   "titre": "The Ethereum Foundation’s Commitment to Privacy",
+   "url": "https://blog.ethereum.org/en/2025/10/08/privacy-commitment",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-10-08T00:00:00.000Z"
+  },
+  {
+   "id": "ba97e92b8729d503",
+   "domaine": "ia",
+   "titre": "CodeMender: an AI agent for code security",
+   "url": "https://deepmind.google/discover/blog/introducing-codemender-an-ai-agent-for-code-security/",
+   "source": "deepmind.google",
+   "origine": "Hacker News",
+   "date": "2025-10-06T21:28:56.000Z"
+  },
+  {
+   "id": "a53a2431996c2111",
+   "domaine": "blockchain",
+   "titre": "Privacy Cluster Leadership Announcement",
+   "url": "https://blog.ethereum.org/en/2025/10/01/privacy-cluster-leads",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-10-01T00:00:00.000Z"
+  },
+  {
+   "id": "94a99458ed074ace",
+   "domaine": "blockchain",
+   "titre": "Fusaka Testnet Announcement",
+   "url": "https://blog.ethereum.org/en/2025/09/26/fusaka-testnet-announcement",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-09-26T00:00:00.000Z"
+  },
+  {
+   "id": "49e11d7400fec8a5",
+   "domaine": "ia",
+   "titre": "Accelerating adoption of AI for cybersecurity at DEF CON 33",
+   "url": "http://security.googleblog.com/feeds/2736122330672757952/comments/default",
+   "source": "security.googleblog.com",
+   "origine": "Google Security Blog",
+   "date": "2025-09-24T18:42:00.003Z"
+  },
+  {
+   "id": "bb97a28d9ab9cd05",
+   "domaine": "blockchain",
+   "titre": "Fusaka $2,000,000 Audit Contest!",
+   "url": "https://blog.ethereum.org/en/2025/09/15/fusaka-audit-content",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-09-15T00:00:00.000Z"
+  },
+  {
+   "id": "667836283b7d6a7b",
+   "domaine": "blockchain",
+   "titre": "Why you’d issue a branded stablecoin",
+   "url": "https://text-incubation.com/Why+you%27d+issue+a+branded+stablecoin+like+McDonaldsCoin",
+   "source": "text-incubation.com",
+   "origine": "Hacker News",
+   "date": "2025-09-14T02:57:00.000Z"
+  },
+  {
+   "id": "6ff052adba4d9894",
+   "domaine": "blockchain",
+   "titre": "Stripe Launches L1 Blockchain: Tempo",
+   "url": "https://tempo.xyz",
+   "source": "tempo.xyz",
+   "origine": "Hacker News",
+   "date": "2025-09-04T16:32:24.000Z"
+  },
+  {
+   "id": "98ef9b078c9a3332",
+   "domaine": "ia",
+   "titre": "Wrap Up: The Month of AI Bugs",
+   "url": "https://embracethered.com/blog/posts/2025/wrapping-up-month-of-ai-bugs/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-31T01:20:58.000Z"
+  },
+  {
+   "id": "dc2e4eda354a6af7",
+   "domaine": "ia",
+   "titre": "AgentHopper: An AI Virus",
+   "url": "https://embracethered.com/blog/posts/2025/agenthopper-a-poc-ai-virus/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-30T03:20:58.000Z"
+  },
+  {
+   "id": "1974eb98edd0852c",
+   "domaine": "blockchain",
+   "titre": "Protocol Update 003 — Improve UX",
+   "url": "https://blog.ethereum.org/en/2025/08/29/protocol-update-003",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-08-29T00:00:00.000Z"
+  },
+  {
+   "id": "f327afadc68bee23",
+   "domaine": "ia",
+   "titre": "Windsurf MCP Integration: Missing Security Controls Put Users at Risk",
+   "url": "https://embracethered.com/blog/posts/2025/windsurf-dangers-lack-of-security-controls-for-mcp-server-tool-invocation/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-28T19:20:58.000Z"
+  },
+  {
+   "id": "b52d81571fe93510",
+   "domaine": "blockchain",
+   "titre": "US to put economic data on 9 blockchains",
+   "url": "https://www.bloomberg.com/news/articles/2025-08-28/us-puts-gdp-data-on-the-blockchain-in-trump-crypto-push",
+   "source": "bloomberg.com",
+   "origine": "Hacker News",
+   "date": "2025-08-28T13:54:50.000Z"
+  },
+  {
+   "id": "9f8d0384b9e84f37",
+   "domaine": "ia",
+   "titre": "AWS Kiro: Arbitrary Code Execution via Indirect Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2025/aws-kiro-aribtrary-command-execution-with-indirect-prompt-injection/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-26T14:00:58.000Z"
+  },
+  {
+   "id": "440f467ce817e886",
+   "domaine": "ia",
+   "titre": "How Prompt Injection Exposes Manus' VS Code Server to the Internet",
+   "url": "https://embracethered.com/blog/posts/2025/manus-ai-kill-chain-expose-port-vs-code-server-on-internet/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-25T11:00:58.000Z"
+  },
+  {
+   "id": "1fab0d7da83d3f21",
+   "domaine": "ia",
+   "titre": "Agentic Browser Security: Indirect Prompt Injection in Perplexity Comet",
+   "url": "https://brave.com/blog/comet-prompt-injection/",
+   "source": "brave.com",
+   "origine": "Hacker News",
+   "date": "2025-08-24T02:52:08.000Z"
+  },
+  {
+   "id": "383a49f7257c8a06",
+   "domaine": "blockchain",
+   "titre": "Protocol Update 002 - Scale Blobs",
+   "url": "https://blog.ethereum.org/en/2025/08/22/protocol-update-002",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-08-22T00:00:00.000Z"
+  },
+  {
+   "id": "63455e5c685d8090",
+   "domaine": "ia",
+   "titre": "Hijacking Windsurf: How Prompt Injection Leaks Developer Secrets",
+   "url": "https://embracethered.com/blog/posts/2025/windsurf-data-exfiltration-vulnerabilities/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-21T09:20:58.000Z"
+  },
+  {
+   "id": "8c46fbdd7120749e",
+   "domaine": "ia",
+   "titre": "Amazon Q Developer for VS Code Vulnerable to Invisible Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2025/amazon-q-developer-interprets-hidden-instructions/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-20T11:00:00.000Z"
+  },
+  {
+   "id": "f1c5dfe2493d4df4",
+   "domaine": "blockchain",
+   "titre": "Trillion Dollar Security - Phase 2",
+   "url": "https://blog.ethereum.org/en/2025/08/20/trillion-dollar-sec-2",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-08-20T00:00:00.000Z"
+  },
+  {
+   "id": "95a2f00d017ac6bf",
+   "domaine": "ia",
+   "titre": "Amazon Q Developer: Remote Code Execution with Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2025/amazon-q-developer-remote-code-execution/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-19T21:20:58.000Z"
+  },
+  {
+   "id": "cbd22e6e0f517068",
+   "domaine": "ia",
+   "titre": "Amazon Q Developer: Secrets Leaked via DNS and Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2025/amazon-q-developer-data-exfil-via-dns/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-18T19:20:58.000Z"
+  },
+  {
+   "id": "2d1ce105e83078f9",
+   "domaine": "ia",
+   "titre": "LLMs and coding agents are a security nightmare",
+   "url": "https://garymarcus.substack.com/p/llms-coding-agents-security-nightmare",
+   "source": "garymarcus.substack.com",
+   "origine": "Hacker News",
+   "date": "2025-08-18T11:04:34.000Z"
+  },
+  {
+   "id": "0082e8cc024f5ae6",
+   "domaine": "ia",
+   "titre": "Amp Code: Invisible Prompt Injection Fixed by Sourcegraph",
+   "url": "https://embracethered.com/blog/posts/2025/amp-code-fixed-invisible-prompt-injection/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-16T19:20:58.000Z"
+  },
+  {
+   "id": "be482239e2f657af",
+   "domaine": "ia",
+   "titre": "Google Jules is Vulnerable To Invisible Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2025/google-jules-invisible-prompt-injection/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-15T09:20:58.000Z"
+  },
+  {
+   "id": "933cc69146d87464",
+   "domaine": "ia",
+   "titre": "Jules Zombie Agent: From Prompt Injection to Remote Control",
+   "url": "https://embracethered.com/blog/posts/2025/google-jules-remote-code-execution-zombai/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-14T11:20:58.000Z"
+  },
+  {
+   "id": "9ecfa35c01fcfddd",
+   "domaine": "ia",
+   "titre": "GitHub Copilot: Remote Code Execution via Prompt Injection (CVE-2025-53773)",
+   "url": "https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-12T21:20:58.000Z"
+  },
+  {
+   "id": "09a14e110858edce",
+   "domaine": "ia",
+   "titre": "Claude Code: Data Exfiltration with DNS (CVE-2025-55284)",
+   "url": "https://embracethered.com/blog/posts/2025/claude-code-exfiltration-via-dns-requests/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-11T11:20:58.000Z"
+  },
+  {
+   "id": "0b9ee2e8f93a20cb",
+   "domaine": "ia",
+   "titre": "ZombAI Exploit with OpenHands: Prompt Injection To Remote Code Execution",
+   "url": "https://embracethered.com/blog/posts/2025/openhands-remote-code-execution-zombai/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-10T11:20:58.000Z"
+  },
+  {
+   "id": "5dbbb399e5624ab6",
+   "domaine": "ia",
+   "titre": "My Lethal Trifecta talk at the Bay Area AI Security Meetup",
+   "url": "https://simonwillison.net/2025/Aug/9/bay-area-ai/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2025-08-09T14:47:38.000Z"
+  },
+  {
+   "id": "542c9cb045c3a435",
+   "domaine": "ia",
+   "titre": "OpenHands and the Lethal Trifecta: How Prompt Injection Can Leak Access Tokens",
+   "url": "https://embracethered.com/blog/posts/2025/openhands-the-lethal-trifecta-strikes-again/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-09T10:00:58.000Z"
+  },
+  {
+   "id": "e5908bbc769d9e14",
+   "domaine": "ia",
+   "titre": "AI Kill Chain in Action: Devin AI Exposes Ports to the Internet with Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2025/devin-ai-kill-chain-exposing-ports/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-08T07:02:58.000Z"
+  },
+  {
+   "id": "4b6edc3f0fbfe7ac",
+   "domaine": "ia",
+   "titre": "How Devin AI Can Leak Your Secrets via Multiple Means",
+   "url": "https://embracethered.com/blog/posts/2025/devin-can-leak-your-secrets/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-07T15:20:58.000Z"
+  },
+  {
+   "id": "369a7de6733f52b4",
+   "domaine": "ia",
+   "titre": "I Spent $500 To Test Devin AI For Prompt Injection So That You Don't Have To",
+   "url": "https://embracethered.com/blog/posts/2025/devin-i-spent-usd500-to-hack-devin/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-06T08:01:58.000Z"
+  },
+  {
+   "id": "17fc9c93f9280c72",
+   "domaine": "ia",
+   "titre": "Amp Code: Arbitrary Command Execution via Prompt Injection Fixed",
+   "url": "https://embracethered.com/blog/posts/2025/amp-agents-that-modify-system-configuration-and-escape/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-05T13:20:58.000Z"
+  },
+  {
+   "id": "83f2aae7fa4fea0f",
+   "domaine": "ia",
+   "titre": "Monitor your security cameras with locally processed AI",
+   "url": "https://frigate.video/",
+   "source": "frigate.video",
+   "origine": "Hacker News",
+   "date": "2025-08-05T05:05:23.000Z"
+  },
+  {
+   "id": "19032b3c89c5458f",
+   "domaine": "blockchain",
+   "titre": "Protocol Update 001 – Scale L1",
+   "url": "https://blog.ethereum.org/en/2025/08/05/protocol-update-001",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-08-05T00:00:00.000Z"
+  },
+  {
+   "id": "eda5b839c3aa5c56",
+   "domaine": "ia",
+   "titre": "Anthropic Filesystem MCP Server: Directory Access Bypass via Improper Path Validation",
+   "url": "https://embracethered.com/blog/posts/2025/anthropic-filesystem-mcp-server-bypass/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-03T08:30:58.000Z"
+  },
+  {
+   "id": "e43275a770a7eeae",
+   "domaine": "ia",
+   "titre": "Turning ChatGPT Codex Into A ZombAI Agent",
+   "url": "https://embracethered.com/blog/posts/2025/chatgpt-codex-remote-control-zombai/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-02T07:31:58.000Z"
+  },
+  {
+   "id": "19076356b51e8c3e",
+   "domaine": "ia",
+   "titre": "Exfiltrating Your ChatGPT Chat History and Memories With Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2025/chatgpt-chat-history-data-exfiltration/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-08-01T15:00:58.000Z"
+  },
+  {
+   "id": "6bdd8d493443560d",
+   "domaine": "ia",
+   "titre": "The Month of AI Bugs 2025",
+   "url": "https://embracethered.com/blog/posts/2025/announcement-the-month-of-ai-bugs/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-07-28T17:20:58.000Z"
+  },
+  {
+   "id": "7bda8b6688e151b9",
+   "domaine": "ia",
+   "titre": "OWASP Agentic AI Taxonomy in Action: From Theory to Tools",
+   "url": "https://genai.owasp.org/2025/07/22/owasp-agentic-ai-taxonomy-in-action-from-theory-to-tools/?utm_source=rss&utm_medium=rss&utm_campaign=owasp-agentic-ai-taxonomy-in-action-from-theory-to-tools",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2025-07-23T01:04:08.000Z"
+  },
+  {
+   "id": "b9f5a392558b1465",
+   "domaine": "ia",
+   "titre": "MCP security vulnerabilities and attack vectors",
+   "url": "https://forgecode.dev/blog/prevent-attacks-on-mcp/",
+   "source": "forgecode.dev",
+   "origine": "Hacker News",
+   "date": "2025-07-19T18:14:19.000Z"
+  },
+  {
+   "id": "14b5cc919c8f936d",
+   "domaine": "ia",
+   "titre": "Code execution through email: How I used Claude to hack itself",
+   "url": "https://www.pynt.io/blog/llm-security-blogs/code-execution-through-email-how-i-used-claude-mcp-to-hack-itself",
+   "source": "pynt.io",
+   "origine": "Hacker News",
+   "date": "2025-07-17T06:32:42.000Z"
+  },
+  {
+   "id": "bc508f2d99f77963",
+   "domaine": "blockchain",
+   "titre": "Shipping an L1 zkEVM #1: Realtime Proving",
+   "url": "https://blog.ethereum.org/en/2025/07/10/realtime-proving",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-07-10T00:00:00.000Z"
+  },
+  {
+   "id": "94b1ede35feb9bff",
+   "domaine": "blockchain",
+   "titre": "How Stablecoins Became the Digital Gold Standard",
+   "url": "https://www.haebom.dev/archive?tl=en&post=943zqpmqrk14g2wnvy87",
+   "source": "haebom.dev",
+   "origine": "Hacker News",
+   "date": "2025-07-06T08:03:15.000Z"
+  },
+  {
+   "id": "47a02a2fa319efd5",
+   "domaine": "ia",
+   "titre": "AI slop security reports submitted to curl",
+   "url": "https://gist.github.com/bagder/07f7581f6e3d78ef37dfbfc81fd1d1cd",
+   "source": "gist.github.com",
+   "origine": "Hacker News",
+   "date": "2025-06-29T08:09:08.000Z"
+  },
+  {
+   "id": "fd3d6eff90a2825a",
+   "domaine": "blockchain",
+   "titre": "Brave creates new TLD on the blockchain",
+   "url": "https://brave.com/blog/brave-tld/",
+   "source": "brave.com",
+   "origine": "Hacker News",
+   "date": "2025-06-29T05:44:13.000Z"
+  },
+  {
+   "id": "030a113ffd579e32",
+   "domaine": "ia",
+   "titre": "Denmark to tackle deepfakes by giving people copyright to their own features",
+   "url": "https://www.theguardian.com/technology/2025/jun/27/deepfakes-denmark-copyright-law-artificial-intelligence",
+   "source": "theguardian.com",
+   "origine": "Hacker News",
+   "date": "2025-06-27T04:39:02.000Z"
+  },
+  {
+   "id": "794c2a7e23c64f99",
+   "domaine": "ia",
+   "titre": "Security Advisory: Anthropic's Slack MCP Server Vulnerable to Data Exfiltration",
+   "url": "https://embracethered.com/blog/posts/2025/security-advisory-anthropic-slack-mcp-server-data-leakage/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-06-24T23:00:46.000Z"
+  },
+  {
+   "id": "4d03f4a7b42e7ac4",
+   "domaine": "blockchain",
+   "titre": "In-Memory C++ Leap in Blockchain Analysis",
+   "url": "https://caudena.com/the-in-memory-c-leap-in-blockchain-analysis/",
+   "source": "caudena.com",
+   "origine": "Hacker News",
+   "date": "2025-06-18T20:40:45.000Z"
+  },
+  {
+   "id": "44c4b02b3894b4f0",
+   "domaine": "ia",
+   "titre": "Mitigating prompt injection attacks with a layered defense strategy",
+   "url": "http://security.googleblog.com/feeds/1436003009998740920/comments/default",
+   "source": "security.googleblog.com",
+   "origine": "Google Security Blog",
+   "date": "2025-06-13T16:03:00.009Z"
+  },
+  {
+   "id": "9279021b27c6d89d",
+   "domaine": "ia",
+   "titre": "Design Patterns for Securing LLM Agents Against Prompt Injections",
+   "url": "https://simonwillison.net/2025/Jun/13/prompt-injection-design-patterns/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2025-06-13T13:27:46.000Z"
+  },
+  {
+   "id": "f039f4f576db61e4",
+   "domaine": "ia",
+   "titre": "EchoLeak – 0-Click AI Vulnerability Enabling Data Exfiltration from 365 Copilot",
+   "url": "https://www.aim.security/lp/aim-labs-echoleak-blogpost",
+   "source": "aim.security",
+   "origine": "Hacker News",
+   "date": "2025-06-11T19:11:00.000Z"
+  },
+  {
+   "id": "57ca03562bd98ac4",
+   "domaine": "ia",
+   "titre": "Hosting COM Servers with an MCP Server",
+   "url": "https://embracethered.com/blog/posts/2025/mcp-com-server-automate-anything-on-windows/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-06-09T05:30:40.000Z"
+  },
+  {
+   "id": "37ccd40d445d6a49",
+   "domaine": "blockchain",
+   "titre": "Social Recovery Wallets are Broken by Design",
+   "url": "https://www.rekt.news/Social-Recovery-Wallets-are-Broken-by-Design",
+   "source": "rekt.news",
+   "origine": "Rekt News (piratages DeFi)",
+   "date": "2025-06-09T00:00:00.000Z"
+  },
+  {
+   "id": "0e037ab94627cdba",
+   "domaine": "blockchain",
+   "titre": "Announcing Protocol",
+   "url": "https://blog.ethereum.org/en/2025/06/02/announcing-protocol",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-06-02T00:00:00.000Z"
+  },
+  {
+   "id": "d1754a1a3030873d",
+   "domaine": "blockchain",
+   "titre": "Global high-performance proof-of-stake blockchain with erasure coding",
+   "url": "https://github.com/qkniep/alpenglow",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2025-05-28T02:47:53.000Z"
+  },
+  {
+   "id": "4ba6bb47bb44b80a",
+   "domaine": "ia",
+   "titre": "GitHub MCP exploited: Accessing private repositories via MCP",
+   "url": "https://invariantlabs.ai/blog/mcp-github-vulnerability",
+   "source": "invariantlabs.ai",
+   "origine": "Hacker News",
+   "date": "2025-05-26T13:46:25.000Z"
+  },
+  {
+   "id": "6a8f24dcda5e4ccf",
+   "domaine": "ia",
+   "titre": "AI ClickFix: Hijacking Computer-Use Agents Using ClickFix",
+   "url": "https://embracethered.com/blog/posts/2025/ai-clickfix-ttp-claude/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-05-24T23:20:58.000Z"
+  },
+  {
+   "id": "3397deb7f3ffe6d0",
+   "domaine": "blockchain",
+   "titre": "Big banks explore venturing into crypto world together with joint stablecoin",
+   "url": "https://www.wsj.com/finance/banking/crypto-stablecoin-big-banks-a841059e",
+   "source": "wsj.com",
+   "origine": "Hacker News",
+   "date": "2025-05-23T17:34:21.000Z"
+  },
+  {
+   "id": "9697cffc42c36635",
+   "domaine": "ia",
+   "titre": "Remote Prompt Injection in Gitlab Duo Leads to Source Code Theft",
+   "url": "https://www.legitsecurity.com/blog/remote-prompt-injection-in-gitlab-duo",
+   "source": "legitsecurity.com",
+   "origine": "Hacker News",
+   "date": "2025-05-23T07:12:33.000Z"
+  },
+  {
+   "id": "fc87e6db070e8b1a",
+   "domaine": "blockchain",
+   "titre": "Announcing the Trillion Dollar Security Initiative",
+   "url": "https://blog.ethereum.org/en/2025/05/14/trillion-dollar-security",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-05-14T00:00:00.000Z"
+  },
+  {
+   "id": "78aa90b103a22e7a",
+   "domaine": "ia",
+   "titre": "Curl: We still have not seen a valid security report done with AI help",
+   "url": "https://www.linkedin.com/posts/danielstenberg_hackerone-curl-activity-7324820893862363136-glb1",
+   "source": "linkedin.com",
+   "origine": "Hacker News",
+   "date": "2025-05-06T17:07:58.000Z"
+  },
+  {
+   "id": "47af016061907b09",
+   "domaine": "blockchain",
+   "titre": "The Inflation Game - Why Emissions-Heavy Protocols Die Before They Grow",
+   "url": "https://www.rekt.news/inflation-game",
+   "source": "rekt.news",
+   "origine": "Rekt News (piratages DeFi)",
+   "date": "2025-05-06T00:00:00.000Z"
+  },
+  {
+   "id": "ab434b53162efbda",
+   "domaine": "ia",
+   "titre": "How ChatGPT Remembers You: A Deep Dive into Its Memory and Chat History Features",
+   "url": "https://embracethered.com/blog/posts/2025/chatgpt-how-does-chat-history-memory-preferences-work/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-05-05T06:24:56.000Z"
+  },
+  {
+   "id": "39896beaf12cd5b7",
+   "domaine": "ia",
+   "titre": "MCP: Untrusted Servers and Confused Clients, Plus a Sneaky Exploit",
+   "url": "https://embracethered.com/blog/posts/2025/model-context-protocol-security-risks-and-exploits/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-05-02T19:30:35.000Z"
+  },
+  {
+   "id": "5d2f7c049a2107e2",
+   "domaine": "ia",
+   "titre": "Show HN: Daily Jailbreak – Prompt Engineer's Wordle",
+   "url": "https://www.vaultbreak.ai/daily-jailbreak",
+   "source": "vaultbreak.ai",
+   "origine": "Hacker News",
+   "date": "2025-04-27T18:32:53.000Z"
+  },
+  {
+   "id": "4842d361ebeafdf8",
+   "domaine": "blockchain",
+   "titre": "Pectra Mainnet Announcement",
+   "url": "https://blog.ethereum.org/en/2025/04/23/pectra-mainnet",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-04-23T00:00:00.000Z"
+  },
+  {
+   "id": "b761102c981798dc",
+   "domaine": "blockchain",
+   "titre": "MEV for Hire - The Rise of Dark Pool Validators",
+   "url": "https://www.rekt.news/mev-for-hire",
+   "source": "rekt.news",
+   "origine": "Rekt News (piratages DeFi)",
+   "date": "2025-04-21T00:00:00.000Z"
+  },
+  {
+   "id": "ac50a42265b4b90b",
+   "domaine": "ia",
+   "titre": "ChatGPT 4.1 Jailbreak Prompt",
+   "url": "https://github.com/elder-plinius/L1B3RT4S/blob/main/OPENAI.mkd",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2025-04-16T14:22:14.000Z"
+  },
+  {
+   "id": "93a1a1e70204cede",
+   "domaine": "ia",
+   "titre": "Show HN: MCP-Shield – Detect security issues in MCP servers",
+   "url": "https://github.com/riseandignite/mcp-shield",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2025-04-15T05:15:01.000Z"
+  },
+  {
+   "id": "261ca51fedc232d8",
+   "domaine": "blockchain",
+   "titre": "DeFi’s UX Problem Is a Feature, Not a Bug",
+   "url": "https://www.rekt.news/defi-ux-problem",
+   "source": "rekt.news",
+   "origine": "Rekt News (piratages DeFi)",
+   "date": "2025-04-14T00:00:00.000Z"
+  },
+  {
+   "id": "681fbfc054ba7769",
+   "domaine": "ia",
+   "titre": "GitHub Copilot Custom Instructions and Risks",
+   "url": "https://embracethered.com/blog/posts/2025/github-custom-copilot-instructions/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-04-07T03:11:43.000Z"
+  },
+  {
+   "id": "c97fef8b450dde63",
+   "domaine": "blockchain",
+   "titre": "Hackers stole billions in crypto to keep North Korea’s regime afloat",
+   "url": "https://www.wsj.com/world/asia/north-korea-cryptocurrency-580d7d3f",
+   "source": "wsj.com",
+   "origine": "Hacker News",
+   "date": "2025-04-03T13:03:34.000Z"
+  },
+  {
+   "id": "b185243cc64c8f52",
+   "domaine": "blockchain",
+   "titre": "You Do Not Need Blockchain: Popular Use Cases and Why They Do Not Work (2019)",
+   "url": "https://blog.smartdec.net/you-do-not-need-blockchain-eight-popular-use-cases-and-why-they-do-not-work-f2ecc6cc2129",
+   "source": "blog.smartdec.net",
+   "origine": "Hacker News",
+   "date": "2025-03-18T13:06:45.000Z"
+  },
+  {
+   "id": "e118b454551f7901",
+   "domaine": "blockchain",
+   "titre": "Sepolia Pectra Incident Update",
+   "url": "https://blog.ethereum.org/en/2025/03/05/sepolia-pectra-incident",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-03-05T00:00:00.000Z"
+  },
+  {
+   "id": "fbc09e232da9058a",
+   "domaine": "blockchain",
+   "titre": "Tether and Circle are battling to win the US stablecoin market",
+   "url": "https://www.wsj.com/finance/currencies/who-is-giancarlo-devasini-tether-jeremy-allaire-circle-90a408b9",
+   "source": "wsj.com",
+   "origine": "Hacker News",
+   "date": "2025-03-04T04:14:14.000Z"
+  },
+  {
+   "id": "c795113f4ae17bb3",
+   "domaine": "ia",
+   "titre": "China tells its AI leaders to avoid U.S. travel over security concerns",
+   "url": "https://www.wsj.com/world/china/china-ai-us-travel-advisory-ff248349",
+   "source": "wsj.com",
+   "origine": "Hacker News",
+   "date": "2025-03-01T13:28:03.000Z"
+  },
+  {
+   "id": "fa72fc39fa8c06b6",
+   "domaine": "blockchain",
+   "titre": "Audit Results for the Pectra System Contracts",
+   "url": "https://blog.ethereum.org/en/2025/02/28/pectra-audit-results",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-02-28T00:00:00.000Z"
+  },
+  {
+   "id": "253a54af767e7c04",
+   "domaine": "ia",
+   "titre": "Grok 3 is highly vulnerable to indirect prompt injection",
+   "url": "https://simonwillison.net/2025/Feb/23/grok-3-indirect-prompt-injection/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2025-02-24T12:02:01.000Z"
+  },
+  {
+   "id": "d6f5991cdb81a072",
+   "domaine": "blockchain",
+   "titre": "Bybit sees over $4B 'bank run' after crypto's biggest hack",
+   "url": "https://www.coindesk.com/business/2025/02/22/bybit-sees-over-usd4-billion-bank-run-after-crypto-s-biggest-hack",
+   "source": "coindesk.com",
+   "origine": "Hacker News",
+   "date": "2025-02-23T17:30:06.000Z"
+  },
+  {
+   "id": "117e89a4374e1953",
+   "domaine": "ia",
+   "titre": "'Indiana Jones' jailbreak approach highlights vulnerabilities of existing LLMs",
+   "url": "https://techxplore.com/news/2025-02-indiana-jones-jailbreak-approach-highlights.html",
+   "source": "techxplore.com",
+   "origine": "Hacker News",
+   "date": "2025-02-21T07:12:17.000Z"
+  },
+  {
+   "id": "55d629f4a16e2516",
+   "domaine": "blockchain",
+   "titre": "Pectra Audit Competition Launches on Cantina",
+   "url": "https://blog.ethereum.org/en/2025/02/21/pectra-audit",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-02-21T00:00:00.000Z"
+  },
+  {
+   "id": "e7f1d4d581b89a81",
+   "domaine": "ia",
+   "titre": "ChatGPT Operator: Prompt Injection Exploits & Defenses",
+   "url": "https://embracethered.com/blog/posts/2025/chatgpt-operator-prompt-injection-exploits/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-02-17T15:30:21.000Z"
+  },
+  {
+   "id": "2dcd7788a34d64c5",
+   "domaine": "blockchain",
+   "titre": "Pectra Testnet Announcement",
+   "url": "https://blog.ethereum.org/en/2025/02/14/pectra-testnet-announcement",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-02-14T00:00:00.000Z"
+  },
+  {
+   "id": "313ae18ff110892a",
+   "domaine": "ia",
+   "titre": "Hacking Gemini's Memory with Prompt Injection and Delayed Tool Invocation",
+   "url": "https://embracethered.com/blog/posts/2025/gemini-memory-persistence-prompt-injection/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-02-10T14:30:21.000Z"
+  },
+  {
+   "id": "62f86a0b508a4da8",
+   "domaine": "ia",
+   "titre": "Deep Fake Detector Extension by Mozilla Firefox",
+   "url": "https://addons.mozilla.org/en-US/firefox/addon/deep-fake-detector/",
+   "source": "addons.mozilla.org",
+   "origine": "Hacker News",
+   "date": "2025-02-08T22:08:07.000Z"
+  },
+  {
+   "id": "e968504f98701d1d",
+   "domaine": "blockchain",
+   "titre": "Ethereum Protocol Studies 2025",
+   "url": "https://blog.ethereum.org/en/2025/02/05/ethereum-protocol-studies",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2025-02-05T00:00:00.000Z"
+  },
+  {
+   "id": "ee3cfcb08037521e",
+   "domaine": "ia",
+   "titre": "Constitutional Classifiers: Defending against universal jailbreaks",
+   "url": "https://www.anthropic.com/research/constitutional-classifiers",
+   "source": "anthropic.com",
+   "origine": "Hacker News",
+   "date": "2025-02-03T16:46:52.000Z"
+  },
+  {
+   "id": "47c63ec0283a741b",
+   "domaine": "ia",
+   "titre": "Google removed 2.36M apps from Google Play using AI threat detection",
+   "url": "https://security.googleblog.com/2025/01/how-we-kept-google-play-android-app-ecosystem-safe-2024.html",
+   "source": "security.googleblog.com",
+   "origine": "Hacker News",
+   "date": "2025-02-03T09:16:26.000Z"
+  },
+  {
+   "id": "269ec2eacffd4558",
+   "domaine": "ia",
+   "titre": "AI Domination: Remote Controlling ChatGPT ZombAI Instances",
+   "url": "https://embracethered.com/blog/posts/2025/spaiware-and-chatgpt-command-and-control-via-prompt-injection-zombai/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-01-07T04:30:53.000Z"
+  },
+  {
+   "id": "7027b1fec6da6de1",
+   "domaine": "ia",
+   "titre": "Microsoft 365 Copilot Generated Images Accessible Without Authentication -- Fixed!",
+   "url": "https://embracethered.com/blog/posts/2025/m365-copilot-image-generation-without-authentication/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2025-01-03T00:00:09.000Z"
+  },
+  {
+   "id": "999d9f8178f7a8ae",
+   "domaine": "ia",
+   "titre": "Trust No AI: Prompt Injection Along the CIA Security Triad Paper",
+   "url": "https://embracethered.com/blog/posts/2024/trust-no-ai-prompt-injection-along-the-cia-security-triad-paper/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-12-24T00:30:53.000Z"
+  },
+  {
+   "id": "56b0c564295f6636",
+   "domaine": "ia",
+   "titre": "Narrative Jailbreaking for Fun and Profit",
+   "url": "https://interconnected.org/home/2024/12/23/jailbreaking",
+   "source": "interconnected.org",
+   "origine": "Hacker News",
+   "date": "2024-12-23T19:28:06.000Z"
+  },
+  {
+   "id": "653f82b12b6f4871",
+   "domaine": "ia",
+   "titre": "Best-of-N Jailbreaking",
+   "url": "https://arxiv.org/abs/2412.03556",
+   "source": "arxiv.org",
+   "origine": "Hacker News",
+   "date": "2024-12-14T05:18:52.000Z"
+  },
+  {
+   "id": "eb15993b0a9d3dc9",
+   "domaine": "ia",
+   "titre": "Deepfakes weaponised to target Pakistan's women leaders",
+   "url": "https://www.france24.com/en/live-news/20241203-deepfakes-weaponised-to-target-pakistan-s-women-leaders",
+   "source": "france24.com",
+   "origine": "Hacker News",
+   "date": "2024-12-08T00:15:13.000Z"
+  },
+  {
+   "id": "5869fe859971d29a",
+   "domaine": "ia",
+   "titre": "Ultralytics AI model hijacked to infect thousands with cryptominer",
+   "url": "https://www.bleepingcomputer.com/news/security/ultralytics-ai-model-hijacked-to-infect-thousands-with-cryptominer/",
+   "source": "bleepingcomputer.com",
+   "origine": "Hacker News",
+   "date": "2024-12-07T18:31:43.000Z"
+  },
+  {
+   "id": "be9e7cf784173c4e",
+   "domaine": "ia",
+   "titre": "Terminal DiLLMa: LLM-powered Apps Can Hijack Your Terminal Via Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2024/terminal-dillmas-prompt-injection-ansi-sequences/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-12-06T16:00:25.000Z"
+  },
+  {
+   "id": "b3e2e57d9751b845",
+   "domaine": "ia",
+   "titre": "DeepSeek AI: From Prompt Injection To Account Takeover",
+   "url": "https://embracethered.com/blog/posts/2024/deepseek-ai-prompt-injection-to-xss-and-account-takeover/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-11-29T22:00:39.000Z"
+  },
+  {
+   "id": "fcec44f2e4664a1d",
+   "domaine": "ia",
+   "titre": "Robot Jailbreak: Researchers Trick Bots into Dangerous Tasks",
+   "url": "https://spectrum.ieee.org/jailbreak-llm",
+   "source": "spectrum.ieee.org",
+   "origine": "Hacker News",
+   "date": "2024-11-24T04:47:55.000Z"
+  },
+  {
+   "id": "49e318c82bccf8d1",
+   "domaine": "ia",
+   "titre": "SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks",
+   "url": "https://arxiv.org/abs/2310.03684",
+   "source": "arxiv.org",
+   "origine": "Hacker News",
+   "date": "2024-11-16T22:37:04.000Z"
+  },
+  {
+   "id": "e38567054e8373af",
+   "domaine": "ia",
+   "titre": "The Beginner's Guide to Visual Prompt Injections (2023)",
+   "url": "https://www.lakera.ai/blog/visual-prompt-injections",
+   "source": "lakera.ai",
+   "origine": "Hacker News",
+   "date": "2024-11-13T18:07:12.000Z"
+  },
+  {
+   "id": "25a79343f4490d79",
+   "domaine": "ia",
+   "titre": "ZombAIs: From Prompt Injection to C2 with Claude Computer Use",
+   "url": "https://embracethered.com/blog/posts/2024/claude-computer-use-c2-the-zombais-are-coming/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-10-25T00:00:57.000Z"
+  },
+  {
+   "id": "e06e3fe9adc5c860",
+   "domaine": "ia",
+   "titre": "Spyware Injection Into Your ChatGPT's Long-Term Memory (SpAIware)",
+   "url": "https://embracethered.com/blog/posts/2024/chatgpt-macos-app-persistent-data-exfiltration/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-09-20T18:02:36.000Z"
+  },
+  {
+   "id": "1fbb410e60bbe969",
+   "domaine": "ia",
+   "titre": "We fine-tuned an LLM to triage and fix insecure code",
+   "url": "https://corgea.com/blog/fine-tuning-for-precision-and-privacy-how-corgea-s-llm-enhances-enterprise-application-security",
+   "source": "corgea.com",
+   "origine": "Hacker News",
+   "date": "2024-09-16T22:57:15.000Z"
+  },
+  {
+   "id": "3ee6ba6527dd1d2e",
+   "domaine": "ia",
+   "titre": "Microsoft Copilot: From Prompt Injection to Exfiltration of Personal Information",
+   "url": "https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-08-27T00:30:17.000Z"
+  },
+  {
+   "id": "a2c3755622632511",
+   "domaine": "ia",
+   "titre": "Google AI Studio: LLM-Powered Data Exfiltration Hits Again! Quickly Fixed.",
+   "url": "https://embracethered.com/blog/posts/2024/google-ai-studio-data-exfiltration-now-fixed/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-08-22T02:00:30.000Z"
+  },
+  {
+   "id": "02b4ba35d21c2fc4",
+   "domaine": "ia",
+   "titre": "Data Exfiltration from Slack AI via indirect prompt injection",
+   "url": "https://promptarmor.substack.com/p/data-exfiltration-from-slack-ai-via",
+   "source": "promptarmor.substack.com",
+   "origine": "Hacker News",
+   "date": "2024-08-20T18:27:45.000Z"
+  },
+  {
+   "id": "16073fa98b4b0aad",
+   "domaine": "ia",
+   "titre": "Deep Live Cam: Real-time face swapping and one-click video deepfake tool",
+   "url": "https://deeplive.cam",
+   "source": "deeplive.cam",
+   "origine": "Hacker News",
+   "date": "2024-08-10T13:05:48.000Z"
+  },
+  {
+   "id": "365affc89843124b",
+   "domaine": "ia",
+   "titre": "Protect Your Copilots: Preventing Data Leaks in Copilot Studio",
+   "url": "https://embracethered.com/blog/posts/2024/copilot-studio-protect-your-copilots/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-07-30T17:00:36.000Z"
+  },
+  {
+   "id": "6a191525bcdd623b",
+   "domaine": "ia",
+   "titre": "Ferrari exec foils deepfake attempt by asking a question only CEO could answer",
+   "url": "https://fortune.com/2024/07/27/ferrari-deepfake-attempt-scammer-security-question-ceo-benedetto-vigna-cybersecurity-ai/",
+   "source": "fortune.com",
+   "origine": "Hacker News",
+   "date": "2024-07-30T06:22:28.000Z"
+  },
+  {
+   "id": "f73bba9c71882a8a",
+   "domaine": "ia",
+   "titre": "Google Colab AI: Data Leakage Through Image Rendering Fixed. Some Risks Remain.",
+   "url": "https://embracethered.com/blog/posts/2024/google-colab-image-render-exfil/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-07-25T05:00:25.000Z"
+  },
+  {
+   "id": "6afb4483981a4d80",
+   "domaine": "ia",
+   "titre": "Breaking Instruction Hierarchy in OpenAI's gpt-4o-mini",
+   "url": "https://embracethered.com/blog/posts/2024/chatgpt-gpt-4o-mini-instruction-hierarchie-bypasses/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-07-22T13:14:05.000Z"
+  },
+  {
+   "id": "059f72a98a8eb01e",
+   "domaine": "ia",
+   "titre": "CrowdStrike debacle provides road map of American vulnerabilities to adversaries",
+   "url": "https://www.nytimes.com/2024/07/19/us/politics/crowdstrike-outage.html",
+   "source": "nytimes.com",
+   "origine": "Hacker News",
+   "date": "2024-07-20T15:18:19.000Z"
+  },
+  {
+   "id": "36f3f7f6e62e42f9",
+   "domaine": "ia",
+   "titre": "Want to spot a deepfake? Look for the stars in their eyes",
+   "url": "https://ras.ac.uk/news-and-press/news/want-spot-deepfake-look-stars-their-eyes",
+   "source": "ras.ac.uk",
+   "origine": "Hacker News",
+   "date": "2024-07-18T14:34:42.000Z"
+  },
+  {
+   "id": "fb8ca2011206579c",
+   "domaine": "ia",
+   "titre": "SAPwned: SAP AI vulnerabilities expose customers' cloud environments and privat",
+   "url": "https://www.wiz.io/blog/sapwned-sap-ai-vulnerabilities-ai-security",
+   "source": "wiz.io",
+   "origine": "Hacker News",
+   "date": "2024-07-17T22:02:39.000Z"
+  },
+  {
+   "id": "a6d77688fae346ae",
+   "domaine": "ia",
+   "titre": "Jailbreaking RabbitOS",
+   "url": "https://www.da.vidbuchanan.co.uk/blog/r1-jailbreak.html",
+   "source": "da.vidbuchanan.co.uk",
+   "origine": "Hacker News",
+   "date": "2024-07-17T16:41:38.000Z"
+  },
+  {
+   "id": "9631065ed338afc5",
+   "domaine": "ia",
+   "titre": "Sorry, ChatGPT Is Under Maintenance: Persistent Denial of Service through Prompt Injection and Memory Attacks",
+   "url": "https://embracethered.com/blog/posts/2024/chatgpt-persistent-denial-of-service/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-07-08T21:30:18.000Z"
+  },
+  {
+   "id": "a494a8c19b79c22c",
+   "domaine": "ia",
+   "titre": "GitHub Copilot Chat: From Prompt Injection to Data Exfiltration",
+   "url": "https://embracethered.com/blog/posts/2024/github-copilot-chat-prompt-injection-data-exfiltration/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-06-15T05:00:17.000Z"
+  },
+  {
+   "id": "2bcd982b183bd62b",
+   "domaine": "ia",
+   "titre": "Microsoft to delay release of Recall AI feature on security concerns",
+   "url": "https://www.reuters.com/technology/artificial-intelligence/microsoft-delay-release-recall-ai-feature-security-concerns-2024-06-14/",
+   "source": "reuters.com",
+   "origine": "Hacker News",
+   "date": "2024-06-14T04:14:04.000Z"
+  },
+  {
+   "id": "63aaa1768a3f628d",
+   "domaine": "ia",
+   "titre": "Private Cloud Compute: A new frontier for AI privacy in the cloud",
+   "url": "https://security.apple.com/blog/private-cloud-compute/",
+   "source": "security.apple.com",
+   "origine": "Hacker News",
+   "date": "2024-06-10T21:53:07.000Z"
+  },
+  {
+   "id": "fb5fe73b77c05287",
+   "domaine": "ia",
+   "titre": "Windows AI feature that screenshots everything labeled a security 'disaster'",
+   "url": "https://www.theverge.com/2024/6/3/24170305/microsoft-windows-recall-ai-screenshots-security-privacy-issues",
+   "source": "theverge.com",
+   "origine": "Hacker News",
+   "date": "2024-06-04T03:03:10.000Z"
+  },
+  {
+   "id": "1357cb1529b96ec5",
+   "domaine": "ia",
+   "titre": "Automatic Tool Invocation when Browsing with ChatGPT - Threats and Mitigations",
+   "url": "https://embracethered.com/blog/posts/2024/llm-apps-automatic-tool-invocations/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-05-29T03:57:38.000Z"
+  },
+  {
+   "id": "d9e598dd076a39d2",
+   "domaine": "ia",
+   "titre": "ChatGPT: Hacking Memories with Prompt Injection",
+   "url": "https://embracethered.com/blog/posts/2024/chatgpt-hacking-memories/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-05-22T19:24:07.000Z"
+  },
+  {
+   "id": "21da53e10b8ac889",
+   "domaine": "ia",
+   "titre": "British engineering giant Arup revealed as $25M deepfake scam victim",
+   "url": "https://www.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk/index.html",
+   "source": "cnn.com",
+   "origine": "Hacker News",
+   "date": "2024-05-20T09:25:52.000Z"
+  },
+  {
+   "id": "544e88b357845e4e",
+   "domaine": "ia",
+   "titre": "Machine Learning Attack Series: Backdooring Keras Models and How to Detect It",
+   "url": "https://embracethered.com/blog/posts/2024/machine-learning-attack-series-keras-backdoor-model/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-05-18T23:00:00.000Z"
+  },
+  {
+   "id": "ff02b7feadf04466",
+   "domaine": "ia",
+   "titre": "A Trivial Llama 3 Jailbreak",
+   "url": "https://github.com/haizelabs/llama3-jailbreak",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2024-04-20T23:31:37.000Z"
+  },
+  {
+   "id": "aa3e0b83de3276a2",
+   "domaine": "ia",
+   "titre": "Microsoft's VASA-1 can deepfake a person with one photo and one audio track",
+   "url": "https://arstechnica.com/information-technology/2024/04/microsofts-vasa-1-can-deepfake-a-person-with-one-photo-and-one-audio-track/",
+   "source": "arstechnica.com",
+   "origine": "Hacker News",
+   "date": "2024-04-19T16:31:22.000Z"
+  },
+  {
+   "id": "e1d95d2a80d6967d",
+   "domaine": "ia",
+   "titre": "NSA publishes guidance for strengthening AI system security",
+   "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3741371/nsa-publishes-guidance-for-strengthening-ai-system-security/",
+   "source": "nsa.gov",
+   "origine": "Hacker News",
+   "date": "2024-04-16T17:32:25.000Z"
+  },
+  {
+   "id": "4c0add1ba1a799ce",
+   "domaine": "ia",
+   "titre": "Bobby Tables but with LLM Apps - Google NotebookLM Data Exfiltration",
+   "url": "https://embracethered.com/blog/posts/2024/google-notebook-ml-data-exfiltration/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-04-15T15:11:30.000Z"
+  },
+  {
+   "id": "104696768b4cbad5",
+   "domaine": "ia",
+   "titre": "Google AI Studio Data Exfiltration via Prompt Injection - Possible Regression and Fix",
+   "url": "https://embracethered.com/blog/posts/2024/google-aistudio-mass-data-exfil/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-04-07T23:00:30.000Z"
+  },
+  {
+   "id": "2cae0348ada041d8",
+   "domaine": "ia",
+   "titre": "HOPE Deepfakes",
+   "url": "https://hope.net/deepfakes.html",
+   "source": "hope.net",
+   "origine": "Hacker News",
+   "date": "2024-04-04T12:10:18.000Z"
+  },
+  {
+   "id": "4ec45b7ca06bcd5b",
+   "domaine": "ia",
+   "titre": "The dangers of AI agents unfurling hyperlinks and what to do about it",
+   "url": "https://embracethered.com/blog/posts/2024/the-dangers-of-unfurling-and-what-you-can-do-about-it/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-04-03T04:00:48.000Z"
+  },
+  {
+   "id": "d322fe523ad7a09e",
+   "domaine": "ia",
+   "titre": "How ML Model Data Poisoning Works in 5 Minutes",
+   "url": "https://journal.hexmos.com/training-data-poisoning/?src=hn",
+   "source": "journal.hexmos.com",
+   "origine": "Hacker News",
+   "date": "2024-03-24T15:15:23.000Z"
+  },
+  {
+   "id": "2aa530733515d9c2",
+   "domaine": "ia",
+   "titre": "Prompt injection and jailbreaking are not the same thing",
+   "url": "https://simonwillison.net/2024/Mar/5/prompt-injection-jailbreaking/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2024-03-05T16:10:20.000Z"
+  },
+  {
+   "id": "f8f27c0f5043fa49",
+   "domaine": "ia",
+   "titre": "Who Am I? Conditional Prompt Injection Attacks with Microsoft Copilot",
+   "url": "https://embracethered.com/blog/posts/2024/whoami-conditional-prompt-injection-instructions/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-03-03T06:25:17.000Z"
+  },
+  {
+   "id": "9ad7c3c9453f3357",
+   "domaine": "ia",
+   "titre": "ArtPrompt: ASCII Art-Based Jailbreak Attacks Against Aligned LLMs",
+   "url": "https://arxiv.org/abs/2402.11753",
+   "source": "arxiv.org",
+   "origine": "Hacker News",
+   "date": "2024-03-02T00:30:06.000Z"
+  },
+  {
+   "id": "30dfb577c1daa94d",
+   "domaine": "ia",
+   "titre": "Malicious AI models on Hugging Face backdoor users' machines",
+   "url": "https://www.bleepingcomputer.com/news/security/malicious-ai-models-on-hugging-face-backdoor-users-machines/",
+   "source": "bleepingcomputer.com",
+   "origine": "Hacker News",
+   "date": "2024-02-29T17:36:21.000Z"
+  },
+  {
+   "id": "b94e80f7e8599444",
+   "domaine": "ia",
+   "titre": "Defending LLMs against Jailbreaking Attacks via Backtranslation",
+   "url": "https://arxiv.org/abs/2402.16459",
+   "source": "arxiv.org",
+   "origine": "Hacker News",
+   "date": "2024-02-27T11:44:31.000Z"
+  },
+  {
+   "id": "4ee919aa89ad1f87",
+   "domaine": "ia",
+   "titre": "Google Gemini: Planting Instructions For Delayed Automatic Tool Invocation",
+   "url": "https://embracethered.com/blog/posts/2024/llm-context-pollution-and-delayed-automated-tool-invocation/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-02-23T06:00:06.000Z"
+  },
+  {
+   "id": "94f19bf89bc8a25d",
+   "domaine": "ia",
+   "titre": "ChatGPT: Lack of Isolation between Code Interpreter sessions of GPTs",
+   "url": "https://embracethered.com/blog/posts/2024/lack-of-isolation-gpts-code-interpreter/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-02-14T11:30:17.000Z"
+  },
+  {
+   "id": "a3af6692f100bcdc",
+   "domaine": "ia",
+   "titre": "Hackers interrupt UAE TV streaming services with deepfake news",
+   "url": "https://www.theguardian.com/technology/2024/feb/08/iran-backed-hackers-interrupt-uae-tv-streaming-services-with-deepfake-news",
+   "source": "theguardian.com",
+   "origine": "Hacker News",
+   "date": "2024-02-08T12:30:57.000Z"
+  },
+  {
+   "id": "8555616ca4be256c",
+   "domaine": "ia",
+   "titre": "Hidden Prompt Injections with Anthropic Claude",
+   "url": "https://embracethered.com/blog/posts/2024/claude-hidden-prompt-injection-ascii-smuggling/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2024-02-08T10:01:54.000Z"
+  },
+  {
+   "id": "6f64f8bd154f6eb4",
+   "domaine": "ia",
+   "titre": "Finance worker pays out $25M after video call call with deepfake CFO",
+   "url": "https://edition.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk/index.html",
+   "source": "edition.cnn.com",
+   "origine": "Hacker News",
+   "date": "2024-02-04T08:43:42.000Z"
+  },
+  {
+   "id": "4501418b5a38436d",
+   "domaine": "ia",
+   "titre": "AI generated security reports about curl",
+   "url": "https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/",
+   "source": "daniel.haxx.se",
+   "origine": "Hacker News",
+   "date": "2024-01-02T19:28:46.000Z"
+  },
+  {
+   "id": "ed5258f7a4508b94",
+   "domaine": "ia",
+   "titre": "OpenAI Begins Tackling ChatGPT Data Leak Vulnerability",
+   "url": "https://embracethered.com/blog/posts/2023/openai-data-exfiltration-first-mitigations-implemented/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-12-20T10:35:07.000Z"
+  },
+  {
+   "id": "a515ae71beee0fee",
+   "domaine": "ia",
+   "titre": "Data exfiltration from Writer.com with indirect prompt injection",
+   "url": "https://promptarmor.substack.com/p/data-exfiltration-from-writercom",
+   "source": "promptarmor.substack.com",
+   "origine": "Hacker News",
+   "date": "2023-12-15T14:31:00.000Z"
+  },
+  {
+   "id": "82902a45b96f5385",
+   "domaine": "ia",
+   "titre": "The emergence of full-body Gaussian Splat deepfake humans",
+   "url": "https://blog.metaphysic.ai/the-emergence-of-full-body-gaussian-splat-deepfake-humans/",
+   "source": "blog.metaphysic.ai",
+   "origine": "Hacker News",
+   "date": "2023-12-15T10:49:26.000Z"
+  },
+  {
+   "id": "681163590b26d1fd",
+   "domaine": "ia",
+   "titre": "Malicious ChatGPT Agents: How GPTs Can Quietly Grab Your Data (Demo)",
+   "url": "https://embracethered.com/blog/posts/2023/openai-custom-malware-gpt/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-12-13T02:00:49.000Z"
+  },
+  {
+   "id": "5ddf8c696b6b2ed0",
+   "domaine": "ia",
+   "titre": "Jailbroken AI Chatbots Can Jailbreak Other Chatbots",
+   "url": "https://www.scientificamerican.com/article/jailbroken-ai-chatbots-can-jailbreak-other-chatbots/",
+   "source": "scientificamerican.com",
+   "origine": "Hacker News",
+   "date": "2023-12-06T13:06:45.000Z"
+  },
+  {
+   "id": "41b88d7a58cf1349",
+   "domaine": "ia",
+   "titre": "Ekoparty Talk - Prompt Injections in the Wild",
+   "url": "https://embracethered.com/blog/posts/2023/ekoparty-prompt-injection-talk/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-11-29T00:00:33.000Z"
+  },
+  {
+   "id": "79e83081df4e73d2",
+   "domaine": "ia",
+   "titre": "Hacking Google Bard - From Prompt Injection to Data Exfiltration",
+   "url": "https://embracethered.com/blog/posts/2023/google-bard-data-exfiltration/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-11-03T19:00:01.000Z"
+  },
+  {
+   "id": "0281fa429fff6ba7",
+   "domaine": "ia",
+   "titre": "New data poisoning tool lets artists fight back against generative AI",
+   "url": "https://www.technologyreview.com/2023/10/23/1082189/data-poisoning-artists-fight-generative-ai/",
+   "source": "technologyreview.com",
+   "origine": "Hacker News",
+   "date": "2023-10-23T19:59:33.000Z"
+  },
+  {
+   "id": "509eb6c28319a347",
+   "domaine": "ia",
+   "titre": "Google Cloud Vertex AI - Data Exfiltration Vulnerability Fixed in Generative AI Studio",
+   "url": "https://embracethered.com/blog/posts/2023/google-gcp-generative-ai-studio-data-exfiltration-fixed/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-10-19T13:35:37.000Z"
+  },
+  {
+   "id": "0a5e6ec7435e78c5",
+   "domaine": "ia",
+   "titre": "GPT-4 vision prompt injection",
+   "url": "https://blog.roboflow.com/gpt-4-vision-prompt-injection/",
+   "source": "blog.roboflow.com",
+   "origine": "Hacker News",
+   "date": "2023-10-18T11:50:23.000Z"
+  },
+  {
+   "id": "a4925d3ad494af7d",
+   "domaine": "ia",
+   "titre": "Multi-modal prompt injection image attacks against GPT-4V",
+   "url": "https://simonwillison.net/2023/Oct/14/multi-modal-prompt-injection/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2023-10-14T02:26:40.000Z"
+  },
+  {
+   "id": "58de964a3d6d9ce2",
+   "domaine": "ia",
+   "titre": "Dead grandma locket request tricks Bing Chat’s AI into solving security puzzle",
+   "url": "https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/",
+   "source": "arstechnica.com",
+   "origine": "Hacker News",
+   "date": "2023-10-02T20:09:53.000Z"
+  },
+  {
+   "id": "ab6cbf6ed06a15df",
+   "domaine": "ia",
+   "titre": "Bing ChatGPT image jailbreak",
+   "url": "https://twitter.com/literallydenis/status/1708283962399846459",
+   "source": "twitter.com",
+   "origine": "Hacker News",
+   "date": "2023-10-01T18:51:24.000Z"
+  },
+  {
+   "id": "861f5bf87cac52b1",
+   "domaine": "ia",
+   "titre": "Microsoft Fixes Data Exfiltration Vulnerability in Azure AI Playground",
+   "url": "https://embracethered.com/blog/posts/2023/data-exfiltration-in-azure-openai-playground-fixed/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-09-29T17:00:08.000Z"
+  },
+  {
+   "id": "0c408dde31ad2202",
+   "domaine": "ia",
+   "titre": "Advanced Data Exfiltration Techniques with ChatGPT",
+   "url": "https://embracethered.com/blog/posts/2023/advanced-plugin-data-exfiltration-trickery/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-09-28T16:01:00.000Z"
+  },
+  {
+   "id": "8d989e5386c13689",
+   "domaine": "ia",
+   "titre": "NSA, FBI, and CISA Release Cybersecurity Information Sheet on Deepfake Threats",
+   "url": "https://www.cisa.gov/news-events/alerts/2023/09/12/nsa-fbi-and-cisa-release-cybersecurity-information-sheet-deepfake-threats",
+   "source": "cisa.gov",
+   "origine": "Hacker News",
+   "date": "2023-09-26T09:26:40.000Z"
+  },
+  {
+   "id": "36bf01879330599f",
+   "domaine": "ia",
+   "titre": "HITCON CMT 2023 - LLM Security Presentation and Trip Report",
+   "url": "https://embracethered.com/blog/posts/2023/hitcon-llm-security-presentation-and-trip-report/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-09-18T10:24:51.000Z"
+  },
+  {
+   "id": "e3bad53918d4adf3",
+   "domaine": "ia",
+   "titre": "LLM Apps: Don't Get Stuck in an Infinite Loop! 💵💰",
+   "url": "https://embracethered.com/blog/posts/2023/llm-cost-and-dos-threat/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-09-16T07:00:00.000Z"
+  },
+  {
+   "id": "a157a3a6342a939f",
+   "domaine": "ia",
+   "titre": "Video: Data Exfiltration Vulnerabilities in LLM apps (Bing Chat, ChatGPT, Claude)",
+   "url": "https://embracethered.com/blog/posts/2023/video-data-exfiltration-vulns-in-llm-applictions/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-08-28T17:00:51.000Z"
+  },
+  {
+   "id": "c77f9f762feb8d20",
+   "domaine": "ia",
+   "titre": "Anthropic Claude Data Exfiltration Vulnerability Fixed",
+   "url": "https://embracethered.com/blog/posts/2023/anthropic-fixes-claude-data-exfiltration-via-images/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-08-01T22:15:15.000Z"
+  },
+  {
+   "id": "0872bab360462e44",
+   "domaine": "ia",
+   "titre": "Universal and transferable adversarial attacks on aligned language models",
+   "url": "https://llm-attacks.org/zou2023universal.pdf",
+   "source": "llm-attacks.org",
+   "origine": "Hacker News",
+   "date": "2023-07-29T16:28:01.000Z"
+  },
+  {
+   "id": "5042f9751c76036a",
+   "domaine": "ia",
+   "titre": "ChatGPT Custom Instructions: Persistent Data Exfiltration Demo",
+   "url": "https://embracethered.com/blog/posts/2023/chatgpt-custom-instruction-post-exploitation-data-exfiltration/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-07-24T14:26:41.000Z"
+  },
+  {
+   "id": "e268cbf8c550584e",
+   "domaine": "ia",
+   "titre": "Google Introduces AI Red Team",
+   "url": "https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/",
+   "source": "blog.google",
+   "origine": "Hacker News",
+   "date": "2023-07-20T09:46:39.000Z"
+  },
+  {
+   "id": "98bfb88f7a46bc2f",
+   "domaine": "ia",
+   "titre": "Image to Prompt Injection with Google Bard",
+   "url": "https://embracethered.com/blog/posts/2023/google-bard-image-to-prompt-injection/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-07-14T16:00:00.000Z"
+  },
+  {
+   "id": "5c589e5e9338d993",
+   "domaine": "ia",
+   "titre": "Google Docs AI Features: Vulnerabilities and Risks",
+   "url": "https://embracethered.com/blog/posts/2023/google-docs-ai-scam/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-07-12T21:30:17.000Z"
+  },
+  {
+   "id": "5a98d0479c420dd5",
+   "domaine": "ia",
+   "titre": "OpenAI Removes the \"Chat with Code\" Plugin From Store",
+   "url": "https://embracethered.com/blog/posts/2023/chatgpt-chat-with-code-plugin-take-down/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-07-06T23:30:00.000Z"
+  },
+  {
+   "id": "d09885ad54accf75",
+   "domaine": "ia",
+   "titre": "Exploit ChatGPT and Enter the Matrix to Learn about AI Security",
+   "url": "https://embracethered.com/blog/posts/2023/chatgpt-vulns-enter-the-matrix/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-06-11T15:49:21.000Z"
+  },
+  {
+   "id": "6341c17e1d22a1cd",
+   "domaine": "ia",
+   "titre": "AI browser extensions are a security nightmare",
+   "url": "https://www.kolide.com/blog/ai-browser-extensions-are-a-security-nightmare",
+   "source": "kolide.com",
+   "origine": "Hacker News",
+   "date": "2023-06-08T15:51:22.000Z"
+  },
+  {
+   "id": "2af79ca2c7e0e20c",
+   "domaine": "ia",
+   "titre": "One Click Deepfake",
+   "url": "https://github.com/s0md3v/roop",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2023-05-29T16:12:22.000Z"
+  },
+  {
+   "id": "52d61bc9b6042a62",
+   "domaine": "ia",
+   "titre": "ChatGPT Plugin Exploit Explained: From Prompt Injection to Accessing Private Data",
+   "url": "https://embracethered.com/blog/posts/2023/chatgpt-cross-plugin-request-forgery-and-prompt-injection./",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-05-28T19:00:02.000Z"
+  },
+  {
+   "id": "27940d2e871b10b2",
+   "domaine": "ia",
+   "titre": "Compromising LLM-integrated applications with indirect prompt injection",
+   "url": "https://arxiv.org/abs/2302.12173",
+   "source": "arxiv.org",
+   "origine": "Hacker News",
+   "date": "2023-05-22T22:07:38.000Z"
+  },
+  {
+   "id": "59aae04792462158",
+   "domaine": "ia",
+   "titre": "Inject My PDF: Prompt Injection for Your Resume",
+   "url": "https://kai-greshake.de/posts/inject-my-pdf/",
+   "source": "kai-greshake.de",
+   "origine": "Hacker News",
+   "date": "2023-05-18T20:16:20.000Z"
+  },
+  {
+   "id": "de5e88ca5fdd0355",
+   "domaine": "ia",
+   "titre": "ChatGPT Plugins: Data Exfiltration via Images & Cross Plugin Request Forgery",
+   "url": "https://embracethered.com/blog/posts/2023/chatgpt-webpilot-data-exfil-via-markdown-injection/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-05-16T14:45:38.000Z"
+  },
+  {
+   "id": "3798ea8f607addb7",
+   "domaine": "ia",
+   "titre": "Indirect Prompt Injection via YouTube Transcripts",
+   "url": "https://embracethered.com/blog/posts/2023/chatgpt-plugin-youtube-indirect-prompt-injection/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-05-14T07:01:38.000Z"
+  },
+  {
+   "id": "3d40325659a66310",
+   "domaine": "ia",
+   "titre": "Prompt injection explained, with video, slides, and a transcript",
+   "url": "https://simonwillison.net/2023/May/2/prompt-injection-explained/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2023-05-13T15:11:11.000Z"
+  },
+  {
+   "id": "2d75857de8d5e77d",
+   "domaine": "ia",
+   "titre": "The Dual LLM pattern for building AI assistants that can resist prompt injection",
+   "url": "https://simonwillison.net/2023/Apr/25/dual-llm-pattern/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2023-05-13T05:08:06.000Z"
+  },
+  {
+   "id": "2bef4291ac7f76d6",
+   "domaine": "ia",
+   "titre": "Adversarial Prompting: Tutorial and Lab",
+   "url": "https://embracethered.com/blog/posts/2023/adversarial-prompting-tutorial-and-lab/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-05-12T05:09:43.000Z"
+  },
+  {
+   "id": "5ba52a66cc64fb5f",
+   "domaine": "ia",
+   "titre": "Delimiters won’t save you from prompt injection",
+   "url": "https://simonwillison.net/2023/May/11/delimiters-wont-save-you/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2023-05-12T03:38:52.000Z"
+  },
+  {
+   "id": "2ffcc88f99271080",
+   "domaine": "ia",
+   "titre": "Turkish presidential candidate quits race after release of alleged deepfake",
+   "url": "https://www.theguardian.com/world/2023/may/11/muharrem-ince-turkish-presidential-candidate-withdraws-alleged-sex-tape",
+   "source": "theguardian.com",
+   "origine": "Hacker News",
+   "date": "2023-05-11T15:07:03.000Z"
+  },
+  {
+   "id": "ba30d32fc124403b",
+   "domaine": "ia",
+   "titre": "Video: Prompt Injections - An Introduction",
+   "url": "https://embracethered.com/blog/posts/2023/prompt-injection-an-introduction-video/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-05-10T14:00:40.000Z"
+  },
+  {
+   "id": "ee6857199ff90b64",
+   "domaine": "ia",
+   "titre": "People are trying to claim real videos are deepfakes",
+   "url": "https://text.npr.org/1174132413",
+   "source": "text.npr.org",
+   "origine": "Hacker News",
+   "date": "2023-05-08T15:33:51.000Z"
+  },
+  {
+   "id": "5e40ffd09a099103",
+   "domaine": "ia",
+   "titre": "MLSecOps Podcast: AI Red Teaming and Threat Modeling Machine Learning Systems",
+   "url": "https://embracethered.com/blog/posts/2023/mlsecops-podcast-ai-red-teaming/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-04-28T03:59:51.000Z"
+  },
+  {
+   "id": "78a0eddc4e558787",
+   "domaine": "ia",
+   "titre": "Don't blindly trust LLM responses. Threats to chatbots.",
+   "url": "https://embracethered.com/blog/posts/2023/ai-injections-threats-context-matters/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-04-16T01:09:46.000Z"
+  },
+  {
+   "id": "40a42b1878a83725",
+   "domaine": "ia",
+   "titre": "Prompt injection: what’s the worst that can happen?",
+   "url": "https://simonwillison.net/2023/Apr/14/worst-that-can-happen/",
+   "source": "simonwillison.net",
+   "origine": "Hacker News",
+   "date": "2023-04-14T17:37:24.000Z"
+  },
+  {
+   "id": "675013ff0bf8ba63",
+   "domaine": "ia",
+   "titre": "AI Injections: Direct and Indirect Prompt Injections and Their Implications",
+   "url": "https://embracethered.com/blog/posts/2023/ai-injections-direct-and-indirect-prompt-injection-basics/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-03-30T03:26:31.000Z"
+  },
+  {
+   "id": "d76a23f0b19103ed",
+   "domaine": "ia",
+   "titre": "Show HN: Jailbreaking GPT3.5 Using GPT4",
+   "url": "https://github.com/traghav/auto-redteam",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2023-03-26T15:11:02.000Z"
+  },
+  {
+   "id": "7c2c681dd79d8fe3",
+   "domaine": "ia",
+   "titre": "Show HN: ChatGPT Plugins are a security nightmare",
+   "url": "https://github.com/greshake/llm-security",
+   "source": "github.com",
+   "origine": "Hacker News",
+   "date": "2023-03-25T11:39:08.000Z"
+  },
+  {
+   "id": "26618e635419d804",
+   "domaine": "ia",
+   "titre": "Anti-recruiter prompt injection attack in LinkedIn profile",
+   "url": "https://twitter.com/brdskggs/status/1637114268876144640",
+   "source": "twitter.com",
+   "origine": "Hacker News",
+   "date": "2023-03-19T23:02:20.000Z"
+  },
+  {
+   "id": "2c774713c57726d0",
+   "domaine": "ia",
+   "titre": "A token-smuggling jailbreak for ChatGPT-4",
+   "url": "https://twitter.com/alexalbert__/status/1636488551817965568",
+   "source": "twitter.com",
+   "origine": "Hacker News",
+   "date": "2023-03-16T23:24:43.000Z"
+  },
+  {
+   "id": "65889e909d3807f1",
+   "domaine": "ia",
+   "titre": "Yolo: Natural Language to Shell Commands with ChatGPT API",
+   "url": "https://embracethered.com/blog/posts/2023/yolo-natural-language-to-bash-command-with-chatgpt-api/",
+   "source": "embracethered.com",
+   "origine": "Embrace The Red",
+   "date": "2023-03-06T01:31:58.000Z"
+  },
+  {
+   "id": "b2546333a196a952",
+   "domaine": "ia",
+   "titre": "Indirect Prompt Injection on Bing Chat",
+   "url": "https://greshake.github.io/",
+   "source": "greshake.github.io",
+   "origine": "Hacker News",
+   "date": "2023-03-01T00:14:03.000Z"
+  },
+  {
+   "id": "ba6a5970b75024d6",
+   "domaine": "ia",
+   "titre": "Jailbreak Chat: A collection of ChatGPT jailbreaks",
+   "url": "https://www.jailbreakchat.com",
+   "source": "jailbreakchat.com",
+   "origine": "Hacker News",
+   "date": "2023-02-28T18:19:21.000Z"
+  },
+  {
+   "id": "567b17645cd6a2a4",
+   "domaine": "ia",
+   "titre": "AI-powered Bing Chat spills its secrets via prompt injection attack",
+   "url": "https://arstechnica.com/information-technology/2023/02/ai-powered-bing-chat-spills-its-secrets-via-prompt-injection-attack/",
+   "source": "arstechnica.com",
+   "origine": "Hacker News",
+   "date": "2023-02-13T18:13:39.000Z"
+  },
+  {
+   "id": "62f1552858deab9e",
+   "domaine": "ia",
+   "titre": "David Guetta uses ChatGPT and uberduck.ai to deepfake Eminem rap for DJ set",
+   "url": "https://twitter.com/davidguetta/status/1621605376733872129",
+   "source": "twitter.com",
+   "origine": "Hacker News",
+   "date": "2023-02-10T07:28:08.000Z"
+  },
+  {
+   "id": "d9d6322bd1c9f4b9",
+   "domaine": "ia",
+   "titre": "Jailbreaking ChatGPT with Dan (Do Anything Now)",
+   "url": "https://twitter.com/venturetwins/status/1622243944649347074",
+   "source": "twitter.com",
+   "origine": "Hacker News",
+   "date": "2023-02-06T11:36:00.000Z"
+  },
+  {
+   "id": "bdd20218f8178462",
+   "domaine": "ia",
+   "titre": "Trey Parker and Matt Stone’s deep fake company announces $20M investment",
+   "url": "https://www.deepvoodoo.com/press/trey-parker-and-matt-stones-deep-fake-company-deep-voodoo-announces-20-million-investment",
+   "source": "deepvoodoo.com",
+   "origine": "Hacker News",
+   "date": "2023-02-02T19:25:04.000Z"
+  }
+ ]
+}

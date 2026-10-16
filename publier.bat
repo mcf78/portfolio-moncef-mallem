@@ -4,6 +4,7 @@ rem et https://mcf78.github.io/portfolio-moncef-mallem/ se met a jour tout seul 
 cd /d "%~dp0"
 git add -A
 git commit -m "Mise a jour du portfolio" >nul 2>&1
+git pull --rebase --autostash origin main
 git push -u origin main
 if errorlevel 1 (
   echo.

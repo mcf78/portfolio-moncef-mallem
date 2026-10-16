@@ -1,9 +1,31 @@
-import { Download, MessageCircle, FileText, MapPin, ArrowRight, ArrowUpRight, type LucideIcon } from 'lucide-react';
+import {
+  Download,
+  MessageCircle,
+  FileText,
+  MapPin,
+  ArrowRight,
+  ArrowUpRight,
+  ClipboardCheck,
+  FolderKanban,
+  Layers,
+  Radar,
+  type LucideIcon,
+} from 'lucide-react';
 import { cx } from './kit';
+import { rubriques } from './Missions';
+import { projets } from './Projets';
+import { technologiesParCategorie } from './APropos';
+import { sujets } from '../data/veille';
 import cvPdf from '../../../assets/cv-moncef-mallem.pdf';
-import photo from '../../../assets/photo-moncef-mallem.png';
+
+// Chiffres calculés à partir du contenu des pages : ils restent justes si le contenu change.
+const nbRealisations = rubriques.reduce((total, r) => total + r.realisations.length, 0);
+const nbTechnologies = new Set(Object.values(technologiesParCategorie).flat().map((t) => t.nom)).size;
+const veilleDepuis = Math.min(...sujets.map((s) => s.depuis));
 
 export function Accueil() {
+  const ouvrir = (onglet: string) => window.dispatchEvent(new CustomEvent('changeTab', { detail: onglet }));
+
   const handleContactClick = () => {
     // Scroll to contact section or trigger tab change
     window.dispatchEvent(new CustomEvent('changeTab', { detail: 'contact' }));
@@ -29,16 +51,20 @@ export function Accueil() {
     { onClick: handleContactClick, icon: MessageCircle, trail: ArrowRight, title: 'Me Contacter', text: 'Envoyez-moi un message directement' },
   ];
 
+  const raccourcis: { onglet: string; icon: LucideIcon; titre: string; detail: string }[] = [
+    { onglet: 'missions', icon: ClipboardCheck, titre: 'Épreuve E5', detail: `${nbRealisations} réalisations` },
+    { onglet: 'projets', icon: FolderKanban, titre: 'Projets (E6)', detail: `${projets.length} projets` },
+    { onglet: 'apropos', icon: Layers, titre: 'Compétences', detail: `${nbTechnologies} technologies` },
+    { onglet: 'veille', icon: Radar, titre: 'Veille technologique', detail: `${sujets.length} sujets depuis ${veilleDepuis}` },
+  ];
+
   return (
     <div className="relative isolate lg:flex lg:min-h-[calc(100dvh-2rem)] lg:flex-col lg:justify-center">
       <div aria-hidden className="pf-aurora pointer-events-none absolute -top-10 right-0 -z-10 h-[380px] w-full sm:h-[520px] sm:w-[85%]" />
 
       <section className="py-6 sm:py-10">
-        {/* Photo de profil */}
-        <div className="pf-ring mb-6 inline-grid size-[92px] place-items-center rounded-full p-[3px]">
-          <div className="size-full overflow-hidden rounded-full bg-surface">
-            <img src={photo} alt="Moncef MALLEM" className="size-full object-cover" />
-          </div>
+        <div aria-hidden className="pf-ring mb-6 inline-grid size-[72px] place-items-center rounded-[20px] p-[2.5px]">
+          <div className="grid size-full place-items-center rounded-[18px] bg-surface text-[22px] font-semibold tracking-[-0.03em] text-ink">MM</div>
         </div>
 
         <h1 className="text-[40px] leading-none font-semibold tracking-[-0.03em] text-ink sm:text-[56px]">Moncef MALLEM</h1>
@@ -90,6 +116,27 @@ export function Accueil() {
           </button>
         ))}
       </section>
+
+      {/* Accès direct aux parties que le jury consulte en premier */}
+      <nav aria-label="Accès rapide" className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {raccourcis.map(({ onglet, icon: Icon, titre, detail }) => (
+          <button
+            key={onglet}
+            type="button"
+            onClick={() => ouvrir(onglet)}
+            className="group flex items-center gap-3 rounded-[12px] border border-line bg-surface/80 p-3 text-left backdrop-blur-sm transition-[border-color,box-shadow,background-color] duration-200 hover:border-brand-line hover:bg-surface hover:shadow-card"
+          >
+            <span className="grid size-8 shrink-0 place-items-center rounded-[8px] border border-line bg-surface-2 text-ink-3 transition-colors group-hover:text-brand-ink">
+              <Icon size={16} />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-[13.5px] leading-snug font-semibold text-ink">{titre}</span>
+              <span className="block text-[12.5px] leading-snug text-ink-3 tabular-nums">{detail}</span>
+            </span>
+            <ArrowRight size={15} className="hidden shrink-0 text-ink-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-brand-ink sm:block" />
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }

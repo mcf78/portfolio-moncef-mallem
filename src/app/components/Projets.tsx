@@ -1,8 +1,7 @@
 import { Github, FileText, Download } from 'lucide-react';
 import { btn, Eyebrow, PageHeader, TechChip } from './kit';
 
-export function Projets() {
-  const projets = [
+export const projets = [
     {
       titre: 'Projet E6 - Application mobile ecommerce',
       image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop',
@@ -41,6 +40,7 @@ export function Projets() {
     },
   ];
 
+export function Projets() {
   return (
     <div>
       <PageHeader

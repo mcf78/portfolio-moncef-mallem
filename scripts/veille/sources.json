@@ -1,0 +1,96 @@
+{
+  "domaines": {
+    "ia": {
+      "nom": "Sécurisation de l'IA",
+      "depuis": "2023-01-01",
+      "inclure": [
+        ["prompt[ -]?injection", "i"],
+        ["injection de prompt", "i"],
+        ["jailbreak", "i"],
+        ["adversari", "i"],
+        ["\\bLLMs?\\b", "i"],
+        ["large language model", "i"],
+        ["modèles? de langage", "i"],
+        ["\\bGPT", ""],
+        ["ChatGPT|Copilot|Claude|Gemini|OpenAI|Anthropic|Mistral AI", "i"],
+        ["\\bAI\\b", ""],
+        ["\\bIA\\b", ""],
+        ["intelligence artificielle|artificial intelligence|machine learning", "i"],
+        ["deep ?fakes?|hypertrucage", "i"],
+        ["data poisoning|model poisoning|empoisonnement", "i"],
+        ["AI agents?|agentic|agentique|\\bMCP\\b|model context protocol", "i"],
+        ["AI Act|règlement (européen )?sur l'IA", "i"]
+      ],
+      "exclure": [
+        ["webinar|webinaire|sponsored|partenaire", "i"],
+        ["CSAM|child sexual|pédocriminel|pédopornograph|\\bporn|nudif|\\bnude|NSFW|sexual|sexuel", "i"],
+        ["(PS[3-5]|PlayStation|Xbox|Nintendo|iPhone|iPad|iOS|console|Kindle)[^.]*jailbreak|jailbreak[^.]*(PS[3-5]|PlayStation|Xbox|Nintendo|iPhone|iPad|iOS|console|Kindle)|0day jailbreak|Tachy0n|checkm8|unc0ver|palera1n|Cydia", "i"]
+      ],
+      "exigerPourHackerNews": [
+        ["secur|sécur|attack|attaque|exploit|vulnerab|vulnérab|jailbreak|injection|poison|leak|fuite|exfiltrat|malware|phish|hack|piratage|backdoor|adversari|red[- ]team|deep ?fake|\\bCVE|breach|threat|menace|privacy|abuse|scam|fraud|steal|stole|hijack|bypass|guardrail|safety", "i"]
+      ],
+      "hackerNews": {
+        "requetes": ["prompt injection", "jailbreak", "LLM security", "AI security", "adversarial attack", "data poisoning", "AI agent security", "MCP vulnerability", "deepfake"],
+        "pointsHistorique": 40,
+        "parTrimestre": 10,
+        "pointsQuotidien": 30,
+        "parJour": 3
+      }
+    },
+    "blockchain": {
+      "nom": "Blockchain, IOTA & NFT",
+      "depuis": "2025-01-01",
+      "inclure": [
+        ["\\bIOTA\\b", "i"],
+        ["\\bNFTs?\\b", "i"],
+        ["blockchain|chaîne de blocs", "i"],
+        ["Ethereum|Pectra|Fusaka", "i"],
+        ["smart contracts?|contrats? intelligents?", "i"],
+        ["\\bDeFi\\b|stablecoins?|\\bMiCA\\b|\\bWeb3\\b|tokeni[sz]ation|OpenSea", "i"],
+        ["\\bcryptos?\\b|crypto-?(actifs?|assets?|monnaies?|currenc)|bitcoin|wallets?|portefeuilles?|Ledger|Trezor", "i"],
+        ["GENIUS Act", "i"]
+      ],
+      "exclure": [
+        ["price|prix|cours d|analyse technique|prediction|prévision|\\bETFs?\\b|rally|hausse|baisse|bullish|bearish|market cap|capitalisation|whale|baleine|airdrop|giveaway|sponsored|casino|\\bbet(s|ting)?\\b|\\bpari|dividend|dividende|treasury|trésorerie|holdings|\\bstocks?\\b|\\bIPO\\b|raises \\$|levée de fonds|funding", "i"],
+        ["holders|traders?\\b|trading|rendement|\\binvest(ors?|ing|ment|issement|isseurs?)?\\b|\\brich\\b|millionaire|fellowship|cohort|recap|devcon|devconnect|allocation update|\\bgrants?\\b", "i"],
+        ["CSAM|child sexual|pédocriminel|\\bporn|\\bnude|\\bAMA\\b|join us", "i"],
+        ["net loss|net income|impairment|earnings|revenue|chiffre d'affaires|résultats financiers|bénéfice|perte nette|^avis |\\breview\\b|que vaut|meilleure?s? (plateforme|application|exchange|wallet)|comparatif|code promo|parrainage|comment acheter|how to buy|acquired|acquires|acquisition|rachète|racheté", "i"],
+        ["jumps?\\b|surges?\\b|soars?\\b|plunges?\\b|slumps?\\b|tumbles?\\b|outpaces?\\b|rebounds?\\b|interest[- ]rates?|taux d'intérêt|\\bCIO\\b|analysts?\\b|analystes?\\b|bitcoin production|hashrate|hashprice|mining (output|production)", "i"]
+      ],
+      "inclureActualite": [
+        ["hack|exploit|faille|vuln[ée]rab|stolen|vol[ée]e?s?\\b|drain|pirat|attaque|attack|scam|arnaque|escroc|phishing|backdoor|malware|s[ée]cur|wallet|portefeuille|Ledger|Trezor|upgrade|mise à jour|hard fork|protocol|smart contract|contrats? intelligents?|\\bMiCA\\b|\\bSEC\\b|\\bAMF\\b|r[ée]gul|r[ée]glement|\\blaw\\b|\\bloi\\b|GENIUS|stablecoin|CBDC|euro numérique|digital euro|\\bIOTA\\b|\\bNFTs?\\b|tokeni[sz]|quantum|quantique|layer[- ]?2|rollup|\\bzk|bridge|Pectra|Fusaka|Glamsterdam|AI agents?|agents? (IA|d'IA)", "i"]
+      ],
+      "hackerNews": {
+        "requetes": ["IOTA", "NFT", "blockchain", "Ethereum upgrade", "stablecoin", "DeFi hack", "crypto hack", "MiCA"],
+        "pointsHistorique": 25,
+        "parTrimestre": 8,
+        "pointsQuotidien": 20,
+        "parJour": 2
+      }
+    }
+  },
+  "sources": [
+    { "domaine": "ia", "nom": "Simon Willison — prompt injection", "flux": "https://simonwillison.net/tags/prompt-injection.atom", "site": "https://simonwillison.net/tags/prompt-injection/", "tout": true },
+    { "domaine": "ia", "nom": "Embrace The Red", "flux": "https://embracethered.com/blog/index.xml", "site": "https://embracethered.com/blog/" },
+    { "domaine": "ia", "nom": "OWASP GenAI Security Project", "flux": "https://genai.owasp.org/feed/", "site": "https://genai.owasp.org/", "tout": true },
+    { "domaine": "ia", "nom": "Google Security Blog", "flux": "https://security.googleblog.com/feeds/posts/default", "site": "https://security.googleblog.com/" },
+    {
+      "domaine": "ia", "nom": "arXiv — sécurité (cs.CR)", "flux": "https://rss.arxiv.org/rss/cs.CR", "site": "https://arxiv.org/list/cs.CR/recent", "maxParPassage": 1,
+      "inclure": [["prompt[ -]?injection|jailbreak|adversari|\\bLLMs?\\b|language models?|agentic|AI agents?|poison|backdoor", "i"]]
+    },
+    { "domaine": "ia", "nom": "The Hacker News", "flux": "https://feeds.feedburner.com/TheHackersNews", "site": "https://thehackernews.com/", "maxParPassage": 2 },
+    { "domaine": "ia", "nom": "CERT-FR (ANSSI)", "flux": "https://www.cert.ssi.gouv.fr/feed/", "site": "https://www.cert.ssi.gouv.fr/", "maxParPassage": 2 },
+    { "domaine": "ia", "nom": "Le Monde Informatique — Sécurité", "flux": "https://www.lemondeinformatique.fr/flux-rss/thematique/securite/rss.xml", "site": "https://www.lemondeinformatique.fr/securite/", "maxParPassage": 2 },
+    { "domaine": "blockchain", "nom": "IOTA Foundation", "flux": "https://blog.iota.org/rss/", "site": "https://blog.iota.org/", "tout": true },
+    {
+      "domaine": "blockchain", "nom": "Ethereum Foundation", "flux": "https://blog.ethereum.org/feed.xml", "site": "https://blog.ethereum.org/",
+      "inclure": [["upgrade|mainnet|hard fork|Pectra|Fusaka|Glamsterdam|Hegota|security|sécurité|zkEVM|privacy|protocol|roadmap|scaling|blobs?\\b|bug bounty|incident", "i"]]
+    },
+    { "domaine": "blockchain", "nom": "Cointelegraph — NFT", "flux": "https://cointelegraph.com/rss/tag/nft", "site": "https://cointelegraph.com/tags/nft", "maxParPassage": 3 },
+    { "domaine": "blockchain", "nom": "Rekt News (piratages DeFi)", "flux": "https://rekt.news/rss/feed.xml", "site": "https://rekt.news/", "tout": true },
+    { "domaine": "blockchain", "nom": "CoinDesk", "flux": "https://www.coindesk.com/arc/outboundfeeds/rss/", "site": "https://www.coindesk.com/", "maxParPassage": 2, "actualite": true },
+    { "domaine": "blockchain", "nom": "The Block", "flux": "https://www.theblock.co/rss.xml", "site": "https://www.theblock.co/", "maxParPassage": 2, "actualite": true },
+    { "domaine": "blockchain", "nom": "Journal du Coin", "flux": "https://journalducoin.com/feed/", "site": "https://journalducoin.com/", "maxParPassage": 2, "actualite": true },
+    { "domaine": "blockchain", "nom": "Cryptoast", "flux": "https://cryptoast.fr/feed/", "site": "https://cryptoast.fr/", "maxParPassage": 2, "actualite": true }
+  ]
+}

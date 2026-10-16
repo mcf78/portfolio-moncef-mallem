@@ -18,9 +18,8 @@ import {
 } from 'lucide-react';
 import { Card, CardTitle, Eyebrow, PageHeader, TechChip } from './kit';
 
-export function APropos() {
-  // Technologies organisées par catégorie avec logos
-  const technologiesParCategorie = {
+// Technologies organisées par catégorie avec logos
+export const technologiesParCategorie = {
     'Langages de programmation & scripts': [
       { nom: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
       { nom: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
@@ -79,6 +78,7 @@ export function APropos() {
     ],
   };
 
+export function APropos() {
   // Une icône par catégorie pour que chaque groupe se repère d'un coup d'œil.
   const iconeParCategorie: Record<string, LucideIcon> = {
     'Langages de programmation & scripts': Code2,

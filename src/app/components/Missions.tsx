@@ -12,7 +12,7 @@ type Realisation = {
 };
 type Rubrique = { id: string; titre: string; tone: Tone; realisations: Realisation[] };
 
-const rubriques: Rubrique[] = [
+export const rubriques: Rubrique[] = [
   {
     id: 'projets-formation',
     titre: 'Projet en formation',
