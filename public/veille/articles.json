@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-17T09:23:47.301Z",
- "derniereCollecte": "2026-10-17T09:23:47.301Z",
+ "miseAJour": "2026-10-18T09:39:53.929Z",
+ "derniereCollecte": "2026-10-18T09:39:53.929Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -163,6 +163,51 @@
   }
  ],
  "articles": [
+  {
+   "id": "ca84aa01ea702bcb",
+   "domaine": "blockchain",
+   "titre": "Vague de cyberattaques en France le 17 octobre : 9 millions de personnes concernées",
+   "url": "https://journalducoin.com/technologies/vague-cyberattaques-france-17-octobre-2026/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-18T08:00:00.000Z"
+  },
+  {
+   "id": "e809c95787b8c55d",
+   "domaine": "blockchain",
+   "titre": "Circle defends USDC economics as stablecoin rivals court its partners with bigger cut",
+   "url": "https://www.coindesk.com/business/2026/10/17/circle-defends-usdc-economics-as-stablecoin-rivals-court-its-partners-with-bigger-cut",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-18T01:06:35.000Z"
+  },
+  {
+   "id": "f6c4085a89989e7e",
+   "domaine": "blockchain",
+   "titre": "Turkey confirms Hex founder Richard Heart’s arrest, says police seized $7.15 million and six cold wallets",
+   "url": "https://www.theblock.co/news/regulation/2026-10-17-turkey-confirms-hex-founder-richard-hearts-arrest-says-police-seized-7-15-million-and-six-cold-wallets-418852",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-17T18:14:43.000Z"
+  },
+  {
+   "id": "36abaeca3a476946",
+   "domaine": "blockchain",
+   "titre": "Goldman, Wells Fargo, Morgan Stanley see tokenization as a growth play, not a threat",
+   "url": "https://www.coindesk.com/business/2026/10/17/goldman-wells-fargo-morgan-stanley-see-tokenization-as-a-growth-play-not-a-threat",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-17T17:00:00.000Z"
+  },
+  {
+   "id": "018bf99cf163f42c",
+   "domaine": "blockchain",
+   "titre": "Agents IA : 138 millions de paiements x402 sur Base en un an selon Chainalysis",
+   "url": "https://journalducoin.com/economie/agents-ia-138-millions-paiements-x402-base-chainalysis/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-17T12:00:00.000Z"
+  },
   {
    "id": "7ecb988af16cd270",
    "domaine": "blockchain",
