@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-18T09:39:53.929Z",
- "derniereCollecte": "2026-10-18T09:39:53.929Z",
+ "miseAJour": "2026-10-19T10:48:28.251Z",
+ "derniereCollecte": "2026-10-19T10:48:28.251Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -71,7 +71,7 @@
    "site": "https://arxiv.org/list/cs.CR/recent",
    "flux": "https://rss.arxiv.org/rss/cs.CR",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "The Hacker News",
@@ -163,6 +163,87 @@
   }
  ],
  "articles": [
+  {
+   "id": "3478f549bee753be",
+   "domaine": "blockchain",
+   "titre": "Revolut secures Gibraltar crypto licence to support international expansion plans",
+   "url": "https://www.theblock.co/news/regulation/2026-10-19-revolut-secures-gibraltar-crypto-licence-to-support-international-expansion-plans-418889",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-19T10:42:07.000Z"
+  },
+  {
+   "id": "6e0cb591373aa6a1",
+   "domaine": "blockchain",
+   "titre": "Crypto vault deposits top $10 billion as lending risks draw regulatory scrutiny",
+   "url": "https://www.coindesk.com/markets/2026/10/19/crypto-vault-deposits-top-usd10-billion-as-lending-risks-draw-regulatory-scrutiny",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-19T09:32:38.000Z"
+  },
+  {
+   "id": "4ba604603ede69f5",
+   "domaine": "blockchain",
+   "titre": "La BCE prépare un pilote de l’euro numérique pour 2027",
+   "url": "https://cryptoast.fr/bce-prepare-pilote-euro-numerique-pour-2027/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-19T08:31:34.000Z"
+  },
+  {
+   "id": "ac8392700291a412",
+   "domaine": "blockchain",
+   "titre": "Menace quantique, fonds volés : Zcash au cœur des enjeux de confidentialité",
+   "url": "https://journalducoin.com/actualites/menace-quantique-fonds-voles-zcash-confidentialite/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-19T07:15:00.000Z"
+  },
+  {
+   "id": "c13b5823e7170cc4",
+   "domaine": "blockchain",
+   "titre": "Actions tokenisées : 9 entreprises opposent leur veto à OKX-ICE, le Nasdaq se retire",
+   "url": "https://journalducoin.com/exchanges/actions-tokenisees-okx-ice-veto-entreprises-nasdaq/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-19T06:15:00.000Z"
+  },
+  {
+   "id": "8b3cdc4ff43dee5d",
+   "domaine": "ia",
+   "titre": "OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys",
+   "url": "https://thehackernews.com/2026/10/opencode-console-breach-may-have.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-19T06:07:08.000Z"
+  },
+  {
+   "id": "1e68396e62405215",
+   "domaine": "blockchain",
+   "titre": "Zcash developers plan a fix to keep ZEC swaps private from future quantum computers",
+   "url": "https://www.coindesk.com/tech/2026/10/19/zcash-developers-plan-a-fix-to-keep-zec-swaps-private-from-future-quantum-computers",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-19T05:23:02.000Z"
+  },
+  {
+   "id": "61811687be3563b1",
+   "domaine": "ia",
+   "titre": "Recoverability-Controlled Safety Miscalibration in Large Language Models",
+   "url": "https://arxiv.org/abs/2610.22425",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-19T04:00:00.000Z"
+  },
+  {
+   "id": "d5c1c390a0fe9888",
+   "domaine": "blockchain",
+   "titre": "Cysic suspends bridge after attacker mints tokens and moves $727,000 to Ethereum",
+   "url": "https://www.theblock.co/news/defi/2026-10-18-cysic-suspends-bridge-after-attacker-mints-tokens-and-moves-727000-to-ethereum-418863",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-18T16:07:43.000Z"
+  },
   {
    "id": "ca84aa01ea702bcb",
    "domaine": "blockchain",
