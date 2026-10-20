@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-19T10:48:28.251Z",
- "derniereCollecte": "2026-10-19T10:48:28.251Z",
+ "miseAJour": "2026-10-20T10:06:16.725Z",
+ "derniereCollecte": "2026-10-20T10:06:16.725Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -163,6 +163,105 @@
   }
  ],
  "articles": [
+  {
+   "id": "032cc95f57d68c1c",
+   "domaine": "ia",
+   "titre": "Anthropic soumet en privé un projet de loi fédéral sur l'IA",
+   "url": "https://www.lemondeinformatique.fr/actualites/lire-anthropic-soumet-en-prive-un-projet-de-loi-federal-sur-l-ia-100858.html",
+   "source": "lemondeinformatique.fr",
+   "origine": "Le Monde Informatique — Sécurité",
+   "date": "2026-10-20T08:27:05.000Z"
+  },
+  {
+   "id": "a035ece3ff35630a",
+   "domaine": "blockchain",
+   "titre": "Stablecoins : Mastercard mise sur la sécurité pour accompagner les banques",
+   "url": "https://journalducoin.com/economie/stablecoins-mastercard-mise-securite-banques/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-20T08:07:39.000Z"
+  },
+  {
+   "id": "32c3346cdd5854ca",
+   "domaine": "ia",
+   "titre": "ServiceNow lance AI Passport pour gouverner les agents IA",
+   "url": "https://www.lemondeinformatique.fr/actualites/lire-servicenow-lance-ai-passport-pour-gouverner-les-agents-ia-100857.html",
+   "source": "lemondeinformatique.fr",
+   "origine": "Le Monde Informatique — Sécurité",
+   "date": "2026-10-20T08:01:35.000Z"
+  },
+  {
+   "id": "4e6e65a483f86dce",
+   "domaine": "blockchain",
+   "titre": "BlackRock souhaite accélérer la tokenisation de la finance traditionnelle",
+   "url": "https://cryptoast.fr/blackrock-souhaite-accelerer-tokenisation-finance-traditionnelle/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-20T08:00:11.000Z"
+  },
+  {
+   "id": "a7609c9036e1f088",
+   "domaine": "blockchain",
+   "titre": "Paiements, finance, IA : la tokenisation du monde est en marche, selon cet expert",
+   "url": "https://cryptoast.fr/paiements-finance-ia-tokenisation-monde-en-marche-selon-expert/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-20T06:00:30.000Z"
+  },
+  {
+   "id": "4126e3287aad3717",
+   "domaine": "ia",
+   "titre": "Ex-OpenAI Engineer Detained in Spy Device Case as Saudi Royal Contacts Emerge",
+   "url": "https://thehackernews.com/2026/10/ex-openai-engineer-detained-in-spy.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-20T05:53:16.000Z"
+  },
+  {
+   "id": "4de143197da122e5",
+   "domaine": "blockchain",
+   "titre": "Budget 2027 : le vote des recettes repoussé, la taxe stablecoins reste en suspens",
+   "url": "https://journalducoin.com/actualites/budget-2027-le-vote-des-recettes-repousse-la-taxe-stablecoins-reste-en-suspens/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-20T05:08:53.000Z"
+  },
+  {
+   "id": "f978cb7c3fee9779",
+   "domaine": "ia",
+   "titre": "Under the Skin: Backdoor Infection in Multimodal Large Language Models",
+   "url": "https://arxiv.org/abs/2610.24058",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-20T04:00:00.000Z"
+  },
+  {
+   "id": "428f9259c8d184b0",
+   "domaine": "blockchain",
+   "titre": "Mastercard unveils Stablecoin Security tool to screen payments for fraud and sanctions risks",
+   "url": "https://www.theblock.co/news/business/2026-10-19-mastercard-unveils-stablecoin-security-tool-to-screen-payments-for-fraud-and-sanctions-risks-420658",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-19T16:00:00.000Z"
+  },
+  {
+   "id": "b9f6f8ca5857f5a9",
+   "domaine": "blockchain",
+   "titre": "Zerohash rolls out a new tool to move crypto without copying wallet addresses",
+   "url": "https://www.coindesk.com/business/2026/10/19/zerohash-rolls-out-a-new-tool-to-move-crypto-without-copying-wallet-addresses",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-19T14:58:40.000Z"
+  },
+  {
+   "id": "7cd11aa712c917aa",
+   "domaine": "ia",
+   "titre": "⚡ Weekly Recap: 98 Zero-Days, Rogue AI Agents, $100M Crypto Theft, 700 Supermarkets Hit and More",
+   "url": "https://thehackernews.com/2026/10/weekly-recap-98-zero-days-rogue-ai.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-19T14:14:07.000Z"
+  },
   {
    "id": "3478f549bee753be",
    "domaine": "blockchain",
@@ -837,6 +936,15 @@
    "source": "gwern.net",
    "origine": "Hacker News",
    "date": "2026-07-14T12:50:29.000Z"
+  },
+  {
+   "id": "a72dd88809a4f828",
+   "domaine": "ia",
+   "titre": "GenAI and Agentic AI Exploit Roundup Q2 2026",
+   "url": "https://genai.owasp.org/2026/07/08/genai-and-agentic-ai-exploit-roundup-q2-2026/?utm_source=rss&utm_medium=rss&utm_campaign=genai-and-agentic-ai-exploit-roundup-q2-2026",
+   "source": "genai.owasp.org",
+   "origine": "OWASP GenAI Security Project",
+   "date": "2026-07-09T04:38:14.000Z"
   },
   {
    "id": "9b054cab6b157b20",
