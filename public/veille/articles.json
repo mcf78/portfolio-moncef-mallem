@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-20T10:06:16.725Z",
- "derniereCollecte": "2026-10-20T10:06:16.725Z",
+ "miseAJour": "2026-10-21T10:11:54.153Z",
+ "derniereCollecte": "2026-10-21T10:11:54.153Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -163,6 +163,114 @@
   }
  ],
  "articles": [
+  {
+   "id": "4e7bef1d982282ca",
+   "domaine": "blockchain",
+   "titre": "Insécurité, agressions crypto, services publics dégradés : les Français vont-ils rejeter l’impôt ?",
+   "url": "https://cryptoast.fr/consentement-impot-francais-agressions-crypto-insecurite/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-21T09:31:37.000Z"
+  },
+  {
+   "id": "86da41ea3f6fcd3e",
+   "domaine": "blockchain",
+   "titre": "Zcash developers confirm November date for upgrade that triples payment speed",
+   "url": "https://www.coindesk.com/markets/2026/10/21/zcash-developers-confirm-november-date-for-upgrade-that-triples-payment-speed",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-21T08:10:12.000Z"
+  },
+  {
+   "id": "83fb712fa2f871e4",
+   "domaine": "blockchain",
+   "titre": "PHP : 2 failles critiques, un correctif et quinze minutes avant les premières attaques",
+   "url": "https://journalducoin.com/technologies/php-failles-critiques-php2shell-correctif-21-octobre/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-21T07:15:00.000Z"
+  },
+  {
+   "id": "f5466e88351b412d",
+   "domaine": "blockchain",
+   "titre": "Faille HTTPS : 8 certificats eMudhra compromis, vos bots crypto encore exposés",
+   "url": "https://journalducoin.com/technologies/certificats-https-emudhra-cles-compromises-navigateurs/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-21T06:35:00.000Z"
+  },
+  {
+   "id": "2a36f1a406914d9f",
+   "domaine": "blockchain",
+   "titre": "Des poids lourds de Wall Street s'opposent à la cotation de leurs actions tokenisées sur OKXICE",
+   "url": "https://cryptoast.fr/poids-lourds-wall-street-opposent-cotation-actions-tokenisees-okxice/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-21T05:30:21.000Z"
+  },
+  {
+   "id": "9aa006644164814e",
+   "domaine": "ia",
+   "titre": "How Intervention History Changes AI Agent Sabotage on Subsequent Tasks",
+   "url": "https://arxiv.org/abs/2610.26935",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-21T04:00:00.000Z"
+  },
+  {
+   "id": "a73847b966519aec",
+   "domaine": "blockchain",
+   "titre": "MoonPay, Upbit parent Dunamu explore collaboration on stablecoin payments, GIWA expansion",
+   "url": "https://www.theblock.co/news/business/2026-10-20-moonpay-upbit-dunamu-421476",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-21T02:30:08.000Z"
+  },
+  {
+   "id": "37b9bbaac4b5833b",
+   "domaine": "ia",
+   "titre": "Deepfake of Washington County, Oregon, Candidate Goes Viral Nationwide",
+   "url": "https://www.oregonjournalismproject.org/deepfake-of-washington-county-oregon-candidate-goes-viral-nationwide",
+   "source": "oregonjournalismproject.org",
+   "origine": "Hacker News",
+   "date": "2026-10-20T20:46:55.000Z"
+  },
+  {
+   "id": "ca22936f62651208",
+   "domaine": "blockchain",
+   "titre": "Crypto firms, Wall Street push SEC to revise Regulation Crypto Assets as comments close",
+   "url": "https://www.theblock.co/news/regulation/2026-10-20-sec-regulation-crypto-assets-comment-period-hyperliquid-sifma-aima-421444",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-20T19:19:54.000Z"
+  },
+  {
+   "id": "d9d9dee936ee5f94",
+   "domaine": "ia",
+   "titre": "Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites",
+   "url": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-20T14:07:17.000Z"
+  },
+  {
+   "id": "07bb796c594e0cdf",
+   "domaine": "ia",
+   "titre": "WhatsApp Hid Instructions in Help Pages Telling Its AI Chatbot Not to Recommend Privacy Regulators",
+   "url": "https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-20T11:41:06.000Z"
+  },
+  {
+   "id": "88d7538037affa42",
+   "domaine": "blockchain",
+   "titre": "France's parliament approves vote to hit stablecoin trades with 31% capital gains tax",
+   "url": "https://www.coindesk.com/policy/2026/10/20/france-s-parliament-approves-vote-to-hit-crypto-to-stablecoin-trades-with-31-levy",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-20T11:25:00.000Z"
+  },
   {
    "id": "032cc95f57d68c1c",
    "domaine": "ia",
