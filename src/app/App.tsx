@@ -135,7 +135,10 @@ export default function App() {
   };
 
   const iconButton =
-    'grid size-8 place-items-center rounded-[8px] text-ink-3 transition-colors duration-150 hover:bg-hover hover:text-ink';
+    'grid size-9 place-items-center rounded-[8px] text-ink-3 transition-colors duration-150 hover:bg-hover hover:text-ink';
+
+  const socialButton =
+    'inline-flex h-9 items-center gap-1.5 rounded-[8px] border border-line bg-surface px-3 text-[12.5px] font-medium text-ink transition-colors duration-150 hover:border-brand-line hover:bg-surface-2';
 
   const socialLinks = (
     <>
@@ -144,18 +147,20 @@ export default function App() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub de Moncef MALLEM"
-        className={iconButton}
+        className={socialButton}
       >
-        <Github size={17} />
+        <Github size={15} />
+        <span>GitHub</span>
       </a>
       <a
         href="https://www.linkedin.com/in/moncef-mallem/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn de Moncef MALLEM"
-        className={iconButton}
+        className={socialButton}
       >
-        <Linkedin size={17} />
+        <Linkedin size={15} />
+        <span>LinkedIn</span>
       </a>
     </>
   );
@@ -196,31 +201,31 @@ export default function App() {
           onClick={() => selectTab(tab.id)}
           aria-current={active ? 'page' : undefined}
           className={cx(
-            'group flex w-full items-center gap-2.5 rounded-[8px] px-2.5 text-left font-medium transition-[background-color,color,box-shadow] duration-150 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]',
-            variant === 'rail' ? 'h-8 text-[13.5px]' : 'h-10 text-[15px]',
+            'group flex w-full items-center gap-2.5 rounded-[8px] px-3 text-left font-medium transition-[background-color,color,box-shadow] duration-150 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]',
+            variant === 'rail' ? 'h-10 text-[14px]' : 'h-11 text-[15px]',
             active ? 'bg-surface text-ink shadow-tab' : 'text-ink-2 hover:bg-hover hover:text-ink',
           )}
         >
-          <Icon size={16} className={cx('shrink-0 transition-colors', active ? 'text-brand-ink' : 'text-ink-4 group-hover:text-ink-3')} />
+          <Icon size={18} className={cx('shrink-0 transition-colors', active ? 'text-brand-ink' : 'text-ink-4 group-hover:text-ink-3')} />
           {tab.label}
         </button>
       );
     });
 
   return (
-    <div className="min-h-dvh bg-canvas text-ink lg:grid lg:grid-cols-[244px_minmax(0,1fr)]">
+    <div className="min-h-dvh bg-canvas text-ink lg:grid lg:grid-cols-[260px_minmax(0,1fr)]">
       {/* Barre latérale (desktop) */}
       <aside className="sticky top-0 hidden h-dvh flex-col border-r border-line bg-rail px-3 pt-4 pb-3 lg:flex">
         <div className="px-1.5">{brand}</div>
-        <nav aria-label="Navigation principale" className="mt-6 flex flex-col gap-0.5">
+        <nav aria-label="Navigation principale" className="mt-6 flex flex-col gap-1">
           {navItems('rail')}
         </nav>
         <div className="mt-auto border-t border-line px-1.5 pt-3">
-          <div className="flex items-center gap-0.5">
+          <div className="flex flex-wrap items-center gap-1.5">
             {socialLinks}
             <span className="ml-auto">{themeButton}</span>
           </div>
-          <p className="mt-2 text-[11.5px] leading-snug text-ink-3">© {annee} Portfolio BTS SIO - Tous droits réservés</p>
+          <p className="mt-2.5 text-[11.5px] leading-snug text-ink-3">© {annee} Portfolio BTS SIO - Tous droits réservés</p>
         </div>
       </aside>
 
@@ -244,8 +249,8 @@ export default function App() {
         </div>
         {mobileMenuOpen && (
           <nav aria-label="Navigation principale" className="pf-enter border-t border-line px-3 pt-2 pb-3 sm:px-5">
-            <div className="flex flex-col gap-0.5">{navItems('sheet')}</div>
-            <div className="mt-2 flex items-center gap-0.5 border-t border-line px-1 pt-2">{socialLinks}</div>
+            <div className="flex flex-col gap-1">{navItems('sheet')}</div>
+            <div className="mt-2 flex flex-wrap items-center gap-1.5 border-t border-line px-1 pt-2">{socialLinks}</div>
           </nav>
         )}
       </header>
@@ -254,8 +259,9 @@ export default function App() {
         <div key={activeTab} className="pf-enter mx-auto w-full max-w-[1120px] 2xl:max-w-[1240px]">
           {renderContent()}
         </div>
-        <footer className="mx-auto mt-10 max-w-[1120px] border-t border-line pt-5 text-center text-[12px] text-ink-3 lg:hidden">
-          © {annee} Portfolio BTS SIO - Tous droits réservés
+        <footer className="mx-auto mt-10 max-w-[1120px] border-t border-line pt-5 lg:hidden">
+          <div className="flex items-center justify-center gap-1.5">{socialLinks}</div>
+          <p className="mt-3 text-center text-[12px] text-ink-3">© {annee} Portfolio BTS SIO - Tous droits réservés</p>
         </footer>
       </main>
     </div>

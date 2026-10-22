@@ -2,16 +2,14 @@ import type { ReactNode } from 'react';
 import {
   Briefcase,
   Building2,
-  Copyright,
-  FileText,
-  Handshake,
   Mail,
   MapPin,
+  MessageCircle,
+  Package,
   Phone,
-  Receipt,
-  Scale,
-  ShieldCheck,
-  Users,
+  ShoppingBag,
+  Sparkles,
+  Store,
   type LucideIcon,
 } from 'lucide-react';
 import { Card, CardTitle, cx, PageHeader } from './kit';
@@ -26,17 +24,15 @@ function Info({ label, value, muted }: { label: string; value: ReactNode; muted?
   );
 }
 
-function LegalItem({ icon: Icon, title, text }: { icon: LucideIcon; title: string; text: string }) {
+function ActiviteItem({ icon: Icon, titre, texte }: { icon: LucideIcon; titre: string; texte: string }) {
   return (
-    <li className="rounded-[8px] border border-line bg-surface-2 p-2.5">
-      <div className="flex items-start gap-2">
-        <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-[6px] bg-brand-soft text-brand-ink">
-          <Icon size={13} />
-        </span>
-        <div className="min-w-0">
-          <p className="text-[12.5px] font-semibold text-ink">{title}</p>
-          <p className="mt-0.5 text-[12px] leading-snug text-ink-3">{text}</p>
-        </div>
+    <li className="flex items-start gap-2.5 rounded-[8px] border border-line bg-surface-2 p-2.5">
+      <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-[6px] bg-brand-soft text-brand-ink">
+        <Icon size={13} />
+      </span>
+      <div className="min-w-0">
+        <p className="text-[12.5px] font-semibold text-ink">{titre}</p>
+        <p className="mt-0.5 text-[12px] leading-snug text-ink-3">{texte}</p>
       </div>
     </li>
   );
@@ -86,131 +82,95 @@ export function EntrepriseEcole() {
         </div>
       </Card>
 
-      <div className="grid gap-4 lg:grid-cols-2 lg:items-start">
-        <Card className="lg:col-start-2 lg:row-start-1">
-          <CardTitle icon={<Building2 size={14} />}>Identité & organisation</CardTitle>
+      <Card className="mb-4">
+        <CardTitle icon={<Store size={14} />}>Ce que fait l'entreprise</CardTitle>
+        <ul className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
+          <ActiviteItem
+            icon={ShoppingBag}
+            titre="Vente en ligne"
+            texte="Boutique PrestaShop en production pour le commerce de librairie."
+          />
+          <ActiviteItem
+            icon={Package}
+            titre="Préparation & expédition"
+            texte="Le dépôt logistique prépare et expédie les commandes."
+          />
+          <ActiviteItem
+            icon={MessageCircle}
+            titre="Service après-vente"
+            texte="Suivi et réponses aux demandes des clients."
+          />
+          <ActiviteItem
+            icon={Sparkles}
+            titre="Pôles internes"
+            texte="Création graphique, contenus digitaux et solutions logicielles."
+          />
+        </ul>
+      </Card>
 
-          <section aria-labelledby="identite-entreprise">
-            <h3 id="identite-entreprise" className="text-[12px] font-semibold tracking-[0.05em] text-ink-3 uppercase">
-              Identité de l'entreprise
-            </h3>
-            <dl className="mt-1 divide-y divide-line">
-              <Info label="Raison sociale" value="Librairie Sana" />
-              <Info label="Forme juridique" value="SARL — société à responsabilité limitée" />
-              <Info label="Activité" value="Commerce de détail / librairie" />
-              <Info label="Siège social" value="116 rue Jean-Pierre Timbaud, 75011 Paris" />
-              <Info label="SIREN" value="438 767 014" />
-              <Info
-                label="Contact"
-                value={
-                  <span>
-                    01 48 05 29 28
-                    <br />
-                    sav@librairie-sana.com
-                  </span>
-                }
-              />
-              <Info label="Site e-commerce" value="Boutique PrestaShop en production" />
-              <Info label="Chiffre d'affaires" value="≈ 2,2 M €" />
-            </dl>
-            <p className="mt-2 text-[11px] leading-snug text-ink-4">
-              Chiffre d'affaires estimé à partir de données récentes — source Infonet.
-            </p>
-          </section>
-
-          <section aria-labelledby="organisation-entreprise" className="mt-4 border-t border-line pt-4">
-            <h3
-              id="organisation-entreprise"
-              className="flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.05em] text-ink-3 uppercase"
-            >
-              <Users size={14} className="text-brand-ink" />
-              Organisation de l'entreprise
-            </h3>
-            <ul className="mt-2 space-y-2.5">
-              {[
-                ['Site e-commerce', 'Boutique PrestaShop en production.'],
-                ['Dépôt logistique', 'Préparation et expédition des commandes.'],
-                ['Service après-vente', 'Suivi et réponses aux demandes clients.'],
-                ['Pôles internes', 'Création graphique, contenus digitaux et solutions logicielles.'],
-              ].map(([titre, texte]) => (
-                <li key={titre} className="flex gap-2.5">
-                  <span aria-hidden className="mt-[7px] size-1.5 shrink-0 rounded-full bg-brand" />
-                  <div>
-                    <p className="text-[13px] font-semibold text-ink">{titre}</p>
-                    <p className="mt-0.5 text-[12.5px] leading-snug text-ink-3">{texte}</p>
-                  </div>
-                </li>
+      <div className="grid gap-4 lg:grid-cols-2">
+        <Card className="flex h-full flex-col">
+          <CardTitle icon={<Briefcase size={14} />}>Mon poste</CardTitle>
+          <p className="text-[15px] leading-snug font-semibold text-ink">
+            Développeur d'Application Mobile — Architecture Client-Serveur PrestaShop
+          </p>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            <span className="rounded-full border border-brand-line bg-brand-soft px-2 py-0.5 text-[11px] font-medium text-brand-ink">
+              Paris 11e
+            </span>
+            <span className="rounded-full border border-line bg-surface-2 px-2 py-0.5 text-[11px] font-medium text-ink-3">
+              2025 – 2027
+            </span>
+          </div>
+          <ul className="mt-3.5 space-y-2">
+            {[
+              "Développement de l'application mobile en cours.",
+              'Intégration des API REST.',
+              "Création d'outils métiers connectés au système e-commerce.",
+              "Participation aux projets d'optimisation logistique assistés par l'IA.",
+            ].map((mission) => (
+              <li key={mission} className="flex gap-2.5 text-[12.5px] leading-snug text-ink-2">
+                <span aria-hidden className="mt-[7px] size-1.5 shrink-0 rounded-full bg-brand" />
+                <span>{mission}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-auto border-t border-line pt-3">
+            <p className="text-[10.5px] font-semibold tracking-[0.06em] text-ink-4 uppercase">Environnement technique</p>
+            <div className="mt-1.5 flex flex-wrap gap-1.5">
+              {['Flutter', 'Dart', 'PrestaShop', 'API REST', 'MySQL', 'Firebase'].map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full border border-line bg-surface-2 px-2 py-0.5 text-[11px] text-ink-2"
+                >
+                  {tech}
+                </span>
               ))}
-            </ul>
-          </section>
+            </div>
+          </div>
         </Card>
 
-        <Card className="lg:col-start-1 lg:row-start-1 lg:mt-24">
-          <CardTitle icon={<Briefcase size={14} />}>Mon poste & cadre juridique</CardTitle>
-
-          <section aria-labelledby="mon-poste">
-            <h3 id="mon-poste" className="text-[12px] font-semibold tracking-[0.05em] text-ink-3 uppercase">
-              Mon poste
-            </h3>
-            <p className="mt-1 text-[14.5px] leading-snug font-semibold text-ink">
-              Développeur d'Application Mobile — Architecture Client-Serveur PrestaShop
-            </p>
-            <ul className="mt-3 space-y-2">
-              {[
-                "Développement de l'application mobile en cours.",
-                'Intégration des API REST.',
-                "Création d'outils métiers connectés au système e-commerce.",
-                "Participation aux projets d'optimisation logistique assistés par l'IA.",
-              ].map((mission) => (
-                <li key={mission} className="flex gap-2.5 text-[12.5px] leading-snug text-ink-2">
-                  <span aria-hidden className="mt-[7px] size-1.5 shrink-0 rounded-full bg-brand" />
-                  <span>{mission}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section aria-labelledby="cadre-juridique" className="mt-4 border-t border-line pt-4">
-            <h3
-              id="cadre-juridique"
-              className="flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.05em] text-ink-3 uppercase"
-            >
-              <Scale size={14} className="text-brand-ink" />
-              Cadre juridique
-            </h3>
-            <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-              <LegalItem
-                icon={Scale}
-                title="Société"
-                text="SARL : responsabilité limitée aux apports des associés."
-              />
-              <LegalItem
-                icon={FileText}
-                title="Consommateurs"
-                text="CGV, mentions légales et droit de rétractation pour la vente en ligne."
-              />
-              <LegalItem
-                icon={ShieldCheck}
-                title="Données personnelles"
-                text="RGPD : consentement, information et droits d'accès, de rectification et de suppression."
-              />
-              <LegalItem
-                icon={Copyright}
-                title="Propriété intellectuelle"
-                text="Protection du logo, des contenus et des créations graphiques."
-              />
-              <LegalItem
-                icon={Handshake}
-                title="Contrats"
-                text="Contrats de travail, prestataires et assurance de l'entreprise."
-              />
-              <LegalItem
-                icon={Receipt}
-                title="Fiscalité"
-                text="TVA et obligations comptables liées à l'activité commerciale."
-              />
-            </ul>
-          </section>
+        <Card className="h-full">
+          <CardTitle icon={<Building2 size={14} />}>Identité de l'entreprise</CardTitle>
+          <dl className="divide-y divide-line">
+            <Info label="Raison sociale" value="Librairie Sana" />
+            <Info label="Forme juridique" value="SARL — société à responsabilité limitée" muted />
+            <Info label="Activité" value="Commerce de détail / librairie" />
+            <Info label="Siège social" value="116 rue Jean-Pierre Timbaud, 75011 Paris" />
+            <Info label="SIREN" value="438 767 014" />
+            <Info
+              label="Contact"
+              value={
+                <span>
+                  01 48 05 29 28
+                  <br />
+                  sav@librairie-sana.com
+                </span>
+              }
+            />
+            <Info label="Site e-commerce" value="Boutique PrestaShop en production" />
+            <Info label="Chiffre d'affaires" value="≈ 2,2 M €" />
+          </dl>
         </Card>
       </div>
     </div>

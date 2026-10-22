@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowUpRight, Check, FileText, Table2 } from 'lucide-react';
+import { ArrowUpRight, Download, FileText, Github, Table2 } from 'lucide-react';
 import { btn, cx, PageHeader, TabPanel, Tabs, type Tone } from './kit';
 
 type Tech = { nom: string; logo: string };
@@ -12,23 +12,6 @@ type Realisation = {
   competences: number[];
 };
 type Rubrique = { id: string; titre: string; contexte: string; tone: Tone; realisations: Realisation[] };
-
-const COMPETENCES = [
-  { code: 'C1', court: 'Patrimoine', titre: 'Gérer le patrimoine informatique' },
-  { code: 'C2', court: 'Incidents', titre: "Répondre aux incidents et aux demandes d'assistance et d'évolution" },
-  { code: 'C3', court: 'Présence en ligne', titre: "Développer la présence en ligne de l'organisation" },
-  { code: 'C4', court: 'Mode projet', titre: 'Travailler en mode projet' },
-  { code: 'C5', court: 'Service', titre: 'Mettre à disposition des utilisateurs un service informatique' },
-  { code: 'C6', court: 'Développement pro', titre: 'Organiser son développement professionnel' },
-];
-
-const slugify = (value: string) =>
-  value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-zA-Z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .toLowerCase();
 
 export const rubriques: Rubrique[] = [
   {
@@ -179,19 +162,30 @@ function CarteRealisation({ realisation }: { realisation: Realisation }) {
   const href = realisation.documentationUrl ?? '#tableau-synthese';
 
   return (
-    <article className="flex flex-col gap-3 rounded-[12px] border border-line bg-surface p-3.5 transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card sm:flex-row sm:items-center sm:justify-between">
+    <article className="flex flex-col items-center gap-3 rounded-[12px] border border-line bg-surface px-3.5 py-4 text-center transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card">
       <h3 className="min-w-0 text-[14.5px] leading-snug font-semibold tracking-[-0.006em] text-ink">
         {realisation.titre}
       </h3>
-      <a
-        href={href}
-        {...(hasDocumentation ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className={cx(btn(hasDocumentation ? 'soft' : 'ghost', 'sm'), 'shrink-0')}
-      >
-        {hasDocumentation ? <FileText size={14} /> : <Table2 size={14} />}
-        <span>{hasDocumentation ? 'Documentation' : 'Voir la synthèse'}</span>
-        {hasDocumentation ? <ArrowUpRight size={13} /> : null}
-      </a>
+      <div className="flex flex-wrap items-center justify-center gap-2">
+        <a
+          href={realisation.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cx(btn('secondary', 'sm'))}
+        >
+          <Github size={14} />
+          <span>GitHub</span>
+        </a>
+        <a
+          href={href}
+          {...(hasDocumentation ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          className={cx(btn(hasDocumentation ? 'soft' : 'ghost', 'sm'))}
+        >
+          {hasDocumentation ? <FileText size={14} /> : <Table2 size={14} />}
+          <span>{hasDocumentation ? 'Documentation' : 'Voir la synthèse'}</span>
+          {hasDocumentation ? <ArrowUpRight size={13} /> : null}
+        </a>
+      </div>
     </article>
   );
 }
@@ -214,142 +208,58 @@ export function Missions() {
             <div>
               <p className="text-[11px] font-semibold tracking-[0.06em] text-brand-ink uppercase">Tableau de synthèse E5</p>
               <h2 className="mt-0.5 text-[17px] leading-snug font-semibold tracking-[-0.012em] text-ink">
-                Compétences mobilisées par réalisation
+                Tableau officiel des réalisations
               </h2>
               <p className="mt-0.5 text-[12.5px] text-ink-3">
                 MALLEM Moncef · BTS SIO SLAM · Session 2027 · {nombreRealisations} réalisations
               </p>
             </div>
-            <p className="max-w-[34ch] text-[12px] leading-snug text-ink-3">
-              6 compétences · mobilisées selon les projets.
-            </p>
+            <div className="flex flex-col items-start gap-2 sm:items-end">
+              <p className="text-[12px] leading-snug text-ink-3">Document officiel · PDF · 2 pages</p>
+              <a
+                href="./e5/tableau-synthese-e5.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cx(btn('primary', 'sm'))}
+              >
+                <FileText size={14} />
+                <span>Ouvrir le tableau officiel</span>
+                <ArrowUpRight size={13} />
+              </a>
+            </div>
           </div>
 
-          <div className="hidden overflow-x-auto lg:block">
-            <table className="w-full min-w-[680px] border-collapse text-left">
-              <thead>
-                <tr className="border-b border-line bg-surface-2/60 text-[12px] text-ink-3">
-                  <th scope="col" className="w-[220px] px-4 py-2.5 text-[11.5px] font-semibold tracking-[0.04em] uppercase">
-                    Réalisation
-                  </th>
-                  <th scope="col" className="w-[88px] px-3 py-2.5 text-[11.5px] font-semibold tracking-[0.04em] uppercase">
-                    Contexte
-                  </th>
-                  {COMPETENCES.map((competence) => (
-                    <th
-                      key={competence.code}
-                      scope="col"
-                      title={competence.titre}
-                      className="w-[62px] px-1.5 py-2.5 text-center align-bottom"
-                    >
-                      <span className="block text-[11px] font-semibold text-brand-ink">{competence.code}</span>
-                      <span className="mt-0.5 block text-[10.5px] leading-tight font-medium text-ink-3">
-                        {competence.court}
-                      </span>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-
-              {rubriques.map((rubrique) => (
-                <tbody key={rubrique.id}>
-                  <tr className="border-b border-line bg-surface-2/40">
-                    <th
-                      colSpan={8}
-                      scope="colgroup"
-                      className="px-4 py-1.5 text-[11px] font-semibold tracking-[0.06em] text-ink-3 uppercase"
-                    >
-                      {rubrique.titre}
-                    </th>
-                  </tr>
-                  {rubrique.realisations.map((realisation) => (
-                    <tr
-                      key={realisation.titre}
-                      id={`realisation-${slugify(realisation.titre)}`}
-                      className="scroll-mt-24 border-b border-line transition-colors duration-150 last:border-0 hover:bg-surface-2/40"
-                    >
-                      <th scope="row" className="px-4 py-2.5 text-[12.5px] leading-snug font-medium text-ink">
-                        {realisation.titre}
-                      </th>
-                      <td className="px-3 py-2.5 text-[12px] text-ink-3">{rubrique.contexte}</td>
-                      {COMPETENCES.map((competence, index) => {
-                        const active = realisation.competences.includes(index);
-                        return (
-                          <td key={competence.code} className="px-1.5 py-2.5 text-center">
-                            {active ? (
-                              <span
-                                role="img"
-                                aria-label={`${competence.titre} : mobilisée`}
-                                className="mx-auto grid size-[18px] place-items-center rounded-full bg-brand text-on-brand"
-                              >
-                                <Check size={11} strokeWidth={3} />
-                              </span>
-                            ) : (
-                              <span
-                                role="img"
-                                aria-label={`${competence.titre} : non mobilisée`}
-                                className="mx-auto block h-px w-3 bg-line-strong/60"
-                              />
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </tbody>
-              ))}
-            </table>
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line bg-surface-2/50 px-4 py-2">
+            <p className="text-[11.5px] text-ink-3">Le PDF officiel rempli s'affiche directement ci-dessous.</p>
+            <div className="flex flex-wrap gap-2">
+              <a
+                href="./e5/tableau-synthese-e5.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cx(btn('secondary', 'sm'))}
+              >
+                <ArrowUpRight size={13} />
+                <span>Ouvrir dans un onglet</span>
+              </a>
+              <a href="./e5/tableau-synthese-e5.pdf" download className={cx(btn('soft', 'sm'))}>
+                <Download size={13} />
+                <span>Télécharger</span>
+              </a>
+            </div>
           </div>
 
-          <div className="lg:hidden">
-            {rubriques.map((rubrique) => (
-              <div key={rubrique.id} className="border-b border-line last:border-0">
-                <p className="bg-surface-2/40 px-4 py-1.5 text-[10.5px] font-semibold tracking-[0.06em] text-ink-3 uppercase">
-                  {rubrique.titre}
-                </p>
-                {rubrique.realisations.map((realisation) => (
-                  <div key={realisation.titre} className="flex items-center justify-between gap-3 px-4 py-2.5">
-                    <div className="min-w-0">
-                      <p className="text-[12.5px] leading-snug font-medium text-ink">{realisation.titre}</p>
-                      <p className="mt-0.5 text-[10.5px] text-ink-4">{rubrique.contexte}</p>
-                    </div>
-                    <div className="flex shrink-0 gap-1">
-                      {COMPETENCES.map((competence, index) => {
-                        const active = realisation.competences.includes(index);
-                        return (
-                          <span
-                            key={competence.code}
-                            role="img"
-                            title={`${competence.code} — ${competence.titre}${active ? ' : mobilisée' : ' : non mobilisée'}`}
-                            aria-label={`${competence.code} ${competence.titre} : ${active ? 'mobilisée' : 'non mobilisée'}`}
-                            className={cx(
-                              'grid size-6 place-items-center rounded-[5px] text-[9.5px] font-semibold',
-                              active ? 'bg-brand text-on-brand' : 'bg-surface-2 text-ink-4',
-                            )}
-                          >
-                            {competence.code}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ))}
-            <p className="px-4 py-2 text-[10.5px] text-ink-4">Badge coloré : compétence mobilisée.</p>
+          <div className="bg-white">
+            <iframe
+              src="./e5/tableau-synthese-e5.pdf#view=FitH&navpanes=0"
+              title="Tableau de synthèse E5 — MALLEM Moncef"
+              className="block h-[72vh] min-h-[420px] w-full"
+            />
           </div>
 
-          <div className="border-t border-line px-4 py-3">
-            <p className="text-[11px] font-semibold tracking-[0.06em] text-ink-3 uppercase">Légende</p>
-            <ul className="mt-1.5 grid gap-x-4 gap-y-1 sm:grid-cols-2 xl:grid-cols-3">
-              {COMPETENCES.map((competence) => (
-                <li key={competence.code} className="flex gap-1.5 text-[12px] leading-snug text-ink-3">
-                  <span className="shrink-0 font-semibold text-brand-ink">{competence.code}</span>
-                  <span>{competence.titre}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="border-t border-line px-4 py-2 text-[11px] text-ink-4">
+            Si l'aperçu ne s'affiche pas (mobile ou navigateur sans lecteur PDF), utilisez « Ouvrir dans un onglet » ou
+            « Télécharger ».
+          </p>
         </div>
       </section>
 

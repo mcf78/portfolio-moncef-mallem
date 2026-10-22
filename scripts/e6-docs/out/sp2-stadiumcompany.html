@@ -23,44 +23,28 @@
     display: flex;
     justify-content: space-between;
     gap: 8mm;
-    padding-bottom: 3.5mm;
-    border-bottom: 2px solid var(--accent);
-    color: var(--muted);
-    font-size: 8pt;
-    letter-spacing: .055em;
-    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 9.5pt;
+  }
+  .annexe {
+    margin-top: 3.5mm;
+    text-align: center;
+    font-weight: 700;
+    font-size: 11pt;
+  }
+  .epreuve {
+    text-align: center;
+    font-size: 9.8pt;
+    color: var(--ink);
   }
   h1 {
-    margin: 4mm 0 1mm;
-    font-size: 17.5pt;
-    line-height: 1.15;
-    letter-spacing: -.02em;
-  }
-  .subtitle {
-    margin: 0 0 3.5mm;
-    color: var(--accent);
-    font-size: 10.4pt;
-    font-weight: 600;
-  }
-  .meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2mm 7mm;
-    margin: 3mm 0;
-    padding: 3mm 4mm;
-    border: 1px solid var(--line);
-    border-radius: 2mm;
-  }
-  .meta div { display: flex; flex-direction: column; gap: .4mm; }
-  .meta span {
-    color: var(--muted);
-    font-size: 7.8pt;
-    letter-spacing: .05em;
+    margin: 4.5mm 0 2.5mm;
+    text-align: center;
+    font-size: 13pt;
+    letter-spacing: .02em;
     text-transform: uppercase;
   }
-  .meta strong { font-size: 9.6pt; font-weight: 600; }
-  .options { margin: 1.5mm 0 0; font-size: 9.3pt; }
-  .options span { margin-right: 5mm; white-space: nowrap; }
   h2 {
     margin: 3.2mm 0 1.2mm;
     padding-bottom: .8mm;
@@ -74,6 +58,17 @@
   .box p { text-align: left; }
   ul, ol { margin: 0 0 2mm 4.5mm; padding: 0; }
   li { margin-bottom: .6mm; }
+  .identite {
+    margin: 3mm 0 1.5mm;
+    padding: 2.6mm 3.2mm;
+    border: 1px solid var(--line);
+    border-radius: 2mm;
+    background: #fafafa;
+  }
+  .identite p { margin: 0 0 1mm; text-align: left; }
+  .identite p:last-child { margin-bottom: 0; }
+  .options { margin: 1.5mm 0 2mm; font-size: 9.3pt; }
+  .options span { margin-right: 5mm; white-space: nowrap; }
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
   .box {
     padding: 2.6mm 3.2mm;
@@ -123,6 +118,12 @@
     color: var(--muted);
     font-size: 7.8pt;
   }
+  .sheet.sp { font-size: 8.9pt; line-height: 1.32; }
+  .sheet.sp h1 { margin: 3.2mm 0 1.8mm; font-size: 12pt; }
+  .sheet.sp h2 { margin: 2.4mm 0 .9mm; font-size: 10pt; }
+  .sheet.sp p { margin-bottom: 1.2mm; }
+  .sheet.sp ul { margin-bottom: 1.4mm; }
+  .sheet.sp li { margin-bottom: .35mm; }
   .page-break { break-before: page; }
   @page { size: A4; margin: 13mm 14mm 14mm; }
   @media print {
@@ -130,26 +131,28 @@
     a { color: inherit; text-decoration: none; }
   }
 </style></head>
-<body><div class="sheet">
+<body><div class="sheet sp">
   
   <div class="topline">
-    <span>BTS Services Informatiques aux Organisations — Session 2027</span>
-    <span>Annexe VII-1-B</span>
+    <span>BTS SERVICES INFORMATIQUES AUX ORGANISATIONS</span>
+    <span>SESSION 2027</span>
   </div>
-  <h1>Situation professionnelle 2</h1>
-  <p class="subtitle">Site web officiel de StadiumCompany</p>
+  <p class="annexe">FICHE DE LA SITUATION PROFESSIONNELLE N°2 (SP2)</p>
+  <p class="epreuve">Épreuve E6 — Concevoir et développer des solutions applicatives (option SLAM)</p>
 
-  <div class="meta">
-    <div><span>Candidat</span><strong>MALLEM Moncef</strong></div>
-    <div><span>Option</span><strong>SLAM</strong></div>
-    <div><span>Centre de formation</span><strong>Paris Ynov Campus — Nanterre</strong></div>
-    <div><span>Organisation support</span><strong>StadiumCompany</strong></div>
-    <div><span>Projet</span><strong>Site web officiel</strong></div>
-    <div><span>Période</span><strong>2026 – 2027</strong></div>
-  </div>
+  <h1>Description d'une situation professionnelle</h1>
 
-  <h2>Organisation support</h2>
-  <p>StadiumCompany est une organisation fictive qui gère un grand stade multi-événements : matchs, concerts et spectacles. Le projet est réalisé dans le cadre de la formation BTS SIO SLAM.</p>
+  <p><strong>N° SP : 2</strong> — <strong>Nom, prénom :</strong> MALLEM Moncef — <strong>N° candidat :</strong> ……………………………</p>
+  <p><strong>Épreuve :</strong> ☐ Épreuve ponctuelle &nbsp;&nbsp; ☑ Contrôle en cours de formation</p>
+  <p><strong>Date :</strong> Juin 2027 &nbsp;·&nbsp; <strong>Modalité :</strong> ☐ Seul(e) &nbsp;&nbsp; ☑ En équipe</p>
+  <p><strong>Centre de formation :</strong> Ynov Campus Paris &nbsp;·&nbsp; <strong>Option :</strong> SLAM</p>
+
+  <h2>Organisation support de la situation professionnelle</h2>
+  <p>Le projet est réalisé dans le cadre de la formation BTS SIO SLAM. StadiumCompany est une organisation de support pédagogique qui gère un grand stade multi-événements (matchs, concerts, spectacles). Elle édite un site web officiel présentant ses événements, sa billetterie en ligne et son espace administrateur.</p>
+
+  <h2>Intitulé de la situation professionnelle</h2>
+  <p style="text-align:center"><strong>Conception et développement du site web officiel de StadiumCompany.</strong></p>
+  <p style="text-align:center"><strong>Période de réalisation :</strong> 2026 – 2027 &nbsp;·&nbsp; <strong>Lieu :</strong> Ynov Campus Paris</p>
 
   <h2>Contexte</h2>
   <p>La gestion des événements et des réservations est réalisée manuellement. L'organisation souhaite un site web officiel pour présenter les événements, centraliser les informations et permettre la réservation en ligne.</p>
@@ -157,48 +160,41 @@
   <h2>Besoin</h2>
   <p>Créer un site web responsive avec une partie publique (événements, billetterie, réservation, boutique, restauration, contact) et un espace administrateur pour gérer les événements, les places et les réservations.</p>
 
-  <div class="two-col">
-    <div class="box">
-      <h3>Utilisateurs</h3>
-      <ul>
-        <li><strong>Visiteur / client :</strong> consulter les événements, vérifier les places disponibles et réserver.</li>
-        <li><strong>Administrateur :</strong> gérer les événements, les places et les réservations depuis le back-office.</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Contraintes techniques</h3>
-      <ul>
-        <li>HTML5, CSS3, Bootstrap 5 et JavaScript.</li>
-        <li>PHP et PDO pour le traitement serveur.</li>
-        <li>MySQL/MariaDB pour les données.</li>
-        <li>Déploiement Apache2 sur VM Debian.</li>
-        <li>Site responsive et sécurisé.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h2>Résultats attendus</h2>
-  <p>Un site fonctionnel avec les pages publiques, une base de données opérationnelle, un espace administrateur protégé, des tests et une documentation.</p>
-
-  <h2>Compétences mobilisées</h2>
-  <p>
-    <span class="tag">Concevoir et développer une solution applicative</span>
-    <span class="tag">Gérer les données d'une application</span>
-    <span class="tag">Assurer la maintenance corrective et évolutive</span>
-    <span class="tag">Travailler en mode projet</span>
-  </p>
-
-  <h2>Livrables</h2>
+  <h2>Utilisateurs concernés</h2>
   <ul>
-    <li>Wireframes et spécifications fonctionnelles.</li>
-    <li>MCD/MPD et script SQL de création de la base.</li>
-    <li>Code source du site et du back-office.</li>
-    <li>Jeu de tests, captures et documentation.</li>
+    <li><strong>Visiteur / client :</strong> consulter les événements, vérifier les places disponibles et réserver.</li>
+    <li><strong>Administrateur :</strong> gérer les événements, les places et les réservations depuis le back-office.</li>
   </ul>
+
+  <h2>Contraintes techniques</h2>
+  <ul>
+    <li>HTML5, CSS3, Bootstrap 5 et JavaScript.</li>
+    <li>PHP et PDO pour le traitement serveur.</li>
+    <li>MySQL/MariaDB pour les données.</li>
+    <li>Déploiement Apache2 sur VM Debian ; site responsive et sécurisé.</li>
+  </ul>
+
+  <h2>Compétences travaillées</h2>
+  <ul>
+    <li>Concevoir et développer une solution applicative.</li><li>Gérer les données d'une application.</li><li>Assurer la maintenance corrective ou évolutive d'une solution applicative.</li>
+  </ul>
+
+  <h2>Conditions de réalisation (ressources fournies, résultats attendus)</h2>
+  <ul>
+    <li>Cahier des charges, spécifications fonctionnelles, maquettes et MCD/MPD.</li>
+    <li>Environnement PHP/MySQL et VM Debian.</li>
+    <li>Documentation Bootstrap, PHP, PDO et MySQL.</li>
+    <li>Site responsive avec pages publiques, espace administrateur protégé, base opérationnelle, tests et documentation livrés.</li>
+  </ul>
+
+  <h2>Description des ressources documentaires, matérielles et logicielles utilisées</h2>
+  <p><strong>Documentaires :</strong> cahier des charges, wireframes, MCD/MPD, spécifications fonctionnelles, documentation Bootstrap, PHP, PDO et MySQL.</p>
+  <p><strong>Matérielles :</strong> PC, VM Debian, serveur web Apache2, base de données MySQL/MariaDB.</p>
+  <p><strong>Logicielles :</strong> VS Code, XAMPP, MySQL/MariaDB, phpMyAdmin, Git, MobaXterm, navigateur web.</p>
 
   
   <div class="footer">
-    <span>MALLEM Moncef — BTS SIO SLAM — Situation professionnelle 2 — support de la réalisation n°2</span>
+    <span>MALLEM Moncef — BTS SIO SLAM — Situation professionnelle 2 — site web StadiumCompany</span>
     <span>Session 2027</span>
   </div>
 
