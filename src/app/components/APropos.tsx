@@ -167,7 +167,7 @@ export function APropos() {
 
       <div className="grid gap-4 lg:grid-cols-12">
         {/* Ce que je fais */}
-        <Card dense className="lg:col-span-7">
+        <Card dense className="lg:col-span-6">
           <CardTitle icon={<Sparkles size={14} />}>Qu'est-ce que je fais ?</CardTitle>
           <p className="text-[14px] leading-[1.65] text-ink-2">
             Je suis un étudiant en informatique orienté vers les solutions logicielles et le développement d'applications. J'ai choisi cette voie pour son aspect concret et sa capacité à répondre à des besoins réels. Au fil de mes projets, j'ai travaillé avec plusieurs technologies telles que HTML, CSS, JavaScript, Python, SQL, Bash (Linux) et Dart, aussi bien dans le développement web que dans des applications plus techniques. J'ai également mené des projets mêlant programmation, automatisation et robotique, ce qui m'a permis de développer une approche rigoureuse et méthodique. Aujourd'hui, je souhaite continuer à me spécialiser dans le développement logiciel et participer à des projets à forte valeur technique.
@@ -175,7 +175,7 @@ export function APropos() {
         </Card>
 
         {/* Mon parcours et expérience */}
-        <Card dense className="lg:col-span-5">
+        <Card dense className="lg:col-span-6">
           <CardTitle icon={<GraduationCap size={14} />}>Mon parcours et expérience</CardTitle>
           <ol className="grid gap-x-5 gap-y-3 sm:grid-cols-2">
             {parcours.map((etape) => (
@@ -190,15 +190,15 @@ export function APropos() {
         </Card>
 
         {/* Ce que je maîtrise */}
-        <Card dense className="lg:col-span-12 xl:col-span-7">
+        <Card dense className="lg:col-span-12">
           <CardTitle icon={<Layers size={14} />} aside={<span className="text-[12px] text-ink-3">{categories.length} domaines</span>}>
             Qu'est-ce que je maîtrise ?
           </CardTitle>
-          <div className="grid gap-2.5 sm:grid-cols-2">
+          <div className="gap-x-2.5 sm:columns-2 xl:columns-3">
             {categories.map(([categorie, technologies]) => {
               const Icone = iconeParCategorie[categorie] ?? Code2;
               return (
-                <div key={categorie} className="rounded-[10px] border border-line bg-surface-2 p-3">
+                <div key={categorie} className="mb-2.5 break-inside-avoid rounded-[10px] border border-line bg-surface-2 p-3">
                   <h3 className="mb-2 flex items-center gap-2 text-[13px] leading-tight font-semibold text-ink">
                     <span aria-hidden className="grid size-[24px] shrink-0 place-items-center rounded-[6px] border border-brand-line bg-surface text-brand-ink">
                       <Icone size={13} strokeWidth={2.2} />
@@ -217,7 +217,7 @@ export function APropos() {
         </Card>
 
         {/* Mon futur */}
-        <Card dense className="lg:col-span-12 xl:col-span-5">
+        <Card dense className="lg:col-span-12 xl:col-span-5 xl:self-start">
           <CardTitle icon={<Rocket size={14} />}>Mon Futur</CardTitle>
           <Eyebrow>Objectifs Professionnels</Eyebrow>
           <p className="text-[13.5px] leading-[1.55] text-ink-2">
