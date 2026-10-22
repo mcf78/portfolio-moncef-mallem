@@ -255,7 +255,7 @@ export default function App() {
         )}
       </header>
 
-      <main className="min-w-0 overflow-x-clip px-4 py-6 sm:px-6 lg:px-10 lg:pt-5 lg:pb-3">
+      <main className="min-w-0 overflow-x-clip px-4 pt-6 pb-10 sm:px-6 lg:px-10 lg:pt-5 lg:pb-12">
         <div key={activeTab} className="pf-enter mx-auto w-full max-w-[1120px] 2xl:max-w-[1240px]">
           {renderContent()}
         </div>

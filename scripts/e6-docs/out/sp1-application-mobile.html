@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><title>SP1 — Application mobile e-commerce</title><style>
+<html lang="fr"><head><meta charset="utf-8"><title>Réalisation 1 — Application mobile e-commerce</title><style>
   :root {
     --ink: #111827;
     --muted: #4b5563;
@@ -58,6 +58,8 @@
   .box p { text-align: left; }
   ul, ol { margin: 0 0 2mm 4.5mm; padding: 0; }
   li { margin-bottom: .6mm; }
+  ul.competences { margin-left: 0; list-style: none; }
+  ul.competences li { margin-bottom: .8mm; }
   .identite {
     margin: 3mm 0 1.5mm;
     padding: 2.6mm 3.2mm;
@@ -131,70 +133,128 @@
     a { color: inherit; text-decoration: none; }
   }
 </style></head>
-<body><div class="sheet sp">
+<body><div class="sheet">
   
   <div class="topline">
     <span>BTS SERVICES INFORMATIQUES AUX ORGANISATIONS</span>
     <span>SESSION 2027</span>
   </div>
-  <p class="annexe">FICHE DE LA SITUATION PROFESSIONNELLE N°1 (SP1)</p>
-  <p class="epreuve">Épreuve E6 — Concevoir et développer des solutions applicatives (option SLAM)</p>
+  <p class="annexe">ANNEXE VII-1-B : Fiche descriptive de réalisation professionnelle (recto)</p>
+  <p class="epreuve">Épreuve E6 - Conception et développement d'applications (option SLAM)</p>
 
-  <h1>Description d'une situation professionnelle</h1>
+  <h1>DESCRIPTION D'UNE RÉALISATION PROFESSIONNELLE</h1>
 
-  <p><strong>N° SP : 1</strong> — <strong>Nom, prénom :</strong> MALLEM Moncef — <strong>N° candidat :</strong> ……………………………</p>
-  <p><strong>Épreuve :</strong> ☐ Épreuve ponctuelle &nbsp;&nbsp; ☑ Contrôle en cours de formation</p>
-  <p><strong>Date :</strong> Juin 2027 &nbsp;·&nbsp; <strong>Modalité :</strong> ☑ Seul(e) &nbsp;&nbsp; ☐ En équipe</p>
-  <p><strong>Centre de formation :</strong> Ynov Campus Paris &nbsp;·&nbsp; <strong>Option :</strong> SLAM</p>
+  <div class="identite"><p><strong>N° réalisation : 1</strong> — <strong>Nom, prénom :</strong> MALLEM Moncef — <strong>N° candidat :</strong> ……………………………</p><p><strong>Épreuve :</strong> ☐ Épreuve ponctuelle &nbsp;&nbsp; ☑ Contrôle en cours de formation</p><p><strong>Date :</strong> Juin 2027 &nbsp;·&nbsp; <strong>Modalité :</strong> ☑ Seul(e) &nbsp;&nbsp; ☐ En équipe</p></div>
 
-  <h2>Organisation support de la situation professionnelle</h2>
+  <h2>Organisation support de la réalisation professionnelle</h2>
   <p>La réalisation se déroule au sein de la Librairie Sana, SARL active dans le commerce de détail / librairie, implantée à Paris (75011). L’entreprise exploite un site e-commerce PrestaShop en production, un dépôt logistique en charge de la préparation et de l’expédition des commandes, un service après-vente, ainsi que des pôles internes de création graphique et de contenus digitaux.</p>
 
-  <h2>Intitulé de la situation professionnelle</h2>
+  <h2>Intitulé de la réalisation professionnelle</h2>
   <p style="text-align:center"><strong>Développement d'une application mobile e-commerce connectée à PrestaShop.</strong></p>
   <p style="text-align:center"><strong>Période de réalisation :</strong> 2025 – 2027 &nbsp;·&nbsp; <strong>Lieu :</strong> Librairie Sana — Paris (75011)</p>
 
-  <h2>Contexte</h2>
-  <p>L'entreprise développe son activité e-commerce et souhaite proposer une application mobile connectée à sa boutique PrestaShop. L'objectif est de rendre le catalogue et le suivi des commandes accessibles depuis un smartphone, tout en conservant la synchronisation avec la base de données de la boutique.</p>
-
-  <h2>Besoin</h2>
-  <p>Concevoir une application mobile cross-platform permettant de consulter les produits, de gérer un panier, de passer commande et de suivre les commandes. L'application doit s'appuyer sur les API REST de PrestaShop et sur les données de la boutique.</p>
-
-  <h2>Utilisateurs concernés</h2>
-  <ul>
-    <li><strong>Client :</strong> consulter le catalogue, rechercher un produit, gérer son panier, passer commande et suivre sa commande.</li>
-    <li><strong>Équipe interne :</strong> consulter les données, suivre les commandes et disposer d'un outil connecté au système e-commerce.</li>
-  </ul>
-
-  <h2>Contraintes techniques</h2>
-  <ul>
-    <li>Application cross-platform en Flutter/Dart.</li>
-    <li>Connexion aux API REST de PrestaShop.</li>
-    <li>Base de données MySQL et phpMyAdmin.</li>
-    <li>Services mobiles Firebase ; environnement Linux/Bash et PuTTY.</li>
-  </ul>
-
   <h2>Compétences travaillées</h2>
-  <ul>
-    <li>Concevoir et développer une solution applicative.</li><li>Gérer les données d'une application.</li><li>Assurer la maintenance corrective ou évolutive d'une solution applicative.</li>
+  <ul class="competences">
+    <li>☑ Concevoir et développer une solution applicative.</li><li>☑ Assurer la maintenance corrective ou évolutive d'une solution applicative.</li><li>☑ Gérer les données.</li>
   </ul>
 
   <h2>Conditions de réalisation (ressources fournies, résultats attendus)</h2>
-  <ul>
-    <li>Accès à la boutique PrestaShop et à sa base de données de test (MySQL, phpMyAdmin).</li>
-    <li>Documentation de l'API REST PrestaShop, maquettes et spécifications fonctionnelles.</li>
-    <li>Environnement de développement Flutter / Android Studio.</li>
-    <li>Application mobile fonctionnelle, connectée à l'API, avec catalogue, panier, commande et suivi ; code source et documentation livrés.</li>
-  </ul>
+  <div class="two-col">
+    <div class="box">
+      <h3>Ressources fournies</h3>
+      <ul>
+        <li>Accès à la boutique PrestaShop et à sa base de données de test (MySQL, phpMyAdmin).</li>
+        <li>Documentation de l'API REST PrestaShop.</li>
+        <li>Environnement de développement Flutter / Android Studio.</li>
+        <li>Maquettes et spécifications fonctionnelles.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Résultats attendus</h3>
+      <ul>
+        <li>Application mobile cross-platform fonctionnelle.</li>
+        <li>Connexion à l'API REST et synchronisation des données.</li>
+        <li>Catalogue, panier, commande et suivi des commandes.</li>
+        <li>Code source et documentation livrés.</li>
+      </ul>
+    </div>
+  </div>
 
   <h2>Description des ressources documentaires, matérielles et logicielles utilisées</h2>
-  <p><strong>Documentaires :</strong> documentation PrestaShop et API REST, maquettes, MCD/MLD, spécifications fonctionnelles, documentation Flutter et Dart.</p>
-  <p><strong>Matérielles :</strong> PC de développement, smartphone Android, émulateur, serveur de la boutique PrestaShop.</p>
-  <p><strong>Logicielles :</strong> Flutter, Dart, Android Studio, VS Code, MySQL, phpMyAdmin, Firebase, Git, PuTTY, Linux/Bash.</p>
+  <div class="box">
+    <p><strong>Ressources documentaires :</strong> documentation PrestaShop et API REST, maquettes, MCD/MLD, spécifications fonctionnelles, documentation Flutter et Dart.</p>
+    <p><strong>Ressources matérielles :</strong> PC de développement, smartphone Android, émulateur, serveur de la boutique PrestaShop.</p>
+    <p><strong>Ressources logicielles :</strong> Flutter, Dart, Android Studio, VS Code, MySQL, phpMyAdmin, Firebase, Git, PuTTY, Linux/Bash.</p>
+  </div>
+
+  <h2>Modalités d'accès aux productions et à leur documentation</h2>
+  <p>Les productions sont accessibles depuis le portfolio, onglet <strong>Projets E6</strong>, via les boutons <strong>SP1</strong>, <strong>Réalisation</strong> et <strong>GitHub</strong>. Le code source, les captures et les tests sont présentés à l'épreuve.</p>
 
   
   <div class="footer">
-    <span>MALLEM Moncef — BTS SIO SLAM — Situation professionnelle 1 — application mobile e-commerce</span>
+    <span>MALLEM Moncef — BTS SIO SLAM — Réalisation n°1 — recto</span>
+    <span>Session 2027</span>
+  </div>
+
+</div>
+
+<div class="sheet page-break">
+  
+  <div class="topline">
+    <span>BTS SERVICES INFORMATIQUES AUX ORGANISATIONS</span>
+    <span>SESSION 2027</span>
+  </div>
+  <p class="annexe">ANNEXE VII-1-B : Fiche descriptive de réalisation professionnelle (verso, éventuellement pages suivantes)</p>
+  <p class="epreuve">Épreuve E6 - Conception et développement d'applications (option SLAM)</p>
+
+  <h1>Descriptif de la réalisation professionnelle</h1>
+  <p style="text-align:center; margin-bottom:3mm">y compris les productions réalisées et schémas explicatifs</p>
+
+  <h2>Contexte</h2>
+  <p>Librairie Sana exploite un site e-commerce PrestaShop en production. Pour accompagner le développement de la vente en ligne, l'entreprise souhaite une application mobile connectée à la boutique. L'application doit permettre au client de consulter les produits, de gérer son panier, de passer commande et de suivre ses commandes.</p>
+
+  <h2>Description de la réalisation</h2>
+  <p>J'ai conçu et développé une application mobile cross-platform en Flutter. Les écrans communiquent avec l'API REST de PrestaShop pour récupérer le catalogue, les informations produits et les commandes. La logique applicative gère le panier, la navigation et la synchronisation des données avec la base MySQL de la boutique. Les écrans ont été adaptés aux formats mobiles puis testés sur émulateur et sur appareil Android. Firebase apporte les services mobiles (notifications, suivi).</p>
+
+  <h2>Étapes de la mise en place</h2>
+  <ol>
+    <li>Analyse du besoin et des parcours utilisateurs.</li>
+    <li>Conception des maquettes et du modèle de données (MCD/MLD).</li>
+    <li>Mise en place de la connexion à l'API REST PrestaShop.</li>
+    <li>Développement des écrans Flutter et de la logique panier/commandes.</li>
+    <li>Tests, corrections, documentation et livraison.</li>
+  </ol>
+
+  <h2>Cette réalisation mobilise les compétences en : </h2>
+  <p>conception et développement d'une solution mobile, consommation d'une API REST, gestion des données (MySQL, phpMyAdmin), services mobiles (Firebase), tests, documentation et travail en mode projet.</p>
+
+  <h2>Schéma logique d'architecture : </h2>
+  <div class="schema">
+    <div class="node">Application mobile<small>Flutter / Dart</small></div>
+    <div class="arrow">→</div>
+    <div class="node">API REST<small>PrestaShop</small></div>
+    <div class="arrow">→</div>
+    <div class="node">Base de données<small>MySQL</small></div>
+  </div>
+  <p class="schema-note">Firebase : services mobiles et notifications — déploiement du back-end sur serveur Linux.</p>
+
+  <h2>Documents et productions associés</h2>
+  <div class="two-col">
+    <ul>
+      <li>Maquettes des écrans (parcours utilisateurs).</li>
+      <li>MCD/MLD et modèle de données.</li>
+      <li>Code source Flutter (référentiel GitHub).</li>
+    </ul>
+    <ul>
+      <li>Collection de tests de l'API REST.</li>
+      <li>Captures d'écran de l'application.</li>
+      <li>Documentation technique.</li>
+    </ul>
+  </div>
+
+  
+  <div class="footer">
+    <span>MALLEM Moncef — BTS SIO SLAM — Réalisation n°1 — verso</span>
     <span>Session 2027</span>
   </div>
 

@@ -70,6 +70,8 @@ const css = `
   .box p { text-align: left; }
   ul, ol { margin: 0 0 2mm 4.5mm; padding: 0; }
   li { margin-bottom: .6mm; }
+  ul.competences { margin-left: 0; list-style: none; }
+  ul.competences li { margin-bottom: .8mm; }
   .identite {
     margin: 3mm 0 1.5mm;
     padding: 2.6mm 3.2mm;
@@ -165,11 +167,12 @@ const footer = (label) => `
 
 const annexeRecto = 'ANNEXE VII-1-B : Fiche descriptive de réalisation professionnelle (recto)';
 const annexeVerso = 'ANNEXE VII-1-B : Fiche descriptive de réalisation professionnelle (verso, éventuellement pages suivantes)';
-const epreuveE6 = 'Épreuve E6 — Concevoir et développer des solutions applicatives (option SLAM)';
+const epreuveE6 = "Épreuve E6 - Conception et développement d'applications (option SLAM)";
+// Ordre et libellés exacts de l'annexe VII-1-B (option SLAM).
 const competencesSLAM = [
   'Concevoir et développer une solution applicative.',
-  "Gérer les données d'une application.",
   "Assurer la maintenance corrective ou évolutive d'une solution applicative.",
+  'Gérer les données.',
 ];
 
 const orgSana =
@@ -178,79 +181,16 @@ const orgSana =
 const orgStadium =
   'Le projet est réalisé dans le cadre de la formation BTS SIO SLAM. StadiumCompany est une organisation de support pédagogique qui gère un grand stade multi-événements (matchs, concerts, spectacles). Elle édite un site web officiel présentant ses événements, sa billetterie en ligne et son espace administrateur.';
 
-const appSp1 = `<!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><title>SP1 — Application mobile e-commerce</title><style>${css}</style></head>
-<body><div class="sheet sp">
-  ${officielTop(
-    'FICHE DE LA SITUATION PROFESSIONNELLE N°1 (SP1)',
-    'Épreuve E6 — Concevoir et développer des solutions applicatives (option SLAM)',
-  )}
-  <h1>Description d'une situation professionnelle</h1>
-
-  <p><strong>N° SP : 1</strong> — <strong>Nom, prénom :</strong> MALLEM Moncef — <strong>N° candidat :</strong> ……………………………</p>
-  <p><strong>Épreuve :</strong> ☐ Épreuve ponctuelle &nbsp;&nbsp; ☑ Contrôle en cours de formation</p>
-  <p><strong>Date :</strong> Juin 2027 &nbsp;·&nbsp; <strong>Modalité :</strong> ☑ Seul(e) &nbsp;&nbsp; ☐ En équipe</p>
-  <p><strong>Centre de formation :</strong> Ynov Campus Paris &nbsp;·&nbsp; <strong>Option :</strong> SLAM</p>
-
-  <h2>Organisation support de la situation professionnelle</h2>
-  <p>${orgSana}</p>
-
-  <h2>Intitulé de la situation professionnelle</h2>
-  <p style="text-align:center"><strong>Développement d'une application mobile e-commerce connectée à PrestaShop.</strong></p>
-  <p style="text-align:center"><strong>Période de réalisation :</strong> 2025 – 2027 &nbsp;·&nbsp; <strong>Lieu :</strong> Librairie Sana — Paris (75011)</p>
-
-  <h2>Contexte</h2>
-  <p>L'entreprise développe son activité e-commerce et souhaite proposer une application mobile connectée à sa boutique PrestaShop. L'objectif est de rendre le catalogue et le suivi des commandes accessibles depuis un smartphone, tout en conservant la synchronisation avec la base de données de la boutique.</p>
-
-  <h2>Besoin</h2>
-  <p>Concevoir une application mobile cross-platform permettant de consulter les produits, de gérer un panier, de passer commande et de suivre les commandes. L'application doit s'appuyer sur les API REST de PrestaShop et sur les données de la boutique.</p>
-
-  <h2>Utilisateurs concernés</h2>
-  <ul>
-    <li><strong>Client :</strong> consulter le catalogue, rechercher un produit, gérer son panier, passer commande et suivre sa commande.</li>
-    <li><strong>Équipe interne :</strong> consulter les données, suivre les commandes et disposer d'un outil connecté au système e-commerce.</li>
-  </ul>
-
-  <h2>Contraintes techniques</h2>
-  <ul>
-    <li>Application cross-platform en Flutter/Dart.</li>
-    <li>Connexion aux API REST de PrestaShop.</li>
-    <li>Base de données MySQL et phpMyAdmin.</li>
-    <li>Services mobiles Firebase ; environnement Linux/Bash et PuTTY.</li>
-  </ul>
-
-  <h2>Compétences travaillées</h2>
-  <ul>
-    ${competencesSLAM.map((c) => `<li>${c}</li>`).join('')}
-  </ul>
-
-  <h2>Conditions de réalisation (ressources fournies, résultats attendus)</h2>
-  <ul>
-    <li>Accès à la boutique PrestaShop et à sa base de données de test (MySQL, phpMyAdmin).</li>
-    <li>Documentation de l'API REST PrestaShop, maquettes et spécifications fonctionnelles.</li>
-    <li>Environnement de développement Flutter / Android Studio.</li>
-    <li>Application mobile fonctionnelle, connectée à l'API, avec catalogue, panier, commande et suivi ; code source et documentation livrés.</li>
-  </ul>
-
-  <h2>Description des ressources documentaires, matérielles et logicielles utilisées</h2>
-  <p><strong>Documentaires :</strong> documentation PrestaShop et API REST, maquettes, MCD/MLD, spécifications fonctionnelles, documentation Flutter et Dart.</p>
-  <p><strong>Matérielles :</strong> PC de développement, smartphone Android, émulateur, serveur de la boutique PrestaShop.</p>
-  <p><strong>Logicielles :</strong> Flutter, Dart, Android Studio, VS Code, MySQL, phpMyAdmin, Firebase, Git, PuTTY, Linux/Bash.</p>
-
-  ${footer('Situation professionnelle 1 — application mobile e-commerce')}
-</div></body></html>`;
-
 const appRealisation = `<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><title>Réalisation 1 — Application mobile e-commerce</title><style>${css}</style></head>
 <body><div class="sheet">
   ${officielTop(annexeRecto, epreuveE6)}
-  <h1>Description d'une réalisation professionnelle</h1>
+  <h1>DESCRIPTION D'UNE RÉALISATION PROFESSIONNELLE</h1>
 
   ${identite([
     '<strong>N° réalisation : 1</strong> — <strong>Nom, prénom :</strong> MALLEM Moncef — <strong>N° candidat :</strong> ……………………………',
     '<strong>Épreuve :</strong> ☐ Épreuve ponctuelle &nbsp;&nbsp; ☑ Contrôle en cours de formation',
     '<strong>Date :</strong> Juin 2027 &nbsp;·&nbsp; <strong>Modalité :</strong> ☑ Seul(e) &nbsp;&nbsp; ☐ En équipe',
-    '<strong>Centre de formation :</strong> Ynov Campus Paris &nbsp;·&nbsp; <strong>Option :</strong> SLAM',
   ])}
 
   <h2>Organisation support de la réalisation professionnelle</h2>
@@ -261,8 +201,8 @@ const appRealisation = `<!doctype html>
   <p style="text-align:center"><strong>Période de réalisation :</strong> 2025 – 2027 &nbsp;·&nbsp; <strong>Lieu :</strong> Librairie Sana — Paris (75011)</p>
 
   <h2>Compétences travaillées</h2>
-  <ul>
-    ${competencesSLAM.map((c) => `<li>${c}</li>`).join('')}
+  <ul class="competences">
+    ${competencesSLAM.map((c) => `<li>☑ ${c}</li>`).join('')}
   </ul>
 
   <h2>Conditions de réalisation (ressources fournies, résultats attendus)</h2>
@@ -289,9 +229,9 @@ const appRealisation = `<!doctype html>
 
   <h2>Description des ressources documentaires, matérielles et logicielles utilisées</h2>
   <div class="box">
-    <p><strong>Documentaires :</strong> documentation PrestaShop et API REST, maquettes, MCD/MLD, spécifications fonctionnelles, documentation Flutter et Dart.</p>
-    <p><strong>Matérielles :</strong> PC de développement, smartphone Android, émulateur, serveur de la boutique PrestaShop.</p>
-    <p><strong>Logicielles :</strong> Flutter, Dart, Android Studio, VS Code, MySQL, phpMyAdmin, Firebase, Git, PuTTY, Linux/Bash.</p>
+    <p><strong>Ressources documentaires :</strong> documentation PrestaShop et API REST, maquettes, MCD/MLD, spécifications fonctionnelles, documentation Flutter et Dart.</p>
+    <p><strong>Ressources matérielles :</strong> PC de développement, smartphone Android, émulateur, serveur de la boutique PrestaShop.</p>
+    <p><strong>Ressources logicielles :</strong> Flutter, Dart, Android Studio, VS Code, MySQL, phpMyAdmin, Firebase, Git, PuTTY, Linux/Bash.</p>
   </div>
 
   <h2>Modalités d'accès aux productions et à leur documentation</h2>
@@ -350,79 +290,16 @@ const appRealisation = `<!doctype html>
   ${footer('Réalisation n°1 — verso')}
 </div></body></html>`;
 
-const stadiumSp2 = `<!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><title>SP2 — Site web StadiumCompany</title><style>${css}</style></head>
-<body><div class="sheet sp">
-  ${officielTop(
-    'FICHE DE LA SITUATION PROFESSIONNELLE N°2 (SP2)',
-    'Épreuve E6 — Concevoir et développer des solutions applicatives (option SLAM)',
-  )}
-  <h1>Description d'une situation professionnelle</h1>
-
-  <p><strong>N° SP : 2</strong> — <strong>Nom, prénom :</strong> MALLEM Moncef — <strong>N° candidat :</strong> ……………………………</p>
-  <p><strong>Épreuve :</strong> ☐ Épreuve ponctuelle &nbsp;&nbsp; ☑ Contrôle en cours de formation</p>
-  <p><strong>Date :</strong> Juin 2027 &nbsp;·&nbsp; <strong>Modalité :</strong> ☐ Seul(e) &nbsp;&nbsp; ☑ En équipe</p>
-  <p><strong>Centre de formation :</strong> Ynov Campus Paris &nbsp;·&nbsp; <strong>Option :</strong> SLAM</p>
-
-  <h2>Organisation support de la situation professionnelle</h2>
-  <p>${orgStadium}</p>
-
-  <h2>Intitulé de la situation professionnelle</h2>
-  <p style="text-align:center"><strong>Conception et développement du site web officiel de StadiumCompany.</strong></p>
-  <p style="text-align:center"><strong>Période de réalisation :</strong> 2026 – 2027 &nbsp;·&nbsp; <strong>Lieu :</strong> Ynov Campus Paris</p>
-
-  <h2>Contexte</h2>
-  <p>La gestion des événements et des réservations est réalisée manuellement. L'organisation souhaite un site web officiel pour présenter les événements, centraliser les informations et permettre la réservation en ligne.</p>
-
-  <h2>Besoin</h2>
-  <p>Créer un site web responsive avec une partie publique (événements, billetterie, réservation, boutique, restauration, contact) et un espace administrateur pour gérer les événements, les places et les réservations.</p>
-
-  <h2>Utilisateurs concernés</h2>
-  <ul>
-    <li><strong>Visiteur / client :</strong> consulter les événements, vérifier les places disponibles et réserver.</li>
-    <li><strong>Administrateur :</strong> gérer les événements, les places et les réservations depuis le back-office.</li>
-  </ul>
-
-  <h2>Contraintes techniques</h2>
-  <ul>
-    <li>HTML5, CSS3, Bootstrap 5 et JavaScript.</li>
-    <li>PHP et PDO pour le traitement serveur.</li>
-    <li>MySQL/MariaDB pour les données.</li>
-    <li>Déploiement Apache2 sur VM Debian ; site responsive et sécurisé.</li>
-  </ul>
-
-  <h2>Compétences travaillées</h2>
-  <ul>
-    ${competencesSLAM.map((c) => `<li>${c}</li>`).join('')}
-  </ul>
-
-  <h2>Conditions de réalisation (ressources fournies, résultats attendus)</h2>
-  <ul>
-    <li>Cahier des charges, spécifications fonctionnelles, maquettes et MCD/MPD.</li>
-    <li>Environnement PHP/MySQL et VM Debian.</li>
-    <li>Documentation Bootstrap, PHP, PDO et MySQL.</li>
-    <li>Site responsive avec pages publiques, espace administrateur protégé, base opérationnelle, tests et documentation livrés.</li>
-  </ul>
-
-  <h2>Description des ressources documentaires, matérielles et logicielles utilisées</h2>
-  <p><strong>Documentaires :</strong> cahier des charges, wireframes, MCD/MPD, spécifications fonctionnelles, documentation Bootstrap, PHP, PDO et MySQL.</p>
-  <p><strong>Matérielles :</strong> PC, VM Debian, serveur web Apache2, base de données MySQL/MariaDB.</p>
-  <p><strong>Logicielles :</strong> VS Code, XAMPP, MySQL/MariaDB, phpMyAdmin, Git, MobaXterm, navigateur web.</p>
-
-  ${footer('Situation professionnelle 2 — site web StadiumCompany')}
-</div></body></html>`;
-
 const stadiumRealisation = `<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><title>Réalisation 2 — Site web StadiumCompany</title><style>${css}</style></head>
 <body><div class="sheet">
   ${officielTop(annexeRecto, epreuveE6)}
-  <h1>Description d'une réalisation professionnelle</h1>
+  <h1>DESCRIPTION D'UNE RÉALISATION PROFESSIONNELLE</h1>
 
   ${identite([
     '<strong>N° réalisation : 2</strong> — <strong>Nom, prénom :</strong> MALLEM Moncef — <strong>N° candidat :</strong> ……………………………',
     '<strong>Épreuve :</strong> ☐ Épreuve ponctuelle &nbsp;&nbsp; ☑ Contrôle en cours de formation',
     '<strong>Date :</strong> Juin 2027 &nbsp;·&nbsp; <strong>Modalité :</strong> ☐ Seul(e) &nbsp;&nbsp; ☑ En équipe',
-    '<strong>Centre de formation :</strong> Ynov Campus Paris &nbsp;·&nbsp; <strong>Option :</strong> SLAM',
   ])}
 
   <h2>Organisation support de la réalisation professionnelle</h2>
@@ -433,8 +310,8 @@ const stadiumRealisation = `<!doctype html>
   <p style="text-align:center"><strong>Période de réalisation :</strong> 2026 – 2027 &nbsp;·&nbsp; <strong>Lieu :</strong> Ynov Campus Paris</p>
 
   <h2>Compétences travaillées</h2>
-  <ul>
-    ${competencesSLAM.map((c) => `<li>${c}</li>`).join('')}
+  <ul class="competences">
+    ${competencesSLAM.map((c) => `<li>☑ ${c}</li>`).join('')}
   </ul>
 
   <h2>Conditions de réalisation (ressources fournies, résultats attendus)</h2>
@@ -461,9 +338,9 @@ const stadiumRealisation = `<!doctype html>
 
   <h2>Description des ressources documentaires, matérielles et logicielles utilisées</h2>
   <div class="box">
-    <p><strong>Documentaires :</strong> cahier des charges, wireframes, MCD/MPD, spécifications fonctionnelles, documentation Bootstrap, PHP, PDO et MySQL.</p>
-    <p><strong>Matérielles :</strong> PC, VM Debian, serveur web Apache2, base de données MySQL/MariaDB.</p>
-    <p><strong>Logicielles :</strong> VS Code, XAMPP, MySQL/MariaDB, phpMyAdmin, Git, MobaXterm, navigateur web.</p>
+    <p><strong>Ressources documentaires :</strong> cahier des charges, wireframes, MCD/MPD, spécifications fonctionnelles, documentation Bootstrap, PHP, PDO et MySQL.</p>
+    <p><strong>Ressources matérielles :</strong> PC, VM Debian, serveur web Apache2, base de données MySQL/MariaDB.</p>
+    <p><strong>Ressources logicielles :</strong> VS Code, XAMPP, MySQL/MariaDB, phpMyAdmin, Git, MobaXterm, navigateur web.</p>
   </div>
 
   <h2>Modalités d'accès aux productions et à leur documentation</h2>
@@ -522,10 +399,12 @@ const stadiumRealisation = `<!doctype html>
   ${footer('Réalisation n°2 — verso')}
 </div></body></html>`;
 
+// Les boutons SP1/SP2 ouvrent la fiche officielle Annexe VII-1-B (recto/verso).
+// Le bouton « Réalisation » de StadiumCompany pointe, lui, vers la documentation complète.
 const documents = [
-  ['sp1-application-mobile', appSp1],
+  ['sp1-application-mobile', appRealisation],
   ['realisation-application-mobile', appRealisation],
-  ['sp2-stadiumcompany', stadiumSp2],
+  ['sp2-stadiumcompany', stadiumRealisation],
   ['realisation-stadiumcompany', stadiumRealisation],
 ];
 
@@ -544,6 +423,26 @@ for (const [name, html] of documents) {
   ], { stdio: 'ignore' });
   if (!fs.existsSync(pdfPath)) throw new Error(`PDF non généré : ${pdfPath}`);
   console.log(`${name}.pdf — ${(fs.statSync(pdfPath).size / 1024).toFixed(0)} Ko`);
+}
+
+// Documentation complète StadiumCompany : le bouton « Réalisation » et le bouton
+// « Documentation » du portfolio pointent vers cette copie publique (plus de lien Drive privé).
+const stadiumDocSource = path.resolve(
+  root,
+  '..',
+  '..',
+  '..',
+  '..',
+  'projet slam e6 aichetou',
+  'projet et doc',
+  'Projet_stadiumcompany_MALLEM_Moncef.pdf',
+);
+const stadiumDocDest = path.join(pdfDir, 'documentation-stadiumcompany.pdf');
+if (fs.existsSync(stadiumDocSource)) {
+  fs.copyFileSync(stadiumDocSource, stadiumDocDest);
+  console.log(`documentation-stadiumcompany.pdf — ${(fs.statSync(stadiumDocDest).size / 1024).toFixed(0)} Ko`);
+} else {
+  console.warn(`Documentation StadiumCompany introuvable : ${stadiumDocSource}`);
 }
 
 console.log('Documents E6 générés dans public/e6.');

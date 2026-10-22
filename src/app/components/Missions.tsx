@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { ArrowUpRight, Download, FileText, Github, Table2 } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { ArrowUpRight, FileText, Github, Table2 } from 'lucide-react';
 import { btn, cx, PageHeader, TabPanel, Tabs, type Tone } from './kit';
 
 type Tech = { nom: string; logo: string };
@@ -86,7 +86,7 @@ export const rubriques: Rubrique[] = [
           { nom: 'MobaXterm', logo: '' },
         ],
         githubUrl: 'https://github.com/mcf78',
-        documentationUrl: 'https://drive.google.com/file/d/1z5gYyA7jVAhe5jJsL2_dcRa5mKM906dT/view?usp=sharing',
+        documentationUrl: './e6/documentation-stadiumcompany.pdf',
         competences: [2, 3, 4],
       },
     ],
@@ -102,7 +102,7 @@ export const rubriques: Rubrique[] = [
         description: "Conception et développement d'une API REST pour connecter une application mobile à la plateforme PrestaShop.",
         technologies: [{ nom: 'Prestashop', logo: 'https://cdn.simpleicons.org/prestashop' }],
         githubUrl: 'https://github.com/mcf78',
-        documentationUrl: './e6/realisation-application-mobile.pdf',
+        documentationUrl: './e6/sp1-application-mobile.pdf',
         competences: [2, 3, 4],
       },
       {
@@ -118,7 +118,7 @@ export const rubriques: Rubrique[] = [
           { nom: 'API Rest', logo: '' },
         ],
         githubUrl: 'https://github.com/mcf78',
-        documentationUrl: './e6/realisation-application-mobile.pdf',
+        documentationUrl: './e6/sp1-application-mobile.pdf',
         competences: [2, 3, 4],
       },
       {
@@ -194,6 +194,19 @@ export function Missions() {
   const [rubriqueActive, setRubriqueActive] = useState(rubriques[0].id);
   const rubrique = rubriques.find((r) => r.id === rubriqueActive) ?? rubriques[0];
   const nombreRealisations = rubriques.reduce((total, r) => total + r.realisations.length, 0);
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const isFirstRender = useRef(true);
+
+  // Quand on change de catégorie, on remonte la barre d'onglets pour que la nouvelle
+  // rubrique soit cadrée en haut, au lieu de rester collée au bas de l'écran.
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    tabsRef.current?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  }, [rubriqueActive]);
 
   return (
     <div>
@@ -201,6 +214,21 @@ export function Missions() {
         title="Mes réalisations"
         description="Réalisations de l'épreuve E5, classées par contexte : formation, entreprise et projet tutoré."
       />
+
+      <div ref={tabsRef} className="scroll-mt-20 lg:scroll-mt-6">
+        <Tabs
+          label="Rubriques de l'épreuve E5"
+          value={rubriqueActive}
+          onChange={setRubriqueActive}
+          items={rubriques.map((r) => ({ id: r.id, label: r.titre, tone: r.tone, count: r.realisations.length }))}
+        />
+      </div>
+
+      <TabPanel key={rubrique.id} id={rubrique.id} className="mt-3 grid gap-2 md:grid-cols-2">
+        {rubrique.realisations.map((realisation) => (
+          <CarteRealisation key={realisation.titre} realisation={realisation} />
+        ))}
+      </TabPanel>
 
       <section id="tableau-synthese" className="mb-4 scroll-mt-24">
         <div className="overflow-hidden rounded-[12px] border border-line bg-surface">
@@ -229,25 +257,6 @@ export function Missions() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line bg-surface-2/50 px-4 py-2">
-            <p className="text-[11.5px] text-ink-3">Le PDF officiel rempli s'affiche directement ci-dessous.</p>
-            <div className="flex flex-wrap gap-2">
-              <a
-                href="./e5/tableau-synthese-e5.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cx(btn('secondary', 'sm'))}
-              >
-                <ArrowUpRight size={13} />
-                <span>Ouvrir dans un onglet</span>
-              </a>
-              <a href="./e5/tableau-synthese-e5.pdf" download className={cx(btn('soft', 'sm'))}>
-                <Download size={13} />
-                <span>Télécharger</span>
-              </a>
-            </div>
-          </div>
-
           <div className="bg-white">
             <iframe
               src="./e5/tableau-synthese-e5.pdf#view=FitH&navpanes=0"
@@ -257,24 +266,11 @@ export function Missions() {
           </div>
 
           <p className="border-t border-line px-4 py-2 text-[11px] text-ink-4">
-            Si l'aperçu ne s'affiche pas (mobile ou navigateur sans lecteur PDF), utilisez « Ouvrir dans un onglet » ou
-            « Télécharger ».
+            Si l'aperçu ne s'affiche pas (mobile ou navigateur sans lecteur PDF), utilisez le bouton « Ouvrir le tableau
+            officiel » ci-dessus.
           </p>
         </div>
       </section>
-
-      <Tabs
-        label="Rubriques de l'épreuve E5"
-        value={rubriqueActive}
-        onChange={setRubriqueActive}
-        items={rubriques.map((r) => ({ id: r.id, label: r.titre, tone: r.tone, count: r.realisations.length }))}
-      />
-
-      <TabPanel key={rubrique.id} id={rubrique.id} className="mt-3 grid gap-2 md:grid-cols-2">
-        {rubrique.realisations.map((realisation) => (
-          <CarteRealisation key={realisation.titre} realisation={realisation} />
-        ))}
-      </TabPanel>
     </div>
   );
 }

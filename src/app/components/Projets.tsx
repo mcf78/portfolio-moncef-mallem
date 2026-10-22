@@ -19,6 +19,7 @@ export const projets: Projet[] = [
     description:
       "Application mobile cross-platform pour la gestion d'une boutique en ligne avec panier, paiement et suivi des commandes. Elle est connectée à PrestaShop via une API REST.",
     sp: 'SP1',
+    // SP1/SP2 ouvrent la fiche officielle Annexe VII-1-B (recto/verso).
     spUrl: './e6/sp1-application-mobile.pdf',
     realisationUrl: './e6/realisation-application-mobile.pdf',
     technologies: [
@@ -40,7 +41,8 @@ export const projets: Projet[] = [
       "StadiumCompany est une organisation qui gère un grand stade multi-événements. Dans le cadre du projet, la partie SLAM consiste à concevoir et développer le site web officiel de StadiumCompany.",
     sp: 'SP2',
     spUrl: './e6/sp2-stadiumcompany.pdf',
-    realisationUrl: './e6/realisation-stadiumcompany.pdf',
+    // La réalisation StadiumCompany est la documentation complète du projet (PDF 40 pages).
+    realisationUrl: './e6/documentation-stadiumcompany.pdf',
     technologies: [
       { nom: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
       { nom: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
@@ -54,7 +56,7 @@ export const projets: Projet[] = [
     ],
     githubUrl: 'https://github.com/mcf78',
     tableauSyntheseUrl: './e5/tableau-synthese-e5.pdf',
-    documentationUrl: 'https://drive.google.com/file/d/1z5gYyA7jVAhe5jJsL2_dcRa5mKM906dT/view?usp=sharing',
+    documentationUrl: './e6/documentation-stadiumcompany.pdf',
   },
 ];
 
