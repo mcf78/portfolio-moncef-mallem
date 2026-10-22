@@ -101,9 +101,9 @@ export default function App() {
   const tabs: { id: string; label: string; icon: LucideIcon }[] = [
     { id: 'accueil', label: 'Accueil', icon: Home },
     { id: 'apropos', label: 'À propos', icon: User },
-    { id: 'entreprise', label: 'Entreprise / École', icon: Building2 },
+    { id: 'entreprise', label: 'Entreprise', icon: Building2 },
     { id: 'missions', label: 'Épreuve E5', icon: ClipboardCheck },
-    { id: 'projets', label: 'Projets (E6)', icon: FolderKanban },
+    { id: 'projets', label: 'Projets E6', icon: FolderKanban },
     { id: 'certifications', label: 'Certifications', icon: BadgeCheck },
     { id: 'veille', label: 'Veille technologique', icon: Radar },
     { id: 'contact', label: 'Contact', icon: Mail },

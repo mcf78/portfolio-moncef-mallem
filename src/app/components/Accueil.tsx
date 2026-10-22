@@ -1,33 +1,14 @@
 import {
   Download,
   MessageCircle,
-  FileText,
   MapPin,
   ArrowRight,
-  ArrowUpRight,
-  ClipboardCheck,
-  FolderKanban,
-  Layers,
-  BadgeCheck,
-  Radar,
   type LucideIcon,
 } from 'lucide-react';
 import { cx } from './kit';
-import { rubriques } from './Missions';
-import { projets } from './Projets';
-import { technologiesParCategorie } from './APropos';
-import { certifications } from '../data/certifications';
-import { sujets } from '../data/veille';
 import cvPdf from '../../../assets/cv-moncef-mallem.pdf';
 
-// Chiffres calculés à partir du contenu des pages : ils restent justes si le contenu change.
-const nbRealisations = rubriques.reduce((total, r) => total + r.realisations.length, 0);
-const nbTechnologies = new Set(Object.values(technologiesParCategorie).flat().map((t) => t.nom)).size;
-const veilleDepuis = Math.min(...sujets.map((s) => s.depuis));
-
 export function Accueil() {
-  const ouvrir = (onglet: string) => window.dispatchEvent(new CustomEvent('changeTab', { detail: onglet }));
-
   const handleContactClick = () => {
     // Scroll to contact section or trigger tab change
     window.dispatchEvent(new CustomEvent('changeTab', { detail: 'contact' }));
@@ -43,22 +24,9 @@ export function Accueil() {
     document.body.removeChild(link);
   };
 
-  const handleDownloadTableau = () => {
-    window.open('https://drive.google.com/file/d/1YFMRH7RI_2jN9y4shdEoahllQHknzz6O/view?usp=sharing', '_blank');
-  };
-
   const actions: { onClick: () => void; icon: LucideIcon; trail: LucideIcon; title: string; text: string; featured?: boolean }[] = [
     { onClick: handleDownloadCV, icon: Download, trail: ArrowRight, title: 'Télécharger mon CV', text: 'Consultez mon parcours complet au format PDF', featured: true },
-    { onClick: handleDownloadTableau, icon: FileText, trail: ArrowUpRight, title: 'Tableau de Synthèse', text: 'Téléchargez mon tableau de synthèse PDF' },
     { onClick: handleContactClick, icon: MessageCircle, trail: ArrowRight, title: 'Me Contacter', text: 'Envoyez-moi un message directement' },
-  ];
-
-  const raccourcis: { onglet: string; icon: LucideIcon; titre: string; detail: string }[] = [
-    { onglet: 'missions', icon: ClipboardCheck, titre: 'Épreuve E5', detail: `${nbRealisations} réalisations` },
-    { onglet: 'projets', icon: FolderKanban, titre: 'Projets (E6)', detail: `${projets.length} projets` },
-    { onglet: 'apropos', icon: Layers, titre: 'Compétences', detail: `${nbTechnologies} technologies` },
-    { onglet: 'certifications', icon: BadgeCheck, titre: 'Certifications', detail: `${certifications.length} obtenues` },
-    { onglet: 'veille', icon: Radar, titre: 'Veille technologique', detail: `${sujets.length} sujets depuis ${veilleDepuis}` },
   ];
 
   return (
@@ -84,7 +52,7 @@ export function Accueil() {
         </div>
       </section>
 
-      <section aria-label="Actions" className="grid gap-3 md:grid-cols-3">
+      <section aria-label="Actions" className="grid gap-3 md:grid-cols-2">
         {actions.map(({ onClick, icon: Icon, trail: Trail, title, text, featured }) => (
           <button
             key={title}
@@ -120,26 +88,6 @@ export function Accueil() {
         ))}
       </section>
 
-      {/* Accès direct aux parties que le jury consulte en premier */}
-      <nav aria-label="Accès rapide" className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-5">
-        {raccourcis.map(({ onglet, icon: Icon, titre, detail }) => (
-          <button
-            key={onglet}
-            type="button"
-            onClick={() => ouvrir(onglet)}
-            className="group flex items-center gap-3 rounded-[12px] border border-line bg-surface/80 p-3 text-left backdrop-blur-sm transition-[border-color,box-shadow,background-color] duration-200 hover:border-brand-line hover:bg-surface hover:shadow-card"
-          >
-            <span className="grid size-8 shrink-0 place-items-center rounded-[8px] border border-line bg-surface-2 text-ink-3 transition-colors group-hover:text-brand-ink">
-              <Icon size={16} />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block text-[13.5px] leading-snug font-semibold text-ink">{titre}</span>
-              <span className="block text-[12.5px] leading-snug text-ink-3 tabular-nums">{detail}</span>
-            </span>
-            <ArrowRight size={15} className="hidden shrink-0 text-ink-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-brand-ink sm:block" />
-          </button>
-        ))}
-      </nav>
     </div>
   );
 }

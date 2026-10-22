@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>SP1 — Application mobile e-commerce</title><style>
+  :root {
+    --ink: #111827;
+    --muted: #4b5563;
+    --line: #d1d5db;
+    --accent: #1d4ed8;
+    --soft: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.4;
+    color: var(--ink);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .sheet { width: 100%; }
+  .topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 8mm;
+    padding-bottom: 3.5mm;
+    border-bottom: 2px solid var(--accent);
+    color: var(--muted);
+    font-size: 8pt;
+    letter-spacing: .055em;
+    text-transform: uppercase;
+  }
+  h1 {
+    margin: 4mm 0 1mm;
+    font-size: 17.5pt;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+  }
+  .subtitle {
+    margin: 0 0 3.5mm;
+    color: var(--accent);
+    font-size: 10.4pt;
+    font-weight: 600;
+  }
+  .meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm 7mm;
+    margin: 3mm 0;
+    padding: 3mm 4mm;
+    border: 1px solid var(--line);
+    border-radius: 2mm;
+  }
+  .meta div { display: flex; flex-direction: column; gap: .4mm; }
+  .meta span {
+    color: var(--muted);
+    font-size: 7.8pt;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+  .meta strong { font-size: 9.6pt; font-weight: 600; }
+  .options { margin: 1.5mm 0 0; font-size: 9.3pt; }
+  .options span { margin-right: 5mm; white-space: nowrap; }
+  h2 {
+    margin: 3.2mm 0 1.2mm;
+    padding-bottom: .8mm;
+    border-bottom: 1px solid var(--line);
+    color: var(--accent);
+    font-size: 11pt;
+    line-height: 1.25;
+  }
+  h3 { margin: 3mm 0 1mm; font-size: 9.8pt; }
+  p { margin: 0 0 1.6mm; text-align: justify; }
+  .box p { text-align: left; }
+  ul, ol { margin: 0 0 2mm 4.5mm; padding: 0; }
+  li { margin-bottom: .6mm; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .box {
+    padding: 2.6mm 3.2mm;
+    border: 1px solid var(--line);
+    border-radius: 2mm;
+    background: #fafafa;
+    break-inside: avoid;
+  }
+  .box h3 { margin-top: 0; }
+  .box p:last-child, .box ul:last-child { margin-bottom: 0; }
+  .tag {
+    display: inline-block;
+    margin: 0 1mm 1mm 0;
+    padding: .45mm 1.8mm;
+    border: 1px solid #bfdbfe;
+    border-radius: 99px;
+    background: var(--soft);
+    color: var(--accent);
+    font-size: 8.2pt;
+  }
+  .schema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3mm;
+    margin: 3mm 0 1.5mm;
+  }
+  .node {
+    min-width: 31mm;
+    padding: 2.5mm 4mm;
+    border: 1px solid var(--accent);
+    border-radius: 2mm;
+    background: var(--soft);
+    text-align: center;
+    font-weight: 600;
+  }
+  .node small { display: block; margin-top: .4mm; color: var(--muted); font-size: 8pt; font-weight: 400; }
+  .arrow { color: var(--accent); font-size: 16pt; }
+  .schema-note { margin: 0 0 2mm; text-align: center; color: var(--muted); font-size: 8.4pt; }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8mm;
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 7.8pt;
+  }
+  .page-break { break-before: page; }
+  @page { size: A4; margin: 13mm 14mm 14mm; }
+  @media print {
+    body { background: #fff; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style></head>
+<body><div class="sheet">
+  
+  <div class="topline">
+    <span>BTS Services Informatiques aux Organisations — Session 2027</span>
+    <span>Annexe VII-1-B</span>
+  </div>
+  <h1>Situation professionnelle 1</h1>
+  <p class="subtitle">Application mobile e-commerce connectée à PrestaShop</p>
+
+  <div class="meta">
+    <div><span>Candidat</span><strong>MALLEM Moncef</strong></div>
+    <div><span>Option</span><strong>SLAM</strong></div>
+    <div><span>Centre de formation</span><strong>Paris Ynov Campus — Nanterre</strong></div>
+    <div><span>Organisation support</span><strong>Librairie Sana</strong></div>
+    <div><span>Projet</span><strong>Application mobile e-commerce</strong></div>
+    <div><span>Période</span><strong>2025 – 2027</strong></div>
+  </div>
+
+  <h2>Organisation support</h2>
+  <p>Librairie Sana est une SARL spécialisée dans la vente de livres religieux et de produits culturels. Elle dispose d'un site e-commerce PrestaShop en production, d'un dépôt logistique, d'un service après-vente et de pôles internes de création graphique.</p>
+
+  <h2>Contexte</h2>
+  <p>L'entreprise développe son activité e-commerce et souhaite proposer une application mobile connectée à sa boutique PrestaShop. L'objectif est de rendre le catalogue et le suivi des commandes accessibles depuis un smartphone, tout en conservant la synchronisation avec la base de données de la boutique.</p>
+
+  <h2>Besoin</h2>
+  <p>Concevoir une application mobile cross-platform permettant de consulter les produits, de gérer un panier, de passer commande et de suivre les commandes. L'application doit s'appuyer sur les API REST de PrestaShop et sur les données de la boutique.</p>
+
+  <div class="two-col">
+    <div class="box">
+      <h3>Utilisateurs</h3>
+      <ul>
+        <li><strong>Client :</strong> consulter le catalogue, rechercher un produit, gérer son panier, passer commande et suivre sa commande.</li>
+        <li><strong>Équipe interne :</strong> consulter les données, suivre les commandes et disposer d'un outil connecté au système e-commerce.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Contraintes techniques</h3>
+      <ul>
+        <li>Application cross-platform en Flutter/Dart.</li>
+        <li>Connexion aux API REST de PrestaShop.</li>
+        <li>Base de données MySQL et phpMyAdmin.</li>
+        <li>Services mobiles Firebase.</li>
+        <li>Environnement Linux/Bash et PuTTY.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Résultats attendus</h2>
+  <p>Une application fonctionnelle sur Android et iOS, connectée à l'API, avec un parcours d'achat et un suivi des commandes. Le code source, les maquettes, les tests et la documentation sont disponibles.</p>
+
+  <h2>Compétences mobilisées</h2>
+  <p>
+    <span class="tag">Concevoir et développer une solution applicative</span>
+    <span class="tag">Gérer les données d'une application</span>
+    <span class="tag">Assurer la maintenance corrective et évolutive</span>
+    <span class="tag">Travailler en mode projet</span>
+  </p>
+
+  <h2>Livrables</h2>
+  <ul>
+    <li>Maquettes des écrans et parcours utilisateurs.</li>
+    <li>Application Flutter et intégration de l'API REST.</li>
+    <li>Base de données de test et jeu de tests.</li>
+    <li>Documentation technique et captures d'écran.</li>
+  </ul>
+
+  
+  <div class="footer">
+    <span>MALLEM Moncef — BTS SIO SLAM — Situation professionnelle 1 — support de la réalisation n°1</span>
+    <span>Session 2027</span>
+  </div>
+
+</div></body></html>

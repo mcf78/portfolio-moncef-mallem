@@ -56,7 +56,7 @@ function CertificationCard({ certification }: { certification: Certification }) 
         <div className="flex items-center gap-2">
           <OrganismeMark organisme={c.organisme} taille="sm" />
           <span className="shrink-0 text-[11.5px] leading-none text-ink-3">{c.date}</span>
-          <span title={c.domaine} className="ml-auto min-w-0 truncate text-[10px] leading-none font-semibold tracking-[0.04em] text-ink-4 uppercase">
+          <span title={c.domaine} className="ml-auto hidden min-w-0 truncate text-[10px] leading-none font-semibold tracking-[0.04em] text-ink-4 uppercase sm:block">
             {c.domaine}
           </span>
         </div>
@@ -116,7 +116,7 @@ export function Certifications() {
     <div>
       <PageHeader
         title="Certifications"
-        description="Huit certifications obtenues entre 2025 et 2026, autour de l'IA appliquée au développement, de la data et du e-commerce."
+        description={`${certifications.length} certifications obtenues entre 2025 et 2026, autour de l'IA appliquée au développement, de la data et du e-commerce.`}
       />
 
       {/* Fil conducteur : relie les certificats au métier plutôt que de les empiler. */}
@@ -148,7 +148,7 @@ export function Certifications() {
         <div>
           <h2 className="text-[17px] leading-snug font-semibold tracking-[-0.01em] text-ink">Certifications principales</h2>
           <p className="mt-0.5 text-[13px] leading-snug text-ink-3">
-            Les six certificats les plus directement liés à mon parcours de développeur.
+            Les {certificationsPrincipales.length} certificats les plus représentatifs de mon parcours.
           </p>
         </div>
         <span className="hidden shrink-0 items-center gap-1.5 rounded-full border border-brand-line bg-brand-soft px-2.5 py-1 text-[11.5px] font-medium text-brand-ink sm:inline-flex">

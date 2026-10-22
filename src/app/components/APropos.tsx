@@ -1,7 +1,4 @@
 import {
-  ArrowRight,
-  ArrowUpRight,
-  BadgeCheck,
   Code2,
   Database,
   Globe,
@@ -19,8 +16,6 @@ import {
   Layers,
   type LucideIcon,
 } from 'lucide-react';
-import { certifications, certificationsPrincipales } from '../data/certifications';
-import { OrganismeMark } from './Certifications';
 import { Card, CardTitle, Eyebrow, PageHeader, TechChip } from './kit';
 
 // Technologies organisées par catégorie avec logos
@@ -29,7 +24,6 @@ export const technologiesParCategorie = {
       { nom: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
       { nom: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
       { nom: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-      { nom: 'Dart', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
       { nom: 'C++ (Arduino)', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
       { nom: 'Bash', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg' },
     ],
@@ -84,8 +78,6 @@ export const technologiesParCategorie = {
   };
 
 export function APropos() {
-  const ouvrir = (onglet: string) => window.dispatchEvent(new CustomEvent('changeTab', { detail: onglet }));
-
   // Une icône par catégorie pour que chaque groupe se repère d'un coup d'œil.
   const iconeParCategorie: Record<string, LucideIcon> = {
     'Langages de programmation & scripts': Code2,
@@ -217,65 +209,35 @@ export function APropos() {
         </Card>
 
         {/* Mon futur */}
-        <Card dense className="lg:col-span-12 xl:col-span-5 xl:self-start">
-          <CardTitle icon={<Rocket size={14} />}>Mon Futur</CardTitle>
-          <Eyebrow>Objectifs Professionnels</Eyebrow>
-          <p className="text-[13.5px] leading-[1.55] text-ink-2">
-            Après l'obtention de mon BTS SIO, je souhaite poursuivre mon développement professionnel en
-            me spécialisant davantage dans les technologies qui me passionnent.
-          </p>
-          <div className="mt-3 space-y-3">
-            {objectifs.map((groupe) => (
-              <div key={groupe.titre}>
-                <h4 className="mb-1 flex items-center gap-1.5 text-[13px] font-semibold text-ink">
-                  <Target className="text-brand-ink" size={14} />
-                  {groupe.titre}
-                </h4>
-                <ul className="space-y-0.5">
-                  {groupe.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-[13px] leading-[1.5] text-ink-2">
-                      <span className="text-brand-ink">→</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </Card>
-
-        {/* Certifications */}
         <Card dense className="lg:col-span-12">
-          <CardTitle icon={<BadgeCheck size={14} />} aside={<span className="text-[12px] text-ink-3">{certifications.length} certificats</span>}>
-            Certifications
-          </CardTitle>
-          <p className="text-[13px] leading-[1.55] text-ink-3">
-            Obtenues entre 2025 et 2026, elles relient l'IA au développement et au e-commerce.
-          </p>
-          <div className="mt-2.5 grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
-            {certificationsPrincipales.map((certification) => (
-              <a
-                key={certification.id}
-                href={certification.fichier}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={certification.titre}
-                className="group flex min-w-0 items-center gap-2 rounded-[8px] border border-line bg-surface-2 px-2 py-1.5 transition-[border-color,background-color] duration-150 hover:border-brand-line hover:bg-surface"
-              >
-                <OrganismeMark organisme={certification.organisme} taille="sm" />
-                <span className="min-w-0 flex-1 truncate text-[12.5px] leading-tight text-ink">{certification.titre}</span>
-                <ArrowUpRight size={13} className="shrink-0 text-ink-4 transition-colors group-hover:text-brand-ink" />
-              </a>
-            ))}
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-8">
+            <div className="min-w-0 lg:w-[34%] lg:shrink-0">
+              <CardTitle icon={<Rocket size={14} />}>Mon Futur</CardTitle>
+              <Eyebrow>Objectifs Professionnels</Eyebrow>
+              <p className="text-[13.5px] leading-[1.55] text-ink-2">
+                Après l'obtention de mon BTS SIO, je souhaite poursuivre mon développement professionnel en
+                me spécialisant davantage dans les technologies qui me passionnent.
+              </p>
+            </div>
+            <div className="grid flex-1 gap-4 sm:grid-cols-2">
+              {objectifs.map((groupe) => (
+                <div key={groupe.titre} className="rounded-[10px] border border-line bg-surface-2 p-3">
+                  <h4 className="mb-1.5 flex items-center gap-1.5 text-[13px] font-semibold text-ink">
+                    <Target className="text-brand-ink" size={14} />
+                    {groupe.titre}
+                  </h4>
+                  <ul className="space-y-1">
+                    {groupe.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-[13px] leading-[1.5] text-ink-2">
+                        <span className="text-brand-ink">→</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
-          <button
-            type="button"
-            onClick={() => ouvrir('certifications')}
-            className="mt-2.5 inline-flex items-center gap-1 text-[12.5px] font-medium text-brand-ink hover:underline"
-          >
-            Voir le détail des {certifications.length} certifications
-            <ArrowRight size={13} />
-          </button>
         </Card>
       </div>
     </div>
