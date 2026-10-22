@@ -30,8 +30,8 @@ export const projets: Projet[] = [
       { nom: 'Putty', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/putty/putty-original.svg' },
       { nom: 'API Rest', logo: '' },
     ],
-    githubUrl: 'https://github.com',
-    tableauSyntheseUrl: null,
+    githubUrl: 'https://github.com/mcf78',
+    tableauSyntheseUrl: './e5/tableau-synthese-e5.pdf',
     documentationUrl: null,
   },
   {
@@ -52,8 +52,8 @@ export const projets: Projet[] = [
       { nom: 'VM Debian', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg' },
       { nom: 'MobaXterm', logo: '' },
     ],
-    githubUrl: 'https://github.com',
-    tableauSyntheseUrl: 'https://drive.google.com/file/d/1C_v2esw7DCRbywN0r6Se69FQms6dnhN8/view?usp=sharing',
+    githubUrl: 'https://github.com/mcf78',
+    tableauSyntheseUrl: './e5/tableau-synthese-e5.pdf',
     documentationUrl: 'https://drive.google.com/file/d/1z5gYyA7jVAhe5jJsL2_dcRa5mKM906dT/view?usp=sharing',
   },
 ];
