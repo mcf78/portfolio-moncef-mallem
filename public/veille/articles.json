@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-21T10:11:54.153Z",
- "derniereCollecte": "2026-10-21T10:11:54.153Z",
+ "miseAJour": "2026-10-22T10:13:27.148Z",
+ "derniereCollecte": "2026-10-22T10:13:27.148Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -163,6 +163,105 @@
   }
  ],
  "articles": [
+  {
+   "id": "eb22d5bad0c66f01",
+   "domaine": "blockchain",
+   "titre": "Starknet community overwhelmingly backs research into becoming an independent post-quantum Layer 1",
+   "url": "https://www.theblock.co/news/ecosystems/2026-10-22-starknet-community-backs-independent-post-quantum-layer-1-421885",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-22T09:32:00.000Z"
+  },
+  {
+   "id": "e9895436801685aa",
+   "domaine": "blockchain",
+   "titre": "Solana déploie son nouveau protocole de consensus Alpenglow : qu'est-ce que ça change ?",
+   "url": "https://cryptoast.fr/solana-deploie-nouveau-protocole-consensus-alpenglow/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-22T09:30:07.000Z"
+  },
+  {
+   "id": "b0f12b14923fe269",
+   "domaine": "blockchain",
+   "titre": "Layer 2 Scaling Solutions",
+   "url": "https://www.theblock.co/learn/campus/layer-2-scaling-solutions-419685",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-22T09:15:50.000Z"
+  },
+  {
+   "id": "82f7c7177bd4cff5",
+   "domaine": "ia",
+   "titre": "LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release",
+   "url": "https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-22T08:28:48.000Z"
+  },
+  {
+   "id": "49a67bc48601f37a",
+   "domaine": "blockchain",
+   "titre": "Zcash s’envole avant NU7, Dogecoin boude son nouveau labo : le point altcoins",
+   "url": "https://journalducoin.com/actualites/zcash-senvole-avant-nu7-dogecoin-boude-son-nouveau-labo-le-point-altcoins/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-22T05:30:00.000Z"
+  },
+  {
+   "id": "c7a986d5581113b8",
+   "domaine": "blockchain",
+   "titre": "Révision de MiCA : les 7 chantiers que la France veut imposer à l’Europe",
+   "url": "https://journalducoin.com/actualites/revision-mica-7-chantiers-france-europe-stablecoins-defi/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-22T05:00:00.000Z"
+  },
+  {
+   "id": "4b48fd974ef688c6",
+   "domaine": "blockchain",
+   "titre": "XRP Ledger bug fix moved to November after validator support dipped for two hours",
+   "url": "https://www.coindesk.com/tech/2026/10/22/xrp-ledger-bug-fix-moved-to-november-after-validator-support-dipped-for-two-hours",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-22T04:36:20.000Z"
+  },
+  {
+   "id": "a07ef732238e3877",
+   "domaine": "ia",
+   "titre": "China-Linked Hackers Use ARTEX AI Agents in ConnectWise Supply Chain Attack",
+   "url": "https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-22T04:21:26.000Z"
+  },
+  {
+   "id": "b54757660ba05e52",
+   "domaine": "ia",
+   "titre": "How Much Does the Harness Matter, and for Whom? A Multi-Model Study of Context in LLM-Driven Vulnerability Discovery",
+   "url": "https://arxiv.org/abs/2610.28802",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-22T04:00:00.000Z"
+  },
+  {
+   "id": "18b2227bf6c549dc",
+   "domaine": "blockchain",
+   "titre": "Stablecoins euro : pourquoi l'Europe perd face à l'USDT, et comment elle veut riposter",
+   "url": "https://cryptoast.fr/stablecoins-euro-mica-france-propositions-usdt/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-21T16:59:17.000Z"
+  },
+  {
+   "id": "4e9315276a8c4241",
+   "domaine": "blockchain",
+   "titre": "Why centralized exchanges refuse to list legacy crypto tokens without explicit SEC immunity",
+   "url": "https://www.coindesk.com/policy/2026/10/21/why-centralized-exchanges-refuse-to-list-legacy-crypto-tokens-without-explicit-sec-immunity",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-21T12:12:36.000Z"
+  },
   {
    "id": "4e7bef1d982282ca",
    "domaine": "blockchain",
