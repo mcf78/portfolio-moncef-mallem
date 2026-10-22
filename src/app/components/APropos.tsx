@@ -1,4 +1,7 @@
 import {
+  ArrowRight,
+  ArrowUpRight,
+  BadgeCheck,
   Code2,
   Database,
   Globe,
@@ -16,6 +19,8 @@ import {
   Layers,
   type LucideIcon,
 } from 'lucide-react';
+import { certifications, certificationsPrincipales } from '../data/certifications';
+import { OrganismeMark } from './Certifications';
 import { Card, CardTitle, Eyebrow, PageHeader, TechChip } from './kit';
 
 // Technologies organisées par catégorie avec logos
@@ -43,7 +48,7 @@ export const technologiesParCategorie = {
       { nom: 'Android Studio', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg' },
       { nom: 'IntelliJ IDEA', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg' },
       { nom: 'PyCharm', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg' },
-      { nom: 'Basthon', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+      { nom: 'Basthon', logo: '' },
       { nom: 'Arduino IDE', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
     ],
     'Systèmes, serveurs & virtualisation': [
@@ -79,6 +84,8 @@ export const technologiesParCategorie = {
   };
 
 export function APropos() {
+  const ouvrir = (onglet: string) => window.dispatchEvent(new CustomEvent('changeTab', { detail: onglet }));
+
   // Une icône par catégorie pour que chaque groupe se repère d'un coup d'œil.
   const iconeParCategorie: Record<string, LucideIcon> = {
     'Langages de programmation & scripts': Code2,
@@ -93,7 +100,7 @@ export function APropos() {
     'Bureautique': FileText,
   };
 
-  // Ordre d'affichage : équilibre les deux colonnes du bloc (les données ci-dessus restent inchangées).
+  // Ordre d'affichage : les domaines proches restent côte à côte dans la grille.
   const ordreAffichage = [
     'Langages de programmation & scripts',
     'Développement web',
@@ -158,17 +165,17 @@ export function APropos() {
     <div>
       <PageHeader title="À Propos" description="Découvrez mes compétences et mon domaine d'expertise" />
 
-      <div className="grid gap-4 lg:grid-cols-12 lg:gap-3">
+      <div className="grid gap-4 lg:grid-cols-12">
         {/* Ce que je fais */}
-        <Card dense className="lg:col-span-6">
+        <Card dense className="lg:col-span-7">
           <CardTitle icon={<Sparkles size={14} />}>Qu'est-ce que je fais ?</CardTitle>
-          <p className="text-[14px] leading-[1.6] text-ink-2">
+          <p className="text-[14px] leading-[1.65] text-ink-2">
             Je suis un étudiant en informatique orienté vers les solutions logicielles et le développement d'applications. J'ai choisi cette voie pour son aspect concret et sa capacité à répondre à des besoins réels. Au fil de mes projets, j'ai travaillé avec plusieurs technologies telles que HTML, CSS, JavaScript, Python, SQL, Bash (Linux) et Dart, aussi bien dans le développement web que dans des applications plus techniques. J'ai également mené des projets mêlant programmation, automatisation et robotique, ce qui m'a permis de développer une approche rigoureuse et méthodique. Aujourd'hui, je souhaite continuer à me spécialiser dans le développement logiciel et participer à des projets à forte valeur technique.
           </p>
         </Card>
 
         {/* Mon parcours et expérience */}
-        <Card dense className="lg:col-span-6">
+        <Card dense className="lg:col-span-5">
           <CardTitle icon={<GraduationCap size={14} />}>Mon parcours et expérience</CardTitle>
           <ol className="grid gap-x-5 gap-y-3 sm:grid-cols-2">
             {parcours.map((etape) => (
@@ -183,20 +190,22 @@ export function APropos() {
         </Card>
 
         {/* Ce que je maîtrise */}
-        <Card dense className="lg:col-span-8">
-          <CardTitle icon={<Layers size={14} />}>Qu'est-ce que je maîtrise ?</CardTitle>
-          <div className="gap-x-5 sm:columns-2">
+        <Card dense className="lg:col-span-12 xl:col-span-7">
+          <CardTitle icon={<Layers size={14} />} aside={<span className="text-[12px] text-ink-3">{categories.length} domaines</span>}>
+            Qu'est-ce que je maîtrise ?
+          </CardTitle>
+          <div className="grid gap-2.5 sm:grid-cols-2">
             {categories.map(([categorie, technologies]) => {
               const Icone = iconeParCategorie[categorie] ?? Code2;
               return (
-                <div key={categorie} className="mb-2.5 break-inside-avoid">
-                  <h3 className="mb-1 flex items-center gap-2 text-[13px] leading-tight font-semibold text-ink">
-                    <span aria-hidden className="grid size-[22px] shrink-0 place-items-center rounded-[6px] border border-brand-line bg-brand-soft text-brand-ink">
+                <div key={categorie} className="rounded-[10px] border border-line bg-surface-2 p-3">
+                  <h3 className="mb-2 flex items-center gap-2 text-[13px] leading-tight font-semibold text-ink">
+                    <span aria-hidden className="grid size-[24px] shrink-0 place-items-center rounded-[6px] border border-brand-line bg-surface text-brand-ink">
                       <Icone size={13} strokeWidth={2.2} />
                     </span>
-                    {categorie}
+                    <span className="min-w-0">{categorie}</span>
                   </h3>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1.5">
                     {technologies.map((tech) => (
                       <TechChip key={tech.nom} nom={tech.nom} logo={tech.logo} compact />
                     ))}
@@ -208,7 +217,7 @@ export function APropos() {
         </Card>
 
         {/* Mon futur */}
-        <Card dense className="lg:col-span-4">
+        <Card dense className="lg:col-span-12 xl:col-span-5">
           <CardTitle icon={<Rocket size={14} />}>Mon Futur</CardTitle>
           <Eyebrow>Objectifs Professionnels</Eyebrow>
           <p className="text-[13.5px] leading-[1.55] text-ink-2">
@@ -233,6 +242,40 @@ export function APropos() {
               </div>
             ))}
           </div>
+        </Card>
+
+        {/* Certifications */}
+        <Card dense className="lg:col-span-12">
+          <CardTitle icon={<BadgeCheck size={14} />} aside={<span className="text-[12px] text-ink-3">{certifications.length} certificats</span>}>
+            Certifications
+          </CardTitle>
+          <p className="text-[13px] leading-[1.55] text-ink-3">
+            Obtenues entre 2025 et 2026, elles relient l'IA au développement et au e-commerce.
+          </p>
+          <div className="mt-2.5 grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
+            {certificationsPrincipales.map((certification) => (
+              <a
+                key={certification.id}
+                href={certification.fichier}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={certification.titre}
+                className="group flex min-w-0 items-center gap-2 rounded-[8px] border border-line bg-surface-2 px-2 py-1.5 transition-[border-color,background-color] duration-150 hover:border-brand-line hover:bg-surface"
+              >
+                <OrganismeMark organisme={certification.organisme} taille="sm" />
+                <span className="min-w-0 flex-1 truncate text-[12.5px] leading-tight text-ink">{certification.titre}</span>
+                <ArrowUpRight size={13} className="shrink-0 text-ink-4 transition-colors group-hover:text-brand-ink" />
+              </a>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => ouvrir('certifications')}
+            className="mt-2.5 inline-flex items-center gap-1 text-[12.5px] font-medium text-brand-ink hover:underline"
+          >
+            Voir le détail des {certifications.length} certifications
+            <ArrowRight size={13} />
+          </button>
         </Card>
       </div>
     </div>

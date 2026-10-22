@@ -8,6 +8,7 @@ import {
   ClipboardCheck,
   FolderKanban,
   Layers,
+  BadgeCheck,
   Radar,
   type LucideIcon,
 } from 'lucide-react';
@@ -15,6 +16,7 @@ import { cx } from './kit';
 import { rubriques } from './Missions';
 import { projets } from './Projets';
 import { technologiesParCategorie } from './APropos';
+import { certifications } from '../data/certifications';
 import { sujets } from '../data/veille';
 import cvPdf from '../../../assets/cv-moncef-mallem.pdf';
 
@@ -55,6 +57,7 @@ export function Accueil() {
     { onglet: 'missions', icon: ClipboardCheck, titre: 'Épreuve E5', detail: `${nbRealisations} réalisations` },
     { onglet: 'projets', icon: FolderKanban, titre: 'Projets (E6)', detail: `${projets.length} projets` },
     { onglet: 'apropos', icon: Layers, titre: 'Compétences', detail: `${nbTechnologies} technologies` },
+    { onglet: 'certifications', icon: BadgeCheck, titre: 'Certifications', detail: `${certifications.length} obtenues` },
     { onglet: 'veille', icon: Radar, titre: 'Veille technologique', detail: `${sujets.length} sujets depuis ${veilleDepuis}` },
   ];
 
@@ -118,7 +121,7 @@ export function Accueil() {
       </section>
 
       {/* Accès direct aux parties que le jury consulte en premier */}
-      <nav aria-label="Accès rapide" className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <nav aria-label="Accès rapide" className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-5">
         {raccourcis.map(({ onglet, icon: Icon, titre, detail }) => (
           <button
             key={onglet}

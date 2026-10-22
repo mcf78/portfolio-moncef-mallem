@@ -5,6 +5,7 @@ import { BtsSio } from './components/BtsSio';
 import { EntrepriseEcole } from './components/EntrepriseEcole';
 import { Projets } from './components/Projets';
 import { Missions } from './components/Missions';
+import { Certifications } from './components/Certifications';
 import { VeilleTechnologique } from './components/VeilleTechnologique';
 import { Contact } from './components/Contact';
 import { cx } from './components/kit';
@@ -18,6 +19,7 @@ import {
   Building2,
   ClipboardCheck,
   FolderKanban,
+  BadgeCheck,
   Radar,
   Mail,
   Sun,
@@ -102,6 +104,7 @@ export default function App() {
     { id: 'entreprise', label: 'Entreprise / École', icon: Building2 },
     { id: 'missions', label: 'Épreuve E5', icon: ClipboardCheck },
     { id: 'projets', label: 'Projets (E6)', icon: FolderKanban },
+    { id: 'certifications', label: 'Certifications', icon: BadgeCheck },
     { id: 'veille', label: 'Veille technologique', icon: Radar },
     { id: 'contact', label: 'Contact', icon: Mail },
   ];
@@ -120,6 +123,8 @@ export default function App() {
         return <Projets />;
       case 'missions':
         return <Missions />;
+      case 'certifications':
+        return <Certifications />;
       case 'veille':
         return <VeilleTechnologique />;
       case 'contact':
