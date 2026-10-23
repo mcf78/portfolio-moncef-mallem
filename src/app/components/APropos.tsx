@@ -10,7 +10,6 @@ import {
   Cpu,
   FileText,
   Rocket,
-  Target,
   Compass,
   GraduationCap,
   Layers,
@@ -153,68 +152,32 @@ export function APropos() {
     },
   ];
 
-  // Quatre domaines suffisent pour comprendre le profil en quelques secondes.
-  const domaines = [
-    {
-      icone: Globe,
-      titre: 'Développement web',
-      texte: 'Interfaces et back-end en HTML, CSS, JavaScript, PHP et Symfony.',
-    },
-    {
-      icone: Smartphone,
-      titre: 'Applications mobiles',
-      texte: 'Applications Flutter/Dart connectées à des API REST et à PrestaShop.',
-    },
-    {
-      icone: Server,
-      titre: 'Systèmes & données',
-      texte: 'Linux Debian, Apache, MySQL/MariaDB, scripts Bash et requêtes SQL.',
-    },
-    {
-      icone: Wrench,
-      titre: 'Méthode & outils',
-      texte: 'Git/GitHub, documentation, tests et veille technique.',
-    },
-  ];
-
   return (
     <div>
       <PageHeader title="À Propos" description="Mon profil, mon parcours et les compétences que je mets en pratique." />
 
       <div className="grid gap-4 lg:grid-cols-12">
         {/* Ce que je fais */}
-        <Card dense className="lg:col-span-12">
-          <div className="grid gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.35fr)] lg:items-start lg:gap-10">
-            <div className="min-w-0">
-              <CardTitle icon={<Compass size={14} />}>Qu'est-ce que je fais ?</CardTitle>
-              <p className="max-w-[56ch] text-[14.5px] leading-[1.7] text-ink-2">
-                Étudiant en BTS SIO option SLAM, je conçois des applications web et mobiles et je les relie à leurs
-                données. En entreprise, je développe une application mobile connectée à PrestaShop. En formation, je
-                travaille aussi sur des serveurs Linux et des outils de gestion de parc.
-              </p>
-              <p className="mt-2 max-w-[56ch] text-[13px] leading-[1.6] text-ink-3">
-                Mon objectif : livrer des solutions simples à utiliser, documentées et maintenables.
-              </p>
-            </div>
-
-            <div className="grid gap-2 sm:grid-cols-2">
-              {domaines.map(({ icone: Icone, titre, texte }) => (
-                <div key={titre} className="rounded-[10px] border border-line bg-surface-2 p-3.5">
-                  <h3 className="flex items-center gap-2 text-[13.5px] leading-tight font-semibold text-ink">
-                    <Icone aria-hidden size={15} className="shrink-0 text-brand" />
-                    {titre}
-                  </h3>
-                  <p className="mt-1.5 text-[12.5px] leading-[1.55] text-ink-3">{texte}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+        <Card dense className="lg:col-span-6">
+          <CardTitle icon={<Compass size={14} />}>Qu'est-ce que je fais ?</CardTitle>
+          <p className="text-[14px] leading-[1.65] text-ink-2">
+            Je suis un étudiant en informatique orienté vers les solutions logicielles et le développement
+            d'applications. J'ai choisi cette voie pour son aspect concret et sa capacité à répondre à des besoins
+            réels.
+          </p>
+          <p className="mt-3 text-[14px] leading-[1.65] text-ink-2">
+            Au fil de mes projets, j'ai travaillé avec plusieurs technologies telles que HTML, CSS, JavaScript, Python,
+            SQL, Bash (Linux) et Dart, aussi bien dans le développement web que dans des applications plus techniques.
+            J'ai également mené des projets mêlant programmation, automatisation et robotique, ce qui m'a permis de
+            développer une approche rigoureuse et méthodique. Aujourd'hui, je souhaite continuer à me spécialiser dans
+            le développement logiciel et participer à des projets à forte valeur technique.
+          </p>
         </Card>
 
         {/* Mon parcours et expérience */}
-        <Card dense className="lg:col-span-7">
+        <Card dense className="lg:col-span-6">
           <CardTitle icon={<GraduationCap size={14} />}>Mon parcours et expérience</CardTitle>
-          <ol className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
+          <ol className="grid gap-x-5 gap-y-3 sm:grid-cols-2">
             {parcours.map((etape) => (
               <li key={etape.titre} className="relative border-l border-line-strong pl-3">
                 <span aria-hidden className="absolute top-[5px] -left-[4px] size-[7px] rounded-full bg-brand ring-2 ring-surface" />
@@ -224,36 +187,33 @@ export function APropos() {
               </li>
             ))}
           </ol>
-          <p className="mt-4 border-t border-line pt-3 text-[12.5px] leading-[1.6] text-ink-3">
-            Ces expériences m'ont appris à partir d'un besoin réel, à choisir les bons outils et à documenter chaque
-            solution livrée.
-          </p>
         </Card>
 
         {/* Mon futur */}
-        <Card dense className="lg:col-span-5">
-          <CardTitle icon={<Rocket size={14} />}>Mon futur</CardTitle>
-          <p className="text-[13px] leading-[1.6] text-ink-2">
-            Après le BTS, je veux continuer à progresser dans le développement et me spécialiser dans les technologies
-            qui me passionnent.
-          </p>
-          <div className="mt-3 grid gap-2.5">
-            {objectifs.map((groupe) => (
-              <div key={groupe.titre} className="rounded-[10px] border border-line bg-surface-2 p-3">
-                <h4 className="mb-1.5 flex items-center gap-1.5 text-[13px] font-semibold text-ink">
-                  <Target aria-hidden className="text-brand" size={14} />
-                  {groupe.titre}
-                </h4>
-                <ul className="space-y-1">
-                  {groupe.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-[12.5px] leading-[1.5] text-ink-2">
-                      <span aria-hidden className="text-ink-4">→</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        <Card dense className="lg:col-span-12">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-8">
+            <div className="min-w-0 lg:w-[34%] lg:shrink-0">
+              <CardTitle icon={<Rocket size={14} />}>Mon futur</CardTitle>
+              <p className="text-[13.5px] leading-[1.55] text-ink-2">
+                Après l'obtention de mon BTS SIO, je souhaite poursuivre mon développement professionnel en me
+                spécialisant davantage dans les technologies qui me passionnent.
+              </p>
+            </div>
+            <div className="grid flex-1 gap-4 sm:grid-cols-2">
+              {objectifs.map((groupe) => (
+                <div key={groupe.titre} className="rounded-[10px] border border-line bg-surface-2 p-3">
+                  <h4 className="mb-2 text-[13px] font-semibold text-ink">{groupe.titre}</h4>
+                  <ul className="space-y-1">
+                    {groupe.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-[13px] leading-[1.5] text-ink-2">
+                        <span aria-hidden className="mt-[7px] size-1 shrink-0 rounded-full bg-brand" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </Card>
 
