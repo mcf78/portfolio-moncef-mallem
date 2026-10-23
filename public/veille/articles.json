@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-22T10:13:27.148Z",
- "derniereCollecte": "2026-10-22T10:13:27.148Z",
+ "miseAJour": "2026-10-23T10:06:09.401Z",
+ "derniereCollecte": "2026-10-23T10:06:09.401Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -111,7 +111,7 @@
    "site": "https://blog.ethereum.org/",
    "flux": "https://blog.ethereum.org/feed.xml",
    "ok": true,
-   "articles": 32
+   "articles": 33
   },
   {
    "nom": "Cointelegraph — NFT",
@@ -164,6 +164,105 @@
  ],
  "articles": [
   {
+   "id": "cf42940818940db3",
+   "domaine": "blockchain",
+   "titre": "Ethereum repousse Glamsterdam sur Hoodi : ce que l’EIP-8037 risque de casser",
+   "url": "https://journalducoin.com/ethereum/ethereum-repousse-glamsterdam-sur-hoodi-ce-que-leip-8037-risque-de-casser/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-23T10:00:00.000Z"
+  },
+  {
+   "id": "34cd03a5ddacdc07",
+   "domaine": "blockchain",
+   "titre": "South Korea to amend forex law to regulate stablecoins as payment instruments: report",
+   "url": "https://www.theblock.co/news/regulation/2026-10-23-south-korea-stablecoins-payment-instruments-424028",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-23T09:52:44.000Z"
+  },
+  {
+   "id": "1693f3e9ab56e27c",
+   "domaine": "blockchain",
+   "titre": "Crypto : 30 pays traquent 39 milliards de dollars d’arnaques dopées à l’IA",
+   "url": "https://journalducoin.com/actualites/crypto-pays-traquent-dollar-arnaques-ia/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-23T09:02:59.000Z"
+  },
+  {
+   "id": "c3c2dd68c7041c83",
+   "domaine": "blockchain",
+   "titre": "Sweden’s central bank revives e-krona debate as stablecoins and digital euro loom",
+   "url": "https://www.coindesk.com/business/2026/10/23/sweden-s-central-bank-revives-e-krona-debate-as-stablecoins-and-digital-euro-loom",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-23T08:57:34.000Z"
+  },
+  {
+   "id": "3976fbb78444aa87",
+   "domaine": "ia",
+   "titre": "Critical x402 SDK Flaw Could Let Malicious APIs Drain AI Agents’ Token Balances",
+   "url": "https://thehackernews.com/2026/10/critical-x402-sdk-flaw-could-let.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-23T08:35:45.000Z"
+  },
+  {
+   "id": "ca74d1e2c5f764e7",
+   "domaine": "blockchain",
+   "titre": "India's largest exchange denies hack after sleuths pointed to $16 million in suspicious outflows",
+   "url": "https://www.coindesk.com/markets/2026/10/23/india-s-largest-exchange-denies-hack-after-blockchain-sleuths-pointed-to-usd16-million-in-suspicious-outflows",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-23T08:02:35.000Z"
+  },
+  {
+   "id": "3766b50f996d6e76",
+   "domaine": "blockchain",
+   "titre": "Impôts en France : les commerçants doivent-ils aussi payer leur propre sécurité ?",
+   "url": "https://cryptoast.fr/impots-france-commercants-securite-privee-violences-octobre-2026/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-23T07:00:15.000Z"
+  },
+  {
+   "id": "c95104fd8d859837",
+   "domaine": "blockchain",
+   "titre": "60 % des Français estiment devoir assurer eux-mêmes leur sécurité",
+   "url": "https://cryptoast.fr/60-pourcent-francais-estiment-devoir-assurer-eux-memes-securite/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-23T06:00:34.000Z"
+  },
+  {
+   "id": "5d5a9b6f7c4c26c4",
+   "domaine": "blockchain",
+   "titre": "HSBC rolls out its first HKD stablecoin RedCoin to retail users",
+   "url": "https://www.theblock.co/news/business/2026-10-23-hsbc-hkd-stablecoin-redcoin-424018",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-23T04:03:09.000Z"
+  },
+  {
+   "id": "8819978c15224a07",
+   "domaine": "ia",
+   "titre": "Self-Evolving Static Analysis via LLM Pseudo-Labeling",
+   "url": "https://arxiv.org/abs/2610.30184",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-23T04:00:00.000Z"
+  },
+  {
+   "id": "67fbf78a14a66885",
+   "domaine": "ia",
+   "titre": "ThreatsDay: AI Secrets Leak, PingCAP Source Theft, Signal Hang-Up Flaw, Laravel Auth Bypass + 21 More",
+   "url": "https://thehackernews.com/2026/10/threatsday-ai-secrets-leak-pingcap.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-22T17:45:44.000Z"
+  },
+  {
    "id": "eb22d5bad0c66f01",
    "domaine": "blockchain",
    "titre": "Starknet community overwhelmingly backs research into becoming an independent post-quantum Layer 1",
@@ -198,6 +297,15 @@
    "source": "thehackernews.com",
    "origine": "The Hacker News",
    "date": "2026-10-22T08:28:48.000Z"
+  },
+  {
+   "id": "b69ed433fdeb43db",
+   "domaine": "ia",
+   "titre": "Jailbreaking the Switch 2",
+   "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+   "source": "pepsipu.com",
+   "origine": "Hacker News",
+   "date": "2026-10-22T08:01:52.000Z"
   },
   {
    "id": "49a67bc48601f37a",
@@ -243,6 +351,15 @@
    "source": "arxiv.org",
    "origine": "arXiv — sécurité (cs.CR)",
    "date": "2026-10-22T04:00:00.000Z"
+  },
+  {
+   "id": "520b618008b1e39b",
+   "domaine": "blockchain",
+   "titre": "Glamsterdam on Hoodi Postponed",
+   "url": "https://blog.ethereum.org/en/2026/10/22/glamsterdam-hoodi-delay",
+   "source": "blog.ethereum.org",
+   "origine": "Ethereum Foundation",
+   "date": "2026-10-22T00:00:00.000Z"
   },
   {
    "id": "18b2227bf6c549dc",
