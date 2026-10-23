@@ -51,7 +51,6 @@ export function Contact() {
     'w-full rounded-[8px] border border-line-strong bg-surface px-3 text-[14px] text-ink placeholder:text-ink-3 outline-none transition-[border-color,box-shadow] duration-150 hover:border-brand-line focus:border-brand focus:shadow-[0_0_0_3px_var(--pf-brand-soft)]';
   const label = 'mb-1.5 block text-[13px] font-medium text-ink-2';
   const required = <span className="text-danger">*</span>;
-  const tile = 'grid size-9 shrink-0 place-items-center rounded-[9px] border border-line bg-surface-2 text-ink-3';
 
   return (
     <div>
@@ -179,9 +178,7 @@ export function Contact() {
             <CardTitle>Coordonnées</CardTitle>
             <div className="divide-y divide-line">
               <div className="flex items-center gap-3 py-2.5 first:pt-0">
-                <div className={tile}>
-                  <Mail size={17} />
-                </div>
+                <Mail size={17} className="shrink-0 text-brand" />
                 <div className="min-w-0">
                   <p className="text-[12.5px] text-ink-3">Email</p>
                   <a href="mailto:mallemoncef@gmail.com" className="text-[14px] font-medium text-ink transition-colors hover:text-brand-ink">
@@ -191,9 +188,7 @@ export function Contact() {
               </div>
 
               <div className="flex items-center gap-3 py-2.5">
-                <div className={tile}>
-                  <Phone size={17} />
-                </div>
+                <Phone size={17} className="shrink-0 text-brand" />
                 <div className="min-w-0">
                   <p className="text-[12.5px] text-ink-3">Téléphone</p>
                   <a href="tel:+33768289623" className="text-[14px] font-medium text-ink transition-colors hover:text-brand-ink">
@@ -203,9 +198,7 @@ export function Contact() {
               </div>
 
               <div className="flex items-center gap-3 py-2.5 last:pb-0">
-                <div className={tile}>
-                  <MapPin size={17} />
-                </div>
+                <MapPin size={17} className="shrink-0 text-brand" />
                 <div className="min-w-0">
                   <p className="text-[12.5px] text-ink-3">Localisation</p>
                   <p className="text-[14px] font-medium text-ink">Houilles, France</p>
@@ -224,9 +217,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 rounded-[10px] border border-line p-2.5 transition-[background-color,border-color] duration-150 hover:border-brand-line hover:bg-surface-2"
               >
-                <div className={cx(tile, 'text-brand-ink')}>
-                  <Linkedin size={17} />
-                </div>
+                <Linkedin size={17} className="shrink-0 text-brand" />
                 <div className="flex-1">
                   <p className="text-[14px] font-medium text-ink">LinkedIn</p>
                   <p className="text-[12.5px] text-ink-3">Profil professionnel</p>
@@ -240,9 +231,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 rounded-[10px] border border-line p-2.5 transition-[background-color,border-color] duration-150 hover:border-brand-line hover:bg-surface-2"
               >
-                <div className={cx(tile, 'text-ink')}>
-                  <Github size={17} />
-                </div>
+                <Github size={17} className="shrink-0 text-ink" />
                 <div className="flex-1">
                   <p className="text-[14px] font-medium text-ink">GitHub</p>
                   <p className="text-[12.5px] text-ink-3">Mes projets & code</p>

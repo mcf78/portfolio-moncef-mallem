@@ -46,7 +46,7 @@ export function Accueil() {
             Houilles, France
           </span>
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-soft px-3 py-1 text-[13.5px] font-medium text-brand-ink">
-            <span aria-hidden className="size-1.5 rounded-full bg-brand" />
+            <span aria-hidden className="size-1.5 rounded-full bg-success" />
             Développeur Application Mobile - PrestaShop
           </span>
         </div>
@@ -65,12 +65,7 @@ export function Accueil() {
                 : 'border-line bg-surface hover:border-brand-line hover:shadow-card',
             )}
           >
-            <span
-              className={cx(
-                'grid size-9 shrink-0 place-items-center rounded-[9px]',
-                featured ? 'bg-white/15 text-white' : 'bg-brand-soft text-brand-ink',
-              )}
-            >
+            <span className={cx('mt-0.5 shrink-0', featured ? 'text-white' : 'text-brand')}>
               <Icon size={18} />
             </span>
             <span className="min-w-0 flex-1">

@@ -1,4 +1,4 @@
-import { ArrowUpRight, BadgeCheck, FileText, GraduationCap, Sparkles } from 'lucide-react';
+import { ArrowUpRight, BadgeCheck, FileText, GraduationCap, Route } from 'lucide-react';
 import {
   certifications,
   certificationsComplementaires,
@@ -124,7 +124,7 @@ export function Certifications() {
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0">
             <Eyebrow className="flex items-center gap-1.5">
-              <Sparkles size={12} className="text-brand-ink" />
+              <Route size={12} className="text-ink-3" />
               Fil conducteur
             </Eyebrow>
             <p className="max-w-[76ch] text-[14px] leading-[1.6] text-ink-2">

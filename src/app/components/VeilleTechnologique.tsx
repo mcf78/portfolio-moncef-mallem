@@ -247,9 +247,7 @@ function Methode({ archive }: { archive: Archive | null }) {
           {etapes.map(({ icone: Icone, titre, texte }, i) => (
             <li key={titre} className="relative rounded-[10px] border border-line bg-surface-2 p-3">
               <div className="mb-1.5 flex items-center gap-2">
-                <span className="grid size-7 place-items-center rounded-[7px] bg-brand-soft text-brand-ink">
-                  <Icone size={15} />
-                </span>
+                <Icone aria-hidden size={15} className="shrink-0 text-brand" />
                 <span className="text-[13.5px] font-semibold text-ink">
                   {i + 1}. {titre}
                 </span>

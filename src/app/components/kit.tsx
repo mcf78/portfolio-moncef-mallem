@@ -50,7 +50,7 @@ export function CardTitle({ icon, children, aside, className }: { icon?: ReactNo
   return (
     <div className={cx('mb-2.5 flex items-center justify-between gap-3', className)}>
       <h2 className="flex items-center gap-2 text-[15px] leading-snug font-semibold tracking-[-0.006em] text-ink">
-        {icon && <span className="grid size-6 shrink-0 place-items-center rounded-[6px] bg-brand-soft text-brand-ink">{icon}</span>}
+        {icon && <span aria-hidden className="shrink-0 text-ink-3">{icon}</span>}
         {children}
       </h2>
       {aside}

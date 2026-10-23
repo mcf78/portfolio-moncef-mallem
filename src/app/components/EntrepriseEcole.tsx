@@ -8,7 +8,7 @@ import {
   Package,
   Phone,
   ShoppingBag,
-  Sparkles,
+  Layers,
   Store,
   type LucideIcon,
 } from 'lucide-react';
@@ -27,9 +27,7 @@ function Info({ label, value, muted }: { label: string; value: ReactNode; muted?
 function ActiviteItem({ icon: Icon, titre, texte }: { icon: LucideIcon; titre: string; texte: string }) {
   return (
     <li className="flex items-start gap-2.5 rounded-[8px] border border-line bg-surface-2 p-2.5">
-      <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-[6px] bg-brand-soft text-brand-ink">
-        <Icon size={13} />
-      </span>
+      <Icon aria-hidden size={15} className="mt-0.5 shrink-0 text-brand" />
       <div className="min-w-0">
         <p className="text-[12.5px] font-semibold text-ink">{titre}</p>
         <p className="mt-0.5 text-[12px] leading-snug text-ink-3">{texte}</p>
@@ -101,7 +99,7 @@ export function EntrepriseEcole() {
             texte="Suivi et réponses aux demandes des clients."
           />
           <ActiviteItem
-            icon={Sparkles}
+            icon={Layers}
             titre="Pôles internes"
             texte="Création graphique, contenus digitaux et solutions logicielles."
           />
@@ -130,7 +128,7 @@ export function EntrepriseEcole() {
               "Participation aux projets d'optimisation logistique assistés par l'IA.",
             ].map((mission) => (
               <li key={mission} className="flex gap-2.5 text-[12.5px] leading-snug text-ink-2">
-                <span aria-hidden className="mt-[7px] size-1.5 shrink-0 rounded-full bg-brand" />
+                <span aria-hidden className="mt-[7px] size-1.5 shrink-0 rounded-full bg-ink-4" />
                 <span>{mission}</span>
               </li>
             ))}

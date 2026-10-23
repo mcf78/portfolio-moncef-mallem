@@ -1,16 +1,17 @@
-import { ClipboardList, Download, FileText, Github } from 'lucide-react';
+import { useState } from 'react';
+import { ClipboardList, FileText, Github, Table2 } from 'lucide-react';
 import { btn, Eyebrow, PageHeader, TechChip } from './kit';
+import { DocumentDialog, type DocumentActif } from './DocumentDialog';
 
 type Projet = {
   titre: string;
   description: string;
   sp: string;
   spUrl: string;
-  realisationUrl: string;
+  documentationUrl: string;
   technologies: { nom: string; logo: string }[];
   githubUrl: string;
   tableauSyntheseUrl: string | null;
-  documentationUrl: string | null;
 };
 
 export const projets: Projet[] = [
@@ -21,7 +22,7 @@ export const projets: Projet[] = [
     sp: 'SP1',
     // SP1/SP2 ouvrent la fiche officielle Annexe VII-1-B (recto/verso).
     spUrl: './e6/sp1-application-mobile.pdf',
-    realisationUrl: './e6/realisation-application-mobile.pdf',
+    documentationUrl: './e6/realisation-application-mobile.pdf',
     technologies: [
       { nom: 'Dart', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
       { nom: 'Bash', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg' },
@@ -33,7 +34,6 @@ export const projets: Projet[] = [
     ],
     githubUrl: 'https://github.com/mcf78',
     tableauSyntheseUrl: './e5/tableau-synthese-e5.pdf',
-    documentationUrl: null,
   },
   {
     titre: 'Site web StadiumCompany',
@@ -41,8 +41,8 @@ export const projets: Projet[] = [
       "StadiumCompany est une organisation qui gère un grand stade multi-événements. Dans le cadre du projet, la partie SLAM consiste à concevoir et développer le site web officiel de StadiumCompany.",
     sp: 'SP2',
     spUrl: './e6/sp2-stadiumcompany.pdf',
-    // La réalisation StadiumCompany est la documentation complète du projet (PDF 40 pages).
-    realisationUrl: './e6/documentation-stadiumcompany.pdf',
+    // La documentation StadiumCompany couvre l'intégralité du projet (PDF 40 pages).
+    documentationUrl: './e6/documentation-stadiumcompany.pdf',
     technologies: [
       { nom: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
       { nom: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
@@ -56,11 +56,12 @@ export const projets: Projet[] = [
     ],
     githubUrl: 'https://github.com/mcf78',
     tableauSyntheseUrl: './e5/tableau-synthese-e5.pdf',
-    documentationUrl: './e6/documentation-stadiumcompany.pdf',
   },
 ];
 
 export function Projets() {
+  const [documentActif, setDocumentActif] = useState<DocumentActif | null>(null);
+
   return (
     <div>
       <PageHeader
@@ -92,41 +93,44 @@ export function Projets() {
 
             <div className="mt-auto pt-6">
               <div className="flex flex-col gap-2 sm:flex-row">
-                <a
-                  href={projet.spUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() =>
+                    setDocumentActif({
+                      titre: `${projet.sp} — ${projet.titre}`,
+                      url: projet.spUrl,
+                      meta: 'Fiche officielle · Annexe VII-1-B · PDF',
+                    })
+                  }
                   className={`${btn('secondary')} flex-1`}
                 >
                   <ClipboardList size={16} />
                   <span>{projet.sp}</span>
-                </a>
-                <a
-                  href={projet.realisationUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setDocumentActif({
+                      titre: `Documentation — ${projet.titre}`,
+                      url: projet.documentationUrl,
+                      meta: 'Documentation E6 · PDF · lecture intégrée',
+                    })
+                  }
                   className={`${btn('primary')} flex-1`}
                 >
                   <FileText size={16} />
-                  <span>Réalisation</span>
-                </a>
+                  <span>Documentation</span>
+                </button>
               </div>
               <div className="mt-2 flex flex-wrap gap-2">
                 <a href={projet.githubUrl} target="_blank" rel="noopener noreferrer" className={btn('secondary', 'sm')}>
                   <Github size={14} />
                   <span>GitHub</span>
                 </a>
-                {/* Ces boutons n'apparaissent que si le lien est renseigné dans les données ci-dessus. */}
                 {projet.tableauSyntheseUrl && (
                   <a href={projet.tableauSyntheseUrl} target="_blank" rel="noopener noreferrer" className={btn('soft', 'sm')}>
-                    <Download size={14} />
+                    <Table2 size={14} />
                     <span>Tableau de synthèse</span>
-                  </a>
-                )}
-                {projet.documentationUrl && (
-                  <a href={projet.documentationUrl} target="_blank" rel="noopener noreferrer" className={btn('soft', 'sm')}>
-                    <FileText size={14} />
-                    <span>Documentation</span>
                   </a>
                 )}
               </div>
@@ -134,6 +138,8 @@ export function Projets() {
           </article>
         ))}
       </div>
+
+      <DocumentDialog document={documentActif} onClose={() => setDocumentActif(null)} />
     </div>
   );
 }

@@ -1,6 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, FileText, Github, Table2 } from 'lucide-react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { FileText, Github, Loader2, Maximize2, Table2 } from 'lucide-react';
 import { btn, cx, PageHeader, TabPanel, Tabs, type Tone } from './kit';
+import { DocumentDialog, type DocumentActif } from './DocumentDialog';
+
+const PdfViewer = lazy(() => import('./PdfViewer').then((module) => ({ default: module.PdfViewer })));
 
 type Tech = { nom: string; logo: string };
 type Realisation = {
@@ -28,7 +31,7 @@ export const rubriques: Rubrique[] = [
           { nom: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
         ],
         githubUrl: 'https://github.com/mcf78',
-        documentationUrl: 'https://drive.google.com/file/d/1W5jmNOc32lm4RpYwgkB0a-Vs7RhAsW73/view?usp=sharing',
+        documentationUrl: './e5/installation-apache2.pdf',
         competences: [0, 4],
       },
       {
@@ -56,7 +59,7 @@ export const rubriques: Rubrique[] = [
           { nom: 'Bash', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg' },
         ],
         githubUrl: 'https://github.com/mcf78',
-        documentationUrl: 'https://drive.google.com/file/d/1UfgXUa8yjtpzf10_m6_UXLXK_LmpxXzJ/view?usp=sharing',
+        documentationUrl: './e5/ocs-glpi.pdf',
         competences: [0, 4],
       },
       {
@@ -68,7 +71,7 @@ export const rubriques: Rubrique[] = [
           { nom: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
         ],
         githubUrl: 'https://github.com/mcf78',
-        documentationUrl: 'https://drive.google.com/file/d/1VGqSX7Kk72z-o0_NLjU6pXM_FahAKSZj/view?usp=sharing',
+        documentationUrl: './e5/tickets-glpi.pdf',
         competences: [0, 1, 4],
       },
       {
@@ -157,9 +160,14 @@ export const rubriques: Rubrique[] = [
   },
 ];
 
-function CarteRealisation({ realisation }: { realisation: Realisation }) {
+function CarteRealisation({
+  realisation,
+  onOpenDocument,
+}: {
+  realisation: Realisation;
+  onOpenDocument: (document: DocumentActif) => void;
+}) {
   const hasDocumentation = Boolean(realisation.documentationUrl);
-  const href = realisation.documentationUrl ?? '#tableau-synthese';
 
   return (
     <article className="flex flex-col items-center gap-3 rounded-[12px] border border-line bg-surface px-3.5 py-4 text-center transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card">
@@ -176,15 +184,27 @@ function CarteRealisation({ realisation }: { realisation: Realisation }) {
           <Github size={14} />
           <span>GitHub</span>
         </a>
-        <a
-          href={href}
-          {...(hasDocumentation ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-          className={cx(btn(hasDocumentation ? 'soft' : 'ghost', 'sm'))}
-        >
-          {hasDocumentation ? <FileText size={14} /> : <Table2 size={14} />}
-          <span>{hasDocumentation ? 'Documentation' : 'Voir la synthèse'}</span>
-          {hasDocumentation ? <ArrowUpRight size={13} /> : null}
-        </a>
+        {hasDocumentation ? (
+          <button
+            type="button"
+            onClick={() =>
+              onOpenDocument({
+                titre: realisation.titre,
+                url: realisation.documentationUrl as string,
+                meta: 'Documentation E5 · PDF · lecture intégrée',
+              })
+            }
+            className={cx(btn('soft', 'sm'))}
+          >
+            <FileText size={14} />
+            <span>Documentation</span>
+          </button>
+        ) : (
+          <a href="#tableau-synthese" className={cx(btn('ghost', 'sm'))}>
+            <Table2 size={14} />
+            <span>Voir la synthèse</span>
+          </a>
+        )}
       </div>
     </article>
   );
@@ -192,6 +212,7 @@ function CarteRealisation({ realisation }: { realisation: Realisation }) {
 
 export function Missions() {
   const [rubriqueActive, setRubriqueActive] = useState(rubriques[0].id);
+  const [documentActif, setDocumentActif] = useState<DocumentActif | null>(null);
   const rubrique = rubriques.find((r) => r.id === rubriqueActive) ?? rubriques[0];
   const nombreRealisations = rubriques.reduce((total, r) => total + r.realisations.length, 0);
   const tabsRef = useRef<HTMLDivElement>(null);
@@ -226,7 +247,11 @@ export function Missions() {
 
       <TabPanel key={rubrique.id} id={rubrique.id} className="mt-3 grid gap-2 md:grid-cols-2">
         {rubrique.realisations.map((realisation) => (
-          <CarteRealisation key={realisation.titre} realisation={realisation} />
+          <CarteRealisation
+            key={realisation.titre}
+            realisation={realisation}
+            onOpenDocument={setDocumentActif}
+          />
         ))}
       </TabPanel>
 
@@ -234,7 +259,7 @@ export function Missions() {
         <div className="overflow-hidden rounded-[12px] border border-line bg-surface">
           <div className="flex flex-col gap-3 border-b border-line bg-surface-2 px-4 py-3.5 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-[11px] font-semibold tracking-[0.06em] text-brand-ink uppercase">Tableau de synthèse E5</p>
+              <p className="text-[11px] font-semibold tracking-[0.06em] text-ink-3 uppercase">Tableau de synthèse E5</p>
               <h2 className="mt-0.5 text-[17px] leading-snug font-semibold tracking-[-0.012em] text-ink">
                 Tableau officiel des réalisations
               </h2>
@@ -243,34 +268,46 @@ export function Missions() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-2 sm:items-end">
-              <p className="text-[12px] leading-snug text-ink-3">Document officiel · PDF · 2 pages</p>
-              <a
-                href="./e5/tableau-synthese-e5.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cx(btn('primary', 'sm'))}
+              <p className="text-[12px] leading-snug text-ink-3">Aperçu intégré · PDF · 2 pages</p>
+              <button
+                type="button"
+                onClick={() =>
+                  setDocumentActif({
+                    titre: 'Tableau de synthèse E5',
+                    url: './e5/tableau-synthese-e5.pdf',
+                    meta: 'Document officiel · MALLEM Moncef · 2 pages',
+                  })
+                }
+                className={cx(btn('secondary', 'sm'))}
               >
-                <FileText size={14} />
-                <span>Ouvrir le tableau officiel</span>
-                <ArrowUpRight size={13} />
-              </a>
+                <Maximize2 size={14} />
+                <span>Agrandir</span>
+              </button>
             </div>
           </div>
 
-          <div className="bg-white">
-            <iframe
-              src="./e5/tableau-synthese-e5.pdf#view=FitH&navpanes=0"
-              title="Tableau de synthèse E5 — MALLEM Moncef"
-              className="block h-[72vh] min-h-[420px] w-full"
-            />
+          <div className="max-h-[70vh] overflow-y-auto bg-surface-2 p-3">
+            <Suspense
+              fallback={
+                <div className="grid min-h-64 place-items-center rounded-[8px] border border-line bg-surface px-6 py-12 text-center">
+                  <span className="inline-flex items-center gap-2 text-[13px] text-ink-3">
+                    <Loader2 size={16} className="animate-spin" />
+                    Chargement du tableau…
+                  </span>
+                </div>
+              }
+            >
+              <PdfViewer src="./e5/tableau-synthese-e5.pdf" titre="Tableau de synthèse E5 — MALLEM Moncef" />
+            </Suspense>
           </div>
 
           <p className="border-t border-line px-4 py-2 text-[11px] text-ink-4">
-            Si l'aperçu ne s'affiche pas (mobile ou navigateur sans lecteur PDF), utilisez le bouton « Ouvrir le tableau
-            officiel » ci-dessus.
+            Le tableau officiel s'affiche directement dans la page. Utilisez « Agrandir » pour le consulter en plein écran.
           </p>
         </div>
       </section>
+
+      <DocumentDialog document={documentActif} onClose={() => setDocumentActif(null)} />
     </div>
   );
 }

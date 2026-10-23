@@ -1,4 +1,4 @@
-import { BookOpen, Code, Network, GraduationCap } from 'lucide-react';
+import { Code, Network, GraduationCap } from 'lucide-react';
 import { Card, CardTitle, Dot, Eyebrow, PageHeader } from './kit';
 
 export function BtsSio() {
@@ -24,9 +24,7 @@ export function BtsSio() {
           {/* SLAM */}
           <div className="rounded-[10px] border border-brand-line bg-brand-soft p-4">
             <div className="mb-3 flex items-center gap-3">
-              <div className="grid size-10 place-items-center rounded-[9px] bg-brand text-on-brand">
-                <Code size={20} />
-              </div>
+              <Code size={22} className="shrink-0 text-brand" />
               <div>
                 <h3 className="text-[16px] font-semibold text-ink">SLAM ( ma spécialité !)</h3>
                 <p className="text-[13px] text-brand-ink">Solutions Logicielles et Applications Métiers</p>
@@ -54,9 +52,7 @@ export function BtsSio() {
           {/* SISR */}
           <div className="rounded-[10px] border border-line bg-surface-2 p-4">
             <div className="mb-3 flex items-center gap-3">
-              <div className="grid size-10 place-items-center rounded-[9px] bg-ink text-canvas">
-                <Network size={20} />
-              </div>
+              <Network size={22} className="shrink-0 text-ink-3" />
               <div>
                 <h3 className="text-[16px] font-semibold text-ink">SISR</h3>
                 <p className="text-[13px] text-ink-3">Solutions d'Infrastructure, Systèmes et Réseaux</p>
