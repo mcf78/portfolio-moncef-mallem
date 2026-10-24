@@ -158,24 +158,24 @@ export function APropos() {
 
       <div className="grid gap-4 lg:grid-cols-12">
         {/* Ce que je fais */}
-        <Card dense className="lg:col-span-6">
+        <Card dense className="lg:col-span-5">
           <CardTitle icon={<Compass size={14} />}>Qu'est-ce que je fais ?</CardTitle>
-          <p className="text-[14px] leading-[1.65] text-ink-2">
-            Je suis un étudiant en informatique orienté vers les solutions logicielles et le développement
-            d'applications. J'ai choisi cette voie pour son aspect concret et sa capacité à répondre à des besoins
-            réels.
+          <p className="text-[13.5px] leading-[1.6] text-ink-2">
+            Étudiant en BTS SIO option SLAM, je développe des applications web et mobiles et je gère les serveurs et
+            bases de données qui les accompagnent.
           </p>
-          <p className="mt-3 text-[14px] leading-[1.65] text-ink-2">
-            Au fil de mes projets, j'ai travaillé avec plusieurs technologies telles que HTML, CSS, JavaScript, Python,
-            SQL, Bash (Linux) et Dart, aussi bien dans le développement web que dans des applications plus techniques.
-            J'ai également mené des projets mêlant programmation, automatisation et robotique, ce qui m'a permis de
-            développer une approche rigoureuse et méthodique. Aujourd'hui, je souhaite continuer à me spécialiser dans
-            le développement logiciel et participer à des projets à forte valeur technique.
-          </p>
+          <dl className="mt-3 grid grid-cols-[76px_minmax(0,1fr)] gap-x-3 gap-y-1.5 text-[13px] leading-[1.5]">
+            <dt className="font-semibold text-brand-ink">Web</dt>
+            <dd className="text-ink-2">Interfaces et back-end en HTML, CSS, JavaScript, PHP et Symfony.</dd>
+            <dt className="font-semibold text-brand-ink">Mobile</dt>
+            <dd className="text-ink-2">Applications Flutter/Dart connectées à des API REST et à PrestaShop.</dd>
+            <dt className="font-semibold text-brand-ink">Systèmes</dt>
+            <dd className="text-ink-2">Linux Debian, Apache, MySQL/MariaDB, scripts Bash et bases SQL.</dd>
+          </dl>
         </Card>
 
         {/* Mon parcours et expérience */}
-        <Card dense className="lg:col-span-6">
+        <Card dense className="lg:col-span-7">
           <CardTitle icon={<GraduationCap size={14} />}>Mon parcours et expérience</CardTitle>
           <ol className="grid gap-x-5 gap-y-3 sm:grid-cols-2">
             {parcours.map((etape) => (

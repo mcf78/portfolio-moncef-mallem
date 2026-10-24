@@ -9,6 +9,7 @@ type Tech = { nom: string; logo: string };
 type Realisation = {
   titre: string;
   description: string;
+  imageUrl?: string;
   technologies: Tech[];
   githubUrl: string;
   documentationUrl: string | null;
@@ -26,6 +27,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'Installation serveur Apache 2',
         description: "Configuration complète d'un serveur web Apache 2 avec mise en place des bonnes pratiques de sécurité et optimisation des performances.",
+        imageUrl: './previews/apache.webp',
         technologies: [
           { nom: 'Apache', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg' },
           { nom: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
@@ -37,6 +39,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'Portfolio personnel',
         description: 'Site portfolio personnel moderne et responsive pour présenter mes projets et compétences avec animations fluides.',
+        imageUrl: './previews/portfolio.webp',
         technologies: [
           { nom: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
           { nom: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
@@ -49,6 +52,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'Installation OCS Inventory & GLPI',
         description: "Installer et configurer OCS Inventory NG et GLPI sur une VM Debian afin de réaliser l'inventaire automatique des postes clients (Windows/Linux) et gérer le parc informatique via une interface web, en utilisant une architecture LAMP.",
+        imageUrl: './previews/ocs-glpi.webp',
         technologies: [
           { nom: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
           { nom: 'Apache2', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg' },
@@ -65,6 +69,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'Gestion des tickets GLPI & OCS',
         description: "Maîtriser l'interface GLPI pour créer, traiter et clôturer des tickets d'incident selon la méthodologie ITIL. Consulter l'inventaire matériel/logiciel via OCS Inventory et lier les tickets aux actifs inventoriés pour une gestion optimale du parc informatique.",
+        imageUrl: './previews/tickets-glpi.webp',
         technologies: [
           { nom: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
           { nom: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
@@ -77,6 +82,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'Site web StadiumCompany',
         description: 'StadiumCompany est une organisation qui gère un grand stade multi-événements. Dans le cadre du projet, la partie SLAM consiste à concevoir et développer le site web officiel de StadiumCompany.',
+        imageUrl: './previews/stadiumcompany.webp',
         technologies: [
           { nom: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
           { nom: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
@@ -103,6 +109,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'API REST PrestaShop',
         description: "Conception et développement d'une API REST pour connecter une application mobile à la plateforme PrestaShop.",
+        imageUrl: './previews/api-prestashop.webp',
         technologies: [{ nom: 'Prestashop', logo: 'https://cdn.simpleicons.org/prestashop' }],
         githubUrl: 'https://github.com/mcf78',
         documentationUrl: './e6/sp1-application-mobile.pdf',
@@ -111,6 +118,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'Application mobile e-commerce',
         description: "Application mobile cross-platform pour la gestion d'une boutique en ligne avec panier, paiement et suivi des commandes.",
+        imageUrl: './previews/mobile-ecommerce.webp',
         technologies: [
           { nom: 'Dart', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
           { nom: 'Bash', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg' },
@@ -127,6 +135,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'Application de gestion de stock',
         description: "Développement d'une application complète de gestion de stock pour une entreprise.",
+        imageUrl: './previews/gestion-stock.webp',
         technologies: [
           { nom: 'Dart', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
           { nom: 'Bash', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg' },
@@ -151,6 +160,7 @@ export const rubriques: Rubrique[] = [
       {
         titre: 'Site web e-commerce Shopify',
         description: "Conception et développement d'une boutique en ligne complète sur la plateforme Shopify avec personnalisation du thème et intégration de modules.",
+        imageUrl: './previews/shopify.webp',
         technologies: [],
         githubUrl: 'https://github.com/mcf78',
         documentationUrl: null,
@@ -170,11 +180,24 @@ function CarteRealisation({
   const hasDocumentation = Boolean(realisation.documentationUrl);
 
   return (
-    <article className="flex flex-col items-center gap-3 rounded-[12px] border border-line bg-surface px-3.5 py-4 text-center transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card">
-      <h3 className="min-w-0 text-[14.5px] leading-snug font-semibold tracking-[-0.006em] text-ink">
-        {realisation.titre}
-      </h3>
-      <div className="flex flex-wrap items-center justify-center gap-2">
+    <article className="flex flex-col gap-3 rounded-[12px] border border-line bg-surface px-3.5 py-4 transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card">
+      <div className="flex w-full items-center gap-3">
+        {realisation.imageUrl && (
+          <div className="aspect-[16/10] w-20 shrink-0 overflow-hidden rounded-[7px] border border-line bg-surface-2 sm:w-24">
+            <img
+              src={realisation.imageUrl}
+              alt={`Aperçu : ${realisation.titre}`}
+              loading="lazy"
+              decoding="async"
+              className="size-full object-cover"
+            />
+          </div>
+        )}
+        <h3 className="min-w-0 flex-1 text-[14px] leading-snug font-semibold tracking-[-0.006em] text-ink">
+          {realisation.titre}
+        </h3>
+      </div>
+      <div className="mt-auto flex flex-wrap items-center justify-center gap-2">
         <a
           href={realisation.githubUrl}
           target="_blank"

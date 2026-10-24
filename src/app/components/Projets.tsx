@@ -6,6 +6,7 @@ import { DocumentDialog, type DocumentActif } from './DocumentDialog';
 type Projet = {
   titre: string;
   description: string;
+  imageUrl?: string;
   sp: string;
   spUrl: string;
   documentationUrl: string;
@@ -19,6 +20,7 @@ export const projets: Projet[] = [
     titre: 'Application mobile e-commerce',
     description:
       "Application mobile cross-platform pour la gestion d'une boutique en ligne avec panier, paiement et suivi des commandes. Elle est connectée à PrestaShop via une API REST.",
+    imageUrl: './previews/mobile-ecommerce.webp',
     sp: 'SP1',
     // SP1/SP2 ouvrent la fiche officielle Annexe VII-1-B (recto/verso).
     spUrl: './e6/sp1-application-mobile.pdf',
@@ -39,6 +41,7 @@ export const projets: Projet[] = [
     titre: 'Site web StadiumCompany',
     description:
       "StadiumCompany est une organisation qui gère un grand stade multi-événements. Dans le cadre du projet, la partie SLAM consiste à concevoir et développer le site web officiel de StadiumCompany.",
+    imageUrl: './previews/stadiumcompany.webp',
     sp: 'SP2',
     spUrl: './e6/sp2-stadiumcompany.pdf',
     // La documentation StadiumCompany couvre l'intégralité du projet (PDF 40 pages).
@@ -75,9 +78,24 @@ export function Projets() {
             key={projet.titre}
             className="flex flex-col rounded-[12px] border border-line bg-surface p-5 transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card sm:p-6"
           >
-            <h2 className="text-[19px] leading-snug font-semibold tracking-[-0.012em] text-ink">{projet.titre}</h2>
+            <div className="flex items-start gap-4">
+              <div className="min-w-0 flex-1">
+                <h2 className="text-[19px] leading-snug font-semibold tracking-[-0.012em] text-ink">{projet.titre}</h2>
+              </div>
+              {projet.imageUrl && (
+                <div className="aspect-[16/10] w-24 shrink-0 overflow-hidden rounded-[8px] border border-line bg-surface-2 sm:w-32">
+                  <img
+                    src={projet.imageUrl}
+                    alt={`Aperçu : ${projet.titre}`}
+                    loading="lazy"
+                    decoding="async"
+                    className="size-full object-cover"
+                  />
+                </div>
+              )}
+            </div>
 
-            <p className="mt-2 text-[14.5px] leading-[1.6] text-ink-2">
+            <p className="mt-3 text-[14.5px] leading-[1.6] text-ink-2">
               <span className="font-medium text-ink">Contexte : </span>
               {projet.description}
             </p>

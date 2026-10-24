@@ -1,17 +1,5 @@
 import type { ReactNode } from 'react';
-import {
-  Briefcase,
-  Building2,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Package,
-  Phone,
-  ShoppingBag,
-  Layers,
-  Store,
-  type LucideIcon,
-} from 'lucide-react';
+import { Briefcase, Building2, Mail, MapPin, Phone, Store } from 'lucide-react';
 import { Card, CardTitle, cx, PageHeader } from './kit';
 import logoSana from '../../../assets/97abc63f856b5a3f64003cab0d4db7672afb9be6.png';
 
@@ -21,18 +9,6 @@ function Info({ label, value, muted }: { label: string; value: ReactNode; muted?
       <dt className="text-[12px] font-medium text-ink-3">{label}</dt>
       <dd className={cx('text-[13px] leading-snug', muted ? 'text-ink-4' : 'text-ink')}>{value}</dd>
     </div>
-  );
-}
-
-function ActiviteItem({ icon: Icon, titre, texte }: { icon: LucideIcon; titre: string; texte: string }) {
-  return (
-    <li className="flex items-start gap-2.5 rounded-[8px] border border-line bg-surface-2 p-2.5">
-      <Icon aria-hidden size={15} className="mt-0.5 shrink-0 text-brand" />
-      <div className="min-w-0">
-        <p className="text-[12.5px] font-semibold text-ink">{titre}</p>
-        <p className="mt-0.5 text-[12px] leading-snug text-ink-3">{texte}</p>
-      </div>
-    </li>
   );
 }
 
@@ -82,27 +58,33 @@ export function EntrepriseEcole() {
 
       <Card className="mb-4">
         <CardTitle icon={<Store size={14} />}>Ce que fait l'entreprise</CardTitle>
-        <ul className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
-          <ActiviteItem
-            icon={ShoppingBag}
-            titre="Vente en ligne"
-            texte="Boutique PrestaShop en production pour le commerce de librairie."
-          />
-          <ActiviteItem
-            icon={Package}
-            titre="Préparation & expédition"
-            texte="Le dépôt logistique prépare et expédie les commandes."
-          />
-          <ActiviteItem
-            icon={MessageCircle}
-            titre="Service après-vente"
-            texte="Suivi et réponses aux demandes des clients."
-          />
-          <ActiviteItem
-            icon={Layers}
-            titre="Pôles internes"
-            texte="Création graphique, contenus digitaux et solutions logicielles."
-          />
+        <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
+          {[
+            {
+              titre: 'Vente en ligne',
+              texte: 'Boutique PrestaShop en production pour le commerce de librairie.',
+            },
+            {
+              titre: 'Préparation & expédition',
+              texte: 'Le dépôt logistique prépare et expédie les commandes.',
+            },
+            {
+              titre: 'Service après-vente',
+              texte: 'Suivi et réponses aux demandes des clients.',
+            },
+            {
+              titre: 'Pôles internes',
+              texte: 'Création graphique, contenus digitaux et solutions logicielles.',
+            },
+          ].map((activite) => (
+            <li key={activite.titre} className="flex gap-2.5">
+              <span aria-hidden className="mt-[7px] size-1.5 shrink-0 rounded-full bg-brand" />
+              <div className="min-w-0">
+                <p className="text-[13px] font-semibold text-ink">{activite.titre}</p>
+                <p className="mt-0.5 text-[12.5px] leading-snug text-ink-3">{activite.texte}</p>
+              </div>
+            </li>
+          ))}
         </ul>
       </Card>
 
