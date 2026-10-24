@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-23T10:06:09.401Z",
- "derniereCollecte": "2026-10-23T10:06:09.401Z",
+ "miseAJour": "2026-10-24T09:33:49.720Z",
+ "derniereCollecte": "2026-10-24T09:33:49.720Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -71,7 +71,7 @@
    "site": "https://arxiv.org/list/cs.CR/recent",
    "flux": "https://rss.arxiv.org/rss/cs.CR",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "The Hacker News",
@@ -151,7 +151,7 @@
    "site": "https://journalducoin.com/",
    "flux": "https://journalducoin.com/feed/",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Cryptoast",
@@ -163,6 +163,78 @@
   }
  ],
  "articles": [
+  {
+   "id": "88b3b2abfb5c7e6e",
+   "domaine": "blockchain",
+   "titre": "Cyberattaques : le Royaume-Uni demande de stocker 3 jours de vivres",
+   "url": "https://cryptoast.fr/royaume-uni-3-jours-vivres-cash-cyberattaques-coupure-internet/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-24T08:16:02.000Z"
+  },
+  {
+   "id": "c3aaacab3d6bf2ee",
+   "domaine": "blockchain",
+   "titre": "Stablecoins : le FSB avoue au G20 qu’il surveille 300 milliards de dollars avec des données privées",
+   "url": "https://journalducoin.com/economie/fsb-g20-stablecoins-300-milliards-donnees-privees-note-12-octobre/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-24T06:00:00.000Z"
+  },
+  {
+   "id": "90b1a30aade85a12",
+   "domaine": "blockchain",
+   "titre": "Franklin Templeton adds $150 million in fund shares to XRP Ledger, all in one wallet",
+   "url": "https://www.coindesk.com/markets/2026/10/24/franklin-templeton-adds-usd150-million-in-fund-shares-to-xrp-ledger-all-in-one-wallet",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-24T04:45:43.000Z"
+  },
+  {
+   "id": "5ba6363f045b858c",
+   "domaine": "ia",
+   "titre": "Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions",
+   "url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-23T17:50:47.000Z"
+  },
+  {
+   "id": "7837860944d4e6b7",
+   "domaine": "blockchain",
+   "titre": "Initia halts network after security incident as attacker reportedly mints tokens",
+   "url": "https://www.theblock.co/news/defi/2026-10-23-initia-halts-network-after-security-incident-attacker-reportedly-mints-tokens-427755",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-23T17:03:56.000Z"
+  },
+  {
+   "id": "e2f84546a4a4de9d",
+   "domaine": "blockchain",
+   "titre": "Singapore, Malaysia and Thailand central banks expand cross-border stablecoin initiative involving Ripple, Visa and Mastercard",
+   "url": "https://www.theblock.co/news/regulation/2026-10-23-singapore-malaysia-and-thailand-central-banks-expand-cross-border-stablecoin-initiative-involving-ripple-visa-and-mastercard-426492",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-23T12:55:26.000Z"
+  },
+  {
+   "id": "5948ceeeceb0db7d",
+   "domaine": "blockchain",
+   "titre": "Bitcoin Core changes security rules as AI makes finding code bugs dangerously easy",
+   "url": "https://www.coindesk.com/tech/2026/10/23/bitcoin-will-now-stop-hiding-bugs-an-ai-can-find-in-one-prompt",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-23T12:03:53.000Z"
+  },
+  {
+   "id": "e42f7275b897645d",
+   "domaine": "blockchain",
+   "titre": "Ethereum reporte la mise à niveau Glamsterdam - Pour quelle raison ?",
+   "url": "https://cryptoast.fr/ethereum-reporte-mise-niveau-glamsterdam-quelle-raison/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-23T11:00:14.000Z"
+  },
   {
    "id": "cf42940818940db3",
    "domaine": "blockchain",
