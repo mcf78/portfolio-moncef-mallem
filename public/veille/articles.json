@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-24T09:33:49.720Z",
- "derniereCollecte": "2026-10-24T09:33:49.720Z",
+ "miseAJour": "2026-10-25T09:50:12.062Z",
+ "derniereCollecte": "2026-10-25T09:50:12.062Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -151,7 +151,7 @@
    "site": "https://journalducoin.com/",
    "flux": "https://journalducoin.com/feed/",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Cryptoast",
@@ -163,6 +163,51 @@
   }
  ],
  "articles": [
+  {
+   "id": "336cdbd0b2c0c692",
+   "domaine": "ia",
+   "titre": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
+   "url": "https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-25T06:54:29.000Z"
+  },
+  {
+   "id": "14929c499e5ab501",
+   "domaine": "blockchain",
+   "titre": "HSBC lance RedCoin : le stablecoin de Hong Kong arrive dans PayMe et ses 3,3 millions d’utilisateurs",
+   "url": "https://journalducoin.com/actualites/redcoin-hsbc-lance-stablecoin-hong-kong-arrive/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-25T06:00:00.000Z"
+  },
+  {
+   "id": "c993abb67bdeb2e8",
+   "domaine": "blockchain",
+   "titre": "Block's new voice AI sounds eerily human, sparking awe and scam fears",
+   "url": "https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-24T15:21:06.000Z"
+  },
+  {
+   "id": "e70120be3fe8613a",
+   "domaine": "ia",
+   "titre": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads",
+   "url": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-24T10:36:33.000Z"
+  },
+  {
+   "id": "fdc1db58cb03d2e2",
+   "domaine": "blockchain",
+   "titre": "Bitcoin Core modifie sa politique de sécurité pour les failles détectées par l'IA",
+   "url": "https://cryptoast.fr/bitcoin-core-modifie-politique-securite-pour-failles-detectees-ia/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-24T10:00:07.000Z"
+  },
   {
    "id": "88b3b2abfb5c7e6e",
    "domaine": "blockchain",
