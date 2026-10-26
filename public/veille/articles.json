@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-25T09:50:12.062Z",
- "derniereCollecte": "2026-10-25T09:50:12.062Z",
+ "miseAJour": "2026-10-26T11:09:27.291Z",
+ "derniereCollecte": "2026-10-26T11:09:27.291Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -71,7 +71,7 @@
    "site": "https://arxiv.org/list/cs.CR/recent",
    "flux": "https://rss.arxiv.org/rss/cs.CR",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "The Hacker News",
@@ -151,7 +151,7 @@
    "site": "https://journalducoin.com/",
    "flux": "https://journalducoin.com/feed/",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Cryptoast",
@@ -163,6 +163,78 @@
   }
  ],
  "articles": [
+  {
+   "id": "ae2da735b2e39a77",
+   "domaine": "blockchain",
+   "titre": "Kaspa : vers un premier stablecoin décentralisé ?",
+   "url": "https://cryptoast.fr/kaspa-kas-kaspadollar-stablecoin-decentralise-collecte/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-26T10:00:16.000Z"
+  },
+  {
+   "id": "9cc075699c8e4811",
+   "domaine": "blockchain",
+   "titre": "Un hacker vole 2 000 $ de Bitcoin grâce à une faille PHP",
+   "url": "https://cryptoast.fr/faille-php-php2shell-hacker-2000-dollars-bitcoin-steal-my-bitcoin/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-26T09:00:49.000Z"
+  },
+  {
+   "id": "085b5bdbde6d65f7",
+   "domaine": "ia",
+   "titre": "Malicious File in Downloads Folder Tries to Trick AI Coding Agent Into Installing Malware",
+   "url": "https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-26T06:03:48.000Z"
+  },
+  {
+   "id": "2e03cb7ad6dabb63",
+   "domaine": "blockchain",
+   "titre": "India's largest crypto exchange absorbs $16 million loss from internal process failure tied to retired wallet",
+   "url": "https://www.coindesk.com/markets/2026/10/26/coindcx-absorbs-usd16-million-loss-from-internal-process-failure-tied-to-retired-wallet",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-26T05:39:17.000Z"
+  },
+  {
+   "id": "97a6a30f9576cd46",
+   "domaine": "blockchain",
+   "titre": "Bitcoin wallet bug let rogue servers steal funds when users tried to speed up payments",
+   "url": "https://www.coindesk.com/tech/2026/10/26/bitcoin-wallet-bug-let-rogue-servers-steal-funds-when-users-tried-to-speed-up-payments",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-26T05:15:20.000Z"
+  },
+  {
+   "id": "63828cce6ac863ab",
+   "domaine": "ia",
+   "titre": "Fooling LLM Safety Guards into Judging the Wrong Text",
+   "url": "https://arxiv.org/abs/2610.31695",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-26T04:00:00.000Z"
+  },
+  {
+   "id": "2b121c05ed308a2a",
+   "domaine": "blockchain",
+   "titre": "CoinDCX confirms $16 million loss from retired wallets days after CEO called breach reports a ‘false alarm’",
+   "url": "https://www.theblock.co/news/business/2026-10-25-coindcx-confirms-16-million-loss-from-retired-wallets-days-after-ceo-called-breach-reports-a-false-alarm-431617",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-25T18:46:21.000Z"
+  },
+  {
+   "id": "2f30bfddb8705790",
+   "domaine": "blockchain",
+   "titre": "Keystone customers say breach exposed data the hardware wallet maker promised to delete",
+   "url": "https://www.theblock.co/news/business/2026-10-25-keystone-customers-say-breach-exposed-data-the-hardware-wallet-maker-promised-to-delete-431613",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-25T15:56:30.000Z"
+  },
   {
    "id": "336cdbd0b2c0c692",
    "domaine": "ia",
