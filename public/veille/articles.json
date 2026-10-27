@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-26T11:09:27.291Z",
- "derniereCollecte": "2026-10-26T11:09:27.291Z",
+ "miseAJour": "2026-10-27T10:36:59.303Z",
+ "derniereCollecte": "2026-10-27T10:36:59.303Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -54,8 +54,8 @@
    "domaine": "ia",
    "site": "https://genai.owasp.org/",
    "flux": "https://genai.owasp.org/feed/",
-   "ok": true,
-   "articles": 10
+   "ok": false,
+   "articles": 0
   },
   {
    "nom": "Google Security Blog",
@@ -151,7 +151,7 @@
    "site": "https://journalducoin.com/",
    "flux": "https://journalducoin.com/feed/",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Cryptoast",
@@ -163,6 +163,105 @@
   }
  ],
  "articles": [
+  {
+   "id": "1b8cf0402026f825",
+   "domaine": "blockchain",
+   "titre": "BlackRock s’allie à SBI pour marier fonds tokenisés et stablecoin yen",
+   "url": "https://journalducoin.com/actualites/blackrock-sbi-fonds-tokenises-stablecoin-yen/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-27T10:00:00.000Z"
+  },
+  {
+   "id": "92aa697cf837156e",
+   "domaine": "ia",
+   "titre": "OpenAI Compaction Flaw Let Researchers Bypass Hidden Reasoning Protections",
+   "url": "https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-27T08:22:43.000Z"
+  },
+  {
+   "id": "b12d15555304e2de",
+   "domaine": "blockchain",
+   "titre": "Keystone : une clé volée, 18 835 wallets détruits et 25 964 clients exposés",
+   "url": "https://journalducoin.com/actualites/keystone-cle-volee-18-835-wallets-detruits/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-27T08:00:00.000Z"
+  },
+  {
+   "id": "cefa7e0fcacad6bb",
+   "domaine": "blockchain",
+   "titre": "Solana bug reports now cost 1 SOL as AI floods security teams with spam",
+   "url": "https://www.coindesk.com/tech/2026/10/27/solana-bug-reports-now-cost-1-sol-as-ai-floods-security-teams-with-spam",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-27T07:44:04.000Z"
+  },
+  {
+   "id": "d66b99ef39de44f0",
+   "domaine": "blockchain",
+   "titre": "Ethereum fixes Glamsterdam bug that could have sent staking deposits to builders",
+   "url": "https://www.coindesk.com/tech/2026/10/27/ethereum-fixes-glamsterdam-bug-that-could-have-sent-staking-deposits-to-builders",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-27T07:09:56.000Z"
+  },
+  {
+   "id": "3b1eeae40ba2e3f4",
+   "domaine": "ia",
+   "titre": "Hidden Backdoor Attack on Deep Contrastive Clustering",
+   "url": "https://arxiv.org/abs/2610.33116",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-27T04:00:00.000Z"
+  },
+  {
+   "id": "353c3d0791c7ebb8",
+   "domaine": "blockchain",
+   "titre": "BlackRock joins SBI and Startale to link tokenized MMFs with Japanese yen stablecoins",
+   "url": "https://www.theblock.co/news/business/2026-10-26-blackrock-sbi-startale-mou-431642",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-27T01:00:00.000Z"
+  },
+  {
+   "id": "d2cfaa236fe00e19",
+   "domaine": "blockchain",
+   "titre": "« Nous sommes loin d’un ordinateur quantique capable de casser Bitcoin » pour cet expert en sécurité",
+   "url": "https://cryptoast.fr/bitcoin-quantique-jameson-lopp-menace-lointaine/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-26T18:24:17.000Z"
+  },
+  {
+   "id": "aaa42b46cd1751df",
+   "domaine": "blockchain",
+   "titre": "Hyperliquid says Kraken parent Payward to be first CFTC-regulated HIP-3 deployer",
+   "url": "https://www.theblock.co/news/markets/2026-10-26-hyperliquid-payward-kraken-cftc-regulated-hip-3-deployer-431787",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-26T18:21:17.000Z"
+  },
+  {
+   "id": "354d113dcbb6346e",
+   "domaine": "blockchain",
+   "titre": "Ripple aide Aviva à tokeniser une partie de son fonds monétaire de 22 milliards de £ sur le XRP Ledger",
+   "url": "https://cryptoast.fr/aviva-investors-ripple-fonds-monetaire-tokenise-sterling-xrp-ledger/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-26T14:15:22.000Z"
+  },
+  {
+   "id": "d1491c6f79a1abe9",
+   "domaine": "ia",
+   "titre": "⚡ Weekly Recap: This2Shell, That2Shell, Everything's an RCE? Rogue AI, Supply Chain Chaos and More",
+   "url": "https://thehackernews.com/2026/10/weekly-recap-this2shell-that2shell.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-26T14:06:13.000Z"
+  },
   {
    "id": "ae2da735b2e39a77",
    "domaine": "blockchain",
