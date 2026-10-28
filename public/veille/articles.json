@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-27T10:36:59.303Z",
- "derniereCollecte": "2026-10-27T10:36:59.303Z",
+ "miseAJour": "2026-10-28T11:22:22.744Z",
+ "derniereCollecte": "2026-10-28T11:22:22.744Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -54,8 +54,8 @@
    "domaine": "ia",
    "site": "https://genai.owasp.org/",
    "flux": "https://genai.owasp.org/feed/",
-   "ok": false,
-   "articles": 0
+   "ok": true,
+   "articles": 10
   },
   {
    "nom": "Google Security Blog",
@@ -163,6 +163,114 @@
   }
  ],
  "articles": [
+  {
+   "id": "eb335ae5941f2c92",
+   "domaine": "ia",
+   "titre": "Anthropic révèle que Mythos 5 a tenté de soumettre du code malveillant à un projet open source",
+   "url": "https://www.lemondeinformatique.fr/actualites/lire-anthropic-revele-que-mythos-5-a-tente-de-soumettre-du-code-malveillant-a-un-projet-open-source-100874.html",
+   "source": "lemondeinformatique.fr",
+   "origine": "Le Monde Informatique — Sécurité",
+   "date": "2026-10-28T11:52:05.000Z"
+  },
+  {
+   "id": "13ab16b79afb3d75",
+   "domaine": "ia",
+   "titre": "Des agents IA accèdent à des données internes d'Anthropic",
+   "url": "https://www.lemondeinformatique.fr/actualites/lire-des-agents-ia-accedent-a-des-donnees-internes-d-anthropic-100881.html",
+   "source": "lemondeinformatique.fr",
+   "origine": "Le Monde Informatique — Sécurité",
+   "date": "2026-10-28T11:47:15.000Z"
+  },
+  {
+   "id": "91bdeaa61248bd09",
+   "domaine": "blockchain",
+   "titre": "Google to preview crypto custody security system as AI threats grow",
+   "url": "https://www.coindesk.com/tech/2026/10/28/google-to-preview-crypto-custody-security-system-as-ai-threats-grow",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-28T11:00:00.000Z"
+  },
+  {
+   "id": "315e8000afae99a7",
+   "domaine": "blockchain",
+   "titre": "Nearly 90% of large businesses are embracing tokenized cash to speed up payments: DBS",
+   "url": "https://www.coindesk.com/business/2026/10/28/nearly-90-of-large-businesses-are-embracing-tokenized-cash-to-speed-up-payments-dbs",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-28T10:41:51.000Z"
+  },
+  {
+   "id": "9e99d6d80874e529",
+   "domaine": "ia",
+   "titre": "Anthropic's Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux Exploits",
+   "url": "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-28T08:15:07.000Z"
+  },
+  {
+   "id": "089292a88bc02be9",
+   "domaine": "blockchain",
+   "titre": "Coinbase va convertir vos USDT en USDC : plus que 2 jours pour retirer vos stablecoins",
+   "url": "https://journalducoin.com/exchanges/coinbase-conversion-usdt-usdc-30-octobre-mica/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-28T08:00:00.000Z"
+  },
+  {
+   "id": "cef1f33a3b89f734",
+   "domaine": "blockchain",
+   "titre": "Solana : incident de sécurité chez Solflare - Que se passe-t-il ?",
+   "url": "https://cryptoast.fr/solana-incident-securite-chez-solflare/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-28T07:45:42.000Z"
+  },
+  {
+   "id": "6409747f682b4df3",
+   "domaine": "blockchain",
+   "titre": "Bithumb piraté : trois établissements financiers coréens touchés en une seule journée",
+   "url": "https://journalducoin.com/exchanges/bithumb-piratage-coree-du-sud-cyberattaques-financieres/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-28T07:30:00.000Z"
+  },
+  {
+   "id": "bf1beab0a6310965",
+   "domaine": "ia",
+   "titre": "Log-To-Leak: Prompt Injection Attacks on Tool-Using LLM Agents via the Model Context Protocol",
+   "url": "https://arxiv.org/abs/2610.36108",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-28T04:00:00.000Z"
+  },
+  {
+   "id": "da84c26d814d32e7",
+   "domaine": "ia",
+   "titre": "CyberStrikeAI Uses 44 AI Agents to Automate Hacking Operations Against Japan Targets",
+   "url": "https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-27T18:26:46.000Z"
+  },
+  {
+   "id": "b0f3491a18483b84",
+   "domaine": "blockchain",
+   "titre": "Coinbase va convertir l’USDT et 13 autres cryptos non conformes à MiCA en USDC, ce 30 octobre",
+   "url": "https://cryptoast.fr/coinbase-conversion-automatique-usdc-stablecoins-mica-30-octobre-usdt/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-27T18:25:09.000Z"
+  },
+  {
+   "id": "f021636b20efab3d",
+   "domaine": "blockchain",
+   "titre": "Ripple, BNY explore using the XRP Ledger to finance approved invoices",
+   "url": "https://www.theblock.co/news/business/2026-10-27-ripple-bny-explore-using-xrp-ledger-finance-approved-invoices-431891",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-27T15:01:12.000Z"
+  },
   {
    "id": "1b8cf0402026f825",
    "domaine": "blockchain",
