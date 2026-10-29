@@ -140,7 +140,7 @@ export function Projets() {
                   <span>Documentation</span>
                 </button>
               </div>
-              <div className="mt-2 flex flex-wrap gap-2">
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-2">
                 <a href={projet.githubUrl} target="_blank" rel="noopener noreferrer" className={btn('secondary', 'sm')}>
                   <Github size={14} />
                   <span>GitHub</span>

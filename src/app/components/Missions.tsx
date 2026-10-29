@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
-import { FileText, Github, Loader2, Maximize2, Table2 } from 'lucide-react';
+import { FileText, Github, Loader2, Maximize2 } from 'lucide-react';
 import { btn, cx, PageHeader, TabPanel, Tabs, type Tone } from './kit';
 import { DocumentDialog, type DocumentActif } from './DocumentDialog';
 
@@ -11,7 +11,7 @@ type Realisation = {
   description: string;
   imageUrl?: string;
   technologies: Tech[];
-  githubUrl: string;
+  githubUrl: string | null;
   documentationUrl: string | null;
   competences: number[];
 };
@@ -162,8 +162,8 @@ export const rubriques: Rubrique[] = [
         description: "Conception et développement d'une boutique en ligne complète sur la plateforme Shopify avec personnalisation du thème et intégration de modules.",
         imageUrl: './previews/shopify.webp',
         technologies: [],
-        githubUrl: 'https://github.com/mcf78',
-        documentationUrl: null,
+        githubUrl: null,
+        documentationUrl: './e5/documentation-shopify.pdf',
         competences: [2, 3, 4],
       },
     ],
@@ -180,10 +180,10 @@ function CarteRealisation({
   const hasDocumentation = Boolean(realisation.documentationUrl);
 
   return (
-    <article className="flex flex-col gap-3 rounded-[12px] border border-line bg-surface px-3.5 py-4 transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card">
-      <div className="flex w-full items-center gap-3">
+    <article className="flex flex-col gap-3 rounded-[12px] border border-line bg-surface p-3 transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card">
+      <div className="flex w-full items-center gap-3 sm:gap-4">
         {realisation.imageUrl && (
-          <div className="aspect-[16/10] w-20 shrink-0 overflow-hidden rounded-[7px] border border-line bg-surface-2 sm:w-24">
+          <div className="aspect-[16/10] w-32 shrink-0 overflow-hidden rounded-[7px] bg-surface-2 sm:w-36">
             <img
               src={realisation.imageUrl}
               alt={`Aperçu : ${realisation.titre}`}
@@ -193,40 +193,38 @@ function CarteRealisation({
             />
           </div>
         )}
-        <h3 className="min-w-0 flex-1 text-[14px] leading-snug font-semibold tracking-[-0.006em] text-ink">
+        <h3 className="min-w-0 flex-1 text-[15px] leading-snug font-semibold tracking-[-0.006em] text-ink [overflow-wrap:anywhere]">
           {realisation.titre}
         </h3>
       </div>
       <div className="mt-auto flex flex-wrap items-center justify-center gap-2">
-        <a
-          href={realisation.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cx(btn('secondary', 'sm'))}
-        >
-          <Github size={14} />
-          <span>GitHub</span>
-        </a>
-        {hasDocumentation ? (
+        {realisation.githubUrl && (
+          <a
+            href={realisation.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cx(btn('secondary', 'sm'))}
+          >
+            <Github size={14} />
+            <span>GitHub</span>
+          </a>
+        )}
+        {hasDocumentation && (
           <button
             type="button"
-            onClick={() =>
+            onClick={() => {
+              if (!realisation.documentationUrl) return;
               onOpenDocument({
                 titre: realisation.titre,
-                url: realisation.documentationUrl as string,
+                url: realisation.documentationUrl,
                 meta: 'Documentation E5 · PDF · lecture intégrée',
-              })
-            }
+              });
+            }}
             className={cx(btn('soft', 'sm'))}
           >
             <FileText size={14} />
             <span>Documentation</span>
           </button>
-        ) : (
-          <a href="#tableau-synthese" className={cx(btn('ghost', 'sm'))}>
-            <Table2 size={14} />
-            <span>Voir la synthèse</span>
-          </a>
         )}
       </div>
     </article>
