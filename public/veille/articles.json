@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-28T11:22:22.744Z",
- "derniereCollecte": "2026-10-28T11:22:22.744Z",
+ "miseAJour": "2026-10-29T11:32:47.005Z",
+ "derniereCollecte": "2026-10-29T11:32:47.005Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -71,7 +71,7 @@
    "site": "https://arxiv.org/list/cs.CR/recent",
    "flux": "https://rss.arxiv.org/rss/cs.CR",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "The Hacker News",
@@ -164,6 +164,69 @@
  ],
  "articles": [
   {
+   "id": "f03bd722db7fbc19",
+   "domaine": "blockchain",
+   "titre": "Départ anticipé de Christine Lagarde : La BCE change de tête, l’euro numérique reste en chantier",
+   "url": "https://journalducoin.com/actualites/depart-christine-lagarde-bce-euro-numerique/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-29T10:52:32.000Z"
+  },
+  {
+   "id": "ae782ab13f677cd1",
+   "domaine": "blockchain",
+   "titre": "Solana wallet Solflare pledges to pay missed rewards on staked $160 million after validator goes offline",
+   "url": "https://www.coindesk.com/markets/2026/10/29/solana-wallet-solflare-pledges-to-pay-missed-rewards-on-staked-usd160-million-after-validator-goes-offline",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-29T10:44:48.000Z"
+  },
+  {
+   "id": "4de91e467612d771",
+   "domaine": "blockchain",
+   "titre": "PLF 2027 : la surtaxe des grandes entreprises tombe, la taxe stablecoins résiste",
+   "url": "https://journalducoin.com/economie/budget-2027-surtaxe-grandes-entreprises-supprimee-is-multinationales-deux-voix/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-29T10:37:56.000Z"
+  },
+  {
+   "id": "6b0d09eabd0e04e8",
+   "domaine": "blockchain",
+   "titre": "Bermuda taps WalletConnect to advance its onchain economy plan",
+   "url": "https://www.coindesk.com/business/2026/10/29/bermuda-taps-walletconnect-to-advance-its-onchain-economy-plan",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-29T10:00:00.000Z"
+  },
+  {
+   "id": "36830c1724a1788e",
+   "domaine": "blockchain",
+   "titre": "Wall Street : la DTCC ouvre la voie à 30 000 milliards de dollars d'actifs tokenisés",
+   "url": "https://cryptoast.fr/dtcc-lance-service-tokenisation-30-000-milliards-wall-street/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-28T16:30:57.000Z"
+  },
+  {
+   "id": "670c051c09032c67",
+   "domaine": "blockchain",
+   "titre": "Coinbase adds Ripple’s RLUSD stablecoin across retail, exchange and Prime platforms",
+   "url": "https://www.theblock.co/news/business/2026-10-28-coinbase-adds-ripple-rlusd-stablecoin-432009",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-28T15:56:36.000Z"
+  },
+  {
+   "id": "6b441827e849d817",
+   "domaine": "blockchain",
+   "titre": "33 grands groupes américains s'opposent désormais à la tokenisation de leurs actions sur OKXICE",
+   "url": "https://cryptoast.fr/33-grands-groupes-americains-opposent-tokenisation-actions-okxice/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-28T15:00:10.000Z"
+  },
+  {
    "id": "eb335ae5941f2c92",
    "domaine": "ia",
    "titre": "Anthropic révèle que Mythos 5 a tenté de soumettre du code malveillant à un projet open source",
@@ -180,6 +243,15 @@
    "source": "lemondeinformatique.fr",
    "origine": "Le Monde Informatique — Sécurité",
    "date": "2026-10-28T11:47:15.000Z"
+  },
+  {
+   "id": "122c1873a2a66bf6",
+   "domaine": "ia",
+   "titre": "Wazuh and AI for Enhanced SOC Workflows",
+   "url": "https://thehackernews.com/2026/10/wazuh-and-ai-for-enhanced-soc-workflows.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-28T11:30:00.000Z"
   },
   {
    "id": "91bdeaa61248bd09",
