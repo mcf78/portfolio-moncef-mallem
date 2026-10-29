@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
-import { ArrowDown, FileText, Github, Loader2, Maximize2 } from 'lucide-react';
+import { createPortal } from 'react-dom';
+import { ArrowDown, ArrowUp, FileText, Github, Loader2, Maximize2 } from 'lucide-react';
 import { btn, cx, PageHeader, TabPanel, Tabs, type Tone } from './kit';
 import { DocumentDialog, type DocumentActif } from './DocumentDialog';
 
@@ -234,10 +235,53 @@ function CarteRealisation({
 export function Missions() {
   const [rubriqueActive, setRubriqueActive] = useState(rubriques[0].id);
   const [documentActif, setDocumentActif] = useState<DocumentActif | null>(null);
+  const [retourAuTableau, setRetourAuTableau] = useState(false);
   const rubrique = rubriques.find((r) => r.id === rubriqueActive) ?? rubriques[0];
   const nombreRealisations = rubriques.reduce((total, r) => total + r.realisations.length, 0);
   const tabsRef = useRef<HTMLDivElement>(null);
+  const tableauRef = useRef<HTMLElement>(null);
+  const pageRef = useRef<HTMLDivElement>(null);
   const isFirstRender = useRef(true);
+
+  // La destination suit le défilement réel, y compris lorsque la dernière
+  // catégorie est trop courte pour placer son début tout en haut de l'écran.
+  useEffect(() => {
+    let frame: number | null = null;
+    const mesurerPosition = () => {
+      frame = null;
+      const ancre = tabsRef.current;
+      if (!ancre) return;
+      const hautDesProjets = ancre.getBoundingClientRect().top;
+      const seuil = Math.min(window.innerHeight * 0.45, 320);
+      const enBasDePage = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      setRetourAuTableau(
+        window.scrollY > 1 && (
+          hautDesProjets <= seuil ||
+          (enBasDePage && hautDesProjets < window.innerHeight - 80)
+        ),
+      );
+    };
+    const planifierMesure = () => {
+      if (frame === null) frame = window.requestAnimationFrame(mesurerPosition);
+    };
+    window.addEventListener('scroll', planifierMesure, { passive: true });
+    window.addEventListener('resize', planifierMesure);
+    const observer = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(planifierMesure) : null;
+    if (pageRef.current) observer?.observe(pageRef.current);
+    planifierMesure();
+    return () => {
+      window.removeEventListener('scroll', planifierMesure);
+      window.removeEventListener('resize', planifierMesure);
+      observer?.disconnect();
+      if (frame !== null) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  function naviguerDansE5() {
+    const cible = retourAuTableau ? tableauRef.current : tabsRef.current;
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    cible?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  }
 
   // Quand on change de catégorie, on remonte la barre d'onglets pour que la nouvelle
   // rubrique soit cadrée en haut, au lieu de rester collée au bas de l'écran.
@@ -251,30 +295,13 @@ export function Missions() {
   }, [rubriqueActive]);
 
   return (
-    <div>
+    <div ref={pageRef} className="pb-24">
       <PageHeader
         title="Mes réalisations"
         description="Réalisations de l'épreuve E5, classées par contexte : formation, entreprise et projet tutoré."
       />
 
-      <nav aria-label="Parcours de l'épreuve E5" className="mb-3 grid grid-cols-2 gap-2">
-        <a
-          href="#tableau-synthese"
-          className="flex min-h-11 min-w-0 items-center justify-between gap-2 rounded-[9px] border border-line-strong bg-surface px-3 py-2 text-[12.5px] leading-snug font-medium text-ink transition-colors hover:border-brand-line hover:bg-brand-soft hover:text-brand-ink"
-        >
-          <span>1. Consulter le tableau</span>
-          <ArrowDown aria-hidden size={15} className="shrink-0" />
-        </a>
-        <a
-          href="#realisations-e5"
-          className="flex min-h-11 min-w-0 items-center justify-between gap-2 rounded-[9px] border border-brand-line bg-brand-soft px-3 py-2 text-[12.5px] leading-snug font-semibold text-brand-ink transition-colors hover:bg-brand-line"
-        >
-          <span>2. Voir les {nombreRealisations} projets</span>
-          <ArrowDown aria-hidden size={15} className="shrink-0" />
-        </a>
-      </nav>
-
-      <section id="tableau-synthese" className="mb-4 scroll-mt-24">
+      <section id="tableau-synthese" ref={tableauRef} className="mb-4 scroll-mt-24 lg:scroll-mt-6">
         <div className="overflow-hidden rounded-[12px] border border-line bg-surface">
           <div className="flex flex-col gap-3 border-b border-line bg-surface-2 px-4 py-3.5 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -320,16 +347,6 @@ export function Missions() {
             </Suspense>
           </div>
 
-          <div className="flex flex-col gap-3 border-t border-brand-line bg-brand-soft px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-[14px] font-semibold text-ink">Les projets sont juste après</p>
-              <p className="mt-0.5 text-[12px] leading-snug text-ink-2">Découvrez les réalisations et ouvrez leur documentation.</p>
-            </div>
-            <a href="#realisations-e5" className={cx(btn('primary'), 'shrink-0')}>
-              Découvrir les {nombreRealisations} projets
-              <ArrowDown aria-hidden size={15} />
-            </a>
-          </div>
         </div>
       </section>
 
@@ -375,6 +392,23 @@ export function Missions() {
       </TabPanel>
 
       <DocumentDialog document={documentActif} onClose={() => setDocumentActif(null)} />
+      {!documentActif && typeof document !== 'undefined' && createPortal(
+        <div className="pointer-events-none fixed inset-x-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-40 flex justify-center sm:inset-x-auto sm:right-6 lg:right-10">
+          <button
+            type="button"
+            onClick={naviguerDansE5}
+            aria-controls={retourAuTableau ? 'tableau-synthese' : 'realisations-e5'}
+            className={cx(
+              btn('primary', 'lg'),
+              'pointer-events-auto min-h-12 w-full max-w-80 cursor-pointer gap-3 shadow-[0_8px_30px_rgba(6,27,49,0.22)] sm:w-auto',
+            )}
+          >
+            {retourAuTableau ? <ArrowUp aria-hidden size={20} /> : <ArrowDown aria-hidden size={20} />}
+            <span>{retourAuTableau ? 'Revenir au tableau' : 'Voir les projets'}</span>
+          </button>
+        </div>,
+        document.body,
+      )}
     </div>
   );
 }

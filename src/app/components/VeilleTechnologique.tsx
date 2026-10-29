@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { sujets, type Sujet } from '../data/veille';
 import { btn, Card, CardTitle, cx, Dot, Eyebrow, PageHeader, type Tone } from './kit';
+import { VeilleSchema } from './VeilleSchema';
 
 // Fil de veille généré chaque jour par scripts/veille/collecter.mjs (GitHub Actions).
 type Article = { id: string; domaine: Sujet['id']; titre: string; url: string; source: string; origine: string; date: string };
@@ -28,27 +29,16 @@ const PAR_PAGE = 40;
 const presentations: Record<Sujet['id'], {
   numero: string;
   question: string;
-  axes: { titre: string; texte: string }[];
   apport: string;
 }> = {
   ia: {
     numero: '01',
     question: 'Comment intégrer une IA dans une application tout en protégeant les données et les actions qu’elle peut effectuer ?',
-    axes: [
-      { titre: 'Manipulation des modèles', texte: 'Injection de prompt, contournement des garde-fous et empoisonnement des données.' },
-      { titre: 'Sécurité des agents', texte: 'Outils connectés, permissions et accès aux informations.' },
-      { titre: 'Développement sécurisé', texte: 'Protection des données, recommandations et encadrement des usages.' },
-    ],
     apport: 'Identifier les risques des fonctions IA et les contrôles à prévoir dans une application.',
   },
   blockchain: {
     numero: '02',
     question: 'Dans quels cas une blockchain répond-elle à un besoin concret, et quelles contraintes faut-il prendre en compte ?',
-    axes: [
-      { titre: 'Usages concrets', texte: 'Traçabilité, échanges de données et identité numérique.' },
-      { titre: 'Évolution des plateformes', texte: 'IOTA, Ethereum et contrats intelligents.' },
-      { titre: 'Sécurité et limites', texte: 'Protection des actifs, vulnérabilités des plateformes et cadre des usages.' },
-    ],
     apport: 'Comparer des architectures et choisir une technologie en fonction des besoins d’un projet.',
   },
 };
@@ -151,15 +141,7 @@ function PresentationSujet({ sujet }: { sujet: Sujet }) {
         <p className="mt-1 text-[15px] leading-snug font-medium text-ink">{presentation.question}</p>
       </div>
 
-      <h3 className="mt-4 mb-2 text-[12px] font-semibold text-ink-3">Ce que je surveille</h3>
-      <ul className="list-disc space-y-1.5 pl-4 text-[13px] leading-[1.55] text-ink-2 marker:text-brand-ink">
-        {presentation.axes.map((axe) => (
-          <li key={axe.titre}>
-            <span className="font-semibold text-ink">{axe.titre} : </span>
-            {axe.texte}
-          </li>
-        ))}
-      </ul>
+      <VeilleSchema sujetId={sujet.id} />
       <p className="mt-4 border-t border-line pt-3 text-[13px] leading-[1.6] text-ink-2">
         <span className="font-semibold text-ink">L’intérêt pour ma formation SLAM : </span>
         {presentation.apport}
