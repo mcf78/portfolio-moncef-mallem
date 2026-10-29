@@ -180,52 +180,52 @@ function CarteRealisation({
   const hasDocumentation = Boolean(realisation.documentationUrl);
 
   return (
-    <article className="flex flex-col gap-3 rounded-[12px] border border-line bg-surface p-3 transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card">
-      <div className="flex w-full items-center gap-3 sm:gap-4">
-        {realisation.imageUrl && (
-          <div className="aspect-[16/10] w-32 shrink-0 overflow-hidden rounded-[7px] bg-surface-2 sm:w-36">
-            <img
-              src={realisation.imageUrl}
-              alt={`Aperçu : ${realisation.titre}`}
-              loading="lazy"
-              decoding="async"
-              className="size-full object-cover"
-            />
-          </div>
-        )}
-        <h3 className="min-w-0 flex-1 text-[15px] leading-snug font-semibold tracking-[-0.006em] text-ink [overflow-wrap:anywhere]">
+    <article className="flex items-start gap-3 rounded-[12px] border border-line bg-surface p-3 transition-[border-color,box-shadow] duration-200 hover:border-line-strong hover:shadow-card sm:gap-4">
+      {realisation.imageUrl && (
+        <div className="aspect-[16/10] w-24 shrink-0 overflow-hidden rounded-[7px] bg-surface-2 min-[360px]:w-32 sm:w-36">
+          <img
+            src={realisation.imageUrl}
+            alt={`Aperçu : ${realisation.titre}`}
+            loading="lazy"
+            decoding="async"
+            className="size-full object-cover"
+          />
+        </div>
+      )}
+      <div className="flex min-w-0 flex-1 flex-col gap-2.5">
+        <h3 className="text-[15px] leading-snug font-semibold tracking-[-0.006em] text-ink [overflow-wrap:anywhere]">
           {realisation.titre}
         </h3>
-      </div>
-      <div className="mt-auto flex flex-wrap items-center justify-center gap-2">
-        {realisation.githubUrl && (
-          <a
-            href={realisation.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cx(btn('secondary', 'sm'))}
-          >
-            <Github size={14} />
-            <span>GitHub</span>
-          </a>
-        )}
-        {hasDocumentation && (
-          <button
-            type="button"
-            onClick={() => {
-              if (!realisation.documentationUrl) return;
-              onOpenDocument({
-                titre: realisation.titre,
-                url: realisation.documentationUrl,
-                meta: 'Documentation E5 · PDF · lecture intégrée',
-              });
-            }}
-            className={cx(btn('soft', 'sm'))}
-          >
-            <FileText size={14} />
-            <span>Documentation</span>
-          </button>
-        )}
+        <div className="flex flex-wrap gap-2">
+          {realisation.githubUrl && (
+            <a
+              href={realisation.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cx(btn('secondary', 'sm'), 'flex-1')}
+            >
+              <Github size={14} />
+              <span>GitHub</span>
+            </a>
+          )}
+          {hasDocumentation && (
+            <button
+              type="button"
+              onClick={() => {
+                if (!realisation.documentationUrl) return;
+                onOpenDocument({
+                  titre: realisation.titre,
+                  url: realisation.documentationUrl,
+                  meta: 'Documentation E5 · PDF · lecture intégrée',
+                });
+              }}
+              className={cx(btn('soft', 'sm'), 'flex-1')}
+            >
+              <FileText size={14} />
+              <span>Documentation</span>
+            </button>
+          )}
+        </div>
       </div>
     </article>
   );
