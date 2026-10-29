@@ -255,26 +255,12 @@ export function Missions() {
       <PageHeader
         title="Mes réalisations"
         description="Réalisations de l'épreuve E5, classées par contexte : formation, entreprise et projet tutoré."
+        actions={
+          <a href="#realisations-e5" className={btn('secondary', 'sm')}>
+            Explorer les projets
+          </a>
+        }
       />
-
-      <div ref={tabsRef} className="scroll-mt-20 lg:scroll-mt-6">
-        <Tabs
-          label="Rubriques de l'épreuve E5"
-          value={rubriqueActive}
-          onChange={setRubriqueActive}
-          items={rubriques.map((r) => ({ id: r.id, label: r.titre, tone: r.tone, count: r.realisations.length }))}
-        />
-      </div>
-
-      <TabPanel key={rubrique.id} id={rubrique.id} className="mt-3 grid gap-2 md:grid-cols-2">
-        {rubrique.realisations.map((realisation) => (
-          <CarteRealisation
-            key={realisation.titre}
-            realisation={realisation}
-            onOpenDocument={setDocumentActif}
-          />
-        ))}
-      </TabPanel>
 
       <section id="tableau-synthese" className="mb-4 scroll-mt-24">
         <div className="overflow-hidden rounded-[12px] border border-line bg-surface">
@@ -327,6 +313,31 @@ export function Missions() {
           </p>
         </div>
       </section>
+
+      <div id="realisations-e5" ref={tabsRef} className="mt-5 scroll-mt-20 lg:scroll-mt-6" />
+      <div className="sticky top-16 z-30 rounded-[12px] border border-brand-line bg-canvas p-3 shadow-[0_6px_20px_rgba(6,27,49,0.08)] lg:top-3">
+        <h2 className="text-[15px] font-semibold text-ink">Explorer les réalisations</h2>
+        <p className="mt-0.5 mb-3 text-[12.5px] text-ink-3">
+          Choisissez un contexte pour afficher les projets.
+        </p>
+        <Tabs
+          appearance="prominent"
+          label="Rubriques de l'épreuve E5"
+          value={rubriqueActive}
+          onChange={setRubriqueActive}
+          items={rubriques.map((r) => ({ id: r.id, label: r.contexte, tone: r.tone, count: r.realisations.length }))}
+        />
+      </div>
+
+      <TabPanel key={rubrique.id} id={rubrique.id} className="mt-3 grid gap-2 md:grid-cols-2">
+        {rubrique.realisations.map((realisation) => (
+          <CarteRealisation
+            key={realisation.titre}
+            realisation={realisation}
+            onOpenDocument={setDocumentActif}
+          />
+        ))}
+      </TabPanel>
 
       <DocumentDialog document={documentActif} onClose={() => setDocumentActif(null)} />
     </div>

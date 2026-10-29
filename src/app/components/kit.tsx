@@ -115,8 +115,21 @@ export function Dot({ tone }: { tone: Tone }) {
 type TabItem<T extends string> = { id: T; label: ReactNode; tone?: Tone; count?: number };
 
 /** Segmented tabs (WAI-ARIA tabs pattern, arrow keys move between tabs). */
-export function Tabs<T extends string>({ items, value, onChange, label }: { items: TabItem<T>[]; value: T; onChange: (id: T) => void; label: string }) {
+export function Tabs<T extends string>({
+  items,
+  value,
+  onChange,
+  label,
+  appearance = 'default',
+}: {
+  items: TabItem<T>[];
+  value: T;
+  onChange: (id: T) => void;
+  label: string;
+  appearance?: 'default' | 'prominent';
+}) {
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
+  const prominent = appearance === 'prominent';
   const onKeyDown = (e: KeyboardEvent, index: number) => {
     if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
     e.preventDefault();
@@ -125,7 +138,11 @@ export function Tabs<T extends string>({ items, value, onChange, label }: { item
     refs.current[next]?.focus();
   };
   return (
-    <div role="tablist" aria-label={label} className="flex max-w-full flex-wrap gap-1 rounded-[10px] border border-line bg-surface-2 p-1 sm:inline-flex sm:flex-nowrap">
+    <div
+      role="tablist"
+      aria-label={label}
+      className={prominent ? 'flex w-full flex-wrap gap-2' : 'flex max-w-full flex-wrap gap-1 rounded-[10px] border border-line bg-surface-2 p-1 sm:inline-flex sm:flex-nowrap'}
+    >
       {items.map((item, i) => {
         const active = item.id === value;
         return (
@@ -142,15 +159,21 @@ export function Tabs<T extends string>({ items, value, onChange, label }: { item
             tabIndex={active ? 0 : -1}
             onClick={() => onChange(item.id)}
             onKeyDown={(e) => onKeyDown(e, i)}
-            className={cx(
+            className={prominent ? cx(
+              'inline-flex min-h-11 min-w-0 flex-1 basis-28 cursor-pointer items-center justify-center gap-2 rounded-[8px] border px-2 py-2 text-center text-[13px] leading-snug font-semibold transition-[background-color,border-color,color,box-shadow] duration-150 sm:px-3',
+              active ? 'border-brand bg-brand text-on-brand shadow-tab' : 'border-line-strong bg-surface text-ink-2 hover:border-brand-line hover:bg-brand-soft hover:text-brand-ink',
+            ) : cx(
               'inline-flex h-8 shrink-0 items-center gap-2 rounded-[7px] px-3 text-[13px] font-medium transition-[background-color,color,box-shadow] duration-150',
               active ? 'bg-surface text-ink shadow-tab' : 'text-ink-3 hover:text-ink',
             )}
           >
-            {item.tone && <Dot tone={item.tone} />}
-            {item.label}
+            {item.tone && (prominent && active ? <span aria-hidden className="inline-block size-1.5 shrink-0 rounded-full bg-current" /> : <Dot tone={item.tone} />)}
+            {prominent ? <span className="min-w-0 [overflow-wrap:anywhere]">{item.label}</span> : item.label}
             {item.count !== undefined && (
-              <span className={cx('rounded-full px-1.5 text-[11px] tabular-nums', active ? 'bg-brand-soft text-brand-ink' : 'bg-surface-3 text-ink-3')}>{item.count}</span>
+              <span className={prominent
+                ? cx('shrink-0 rounded-full px-1.5 py-0.5 text-[11px] tabular-nums', active ? 'bg-white/20 text-on-brand' : 'bg-surface-3 text-ink-2')
+                : cx('rounded-full px-1.5 text-[11px] tabular-nums', active ? 'bg-brand-soft text-brand-ink' : 'bg-surface-3 text-ink-3')
+              }>{item.count}</span>
             )}
           </button>
         );
