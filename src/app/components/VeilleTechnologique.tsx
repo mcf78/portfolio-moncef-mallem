@@ -15,14 +15,13 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { sujets, type Sujet } from '../data/veille';
-import { btn, Card, CardTitle, cx, Dot, Eyebrow, PageHeader, TabPanel, Tabs, type Tone } from './kit';
+import { btn, Card, CardTitle, cx, Dot, Eyebrow, PageHeader, type Tone } from './kit';
 
 // Fil de veille généré chaque jour par scripts/veille/collecter.mjs (GitHub Actions).
 type Article = { id: string; domaine: Sujet['id']; titre: string; url: string; source: string; origine: string; date: string };
 type EtatSource = { nom: string; domaine: Sujet['id']; site: string; flux: string; ok: boolean; articles: number };
 type Archive = { miseAJour: string; derniereCollecte: string; sources: EtatSource[]; articles: Article[] };
 
-const METHODE = 'methode';
 const tons: Record<Sujet['id'], Tone> = { ia: 'red', blockchain: 'brand' };
 const PAR_PAGE = 40;
 
@@ -40,7 +39,7 @@ const presentations: Record<Sujet['id'], {
       { titre: 'Sécurité des agents', texte: 'Outils connectés, permissions et accès aux informations.' },
       { titre: 'Développement sécurisé', texte: 'Protection des données, recommandations et encadrement des usages.' },
     ],
-    apport: 'Ce thème m’aide à identifier les risques d’une fonctionnalité utilisant l’IA et à réfléchir aux contrôles nécessaires lors de son intégration dans une application.',
+    apport: 'Identifier les risques des fonctions IA et les contrôles à prévoir dans une application.',
   },
   blockchain: {
     numero: '02',
@@ -50,7 +49,7 @@ const presentations: Record<Sujet['id'], {
       { titre: 'Évolution des plateformes', texte: 'IOTA, Ethereum et contrats intelligents.' },
       { titre: 'Sécurité et limites', texte: 'Protection des actifs, vulnérabilités des plateformes et cadre des usages.' },
     ],
-    apport: 'Ce thème m’aide à comparer des architectures, à comprendre les échanges entre applications et à évaluer l’intérêt d’une technologie selon les besoins d’un projet.',
+    apport: 'Comparer des architectures et choisir une technologie en fonction des besoins d’un projet.',
   },
 };
 
@@ -140,50 +139,43 @@ function PresentationSujet({ sujet }: { sujet: Sujet }) {
   const presentation = presentations[sujet.id];
 
   return (
-    <div>
-      <section aria-labelledby={`presentation-${sujet.id}`} className="rounded-[12px] border border-line bg-surface p-4 sm:p-5">
-        <p className="text-[11px] font-semibold tracking-[0.06em] text-brand-ink uppercase">
-          Thème {presentation.numero} · Suivi depuis {sujet.depuis}
-        </p>
-        <h2 id={`presentation-${sujet.id}`} className="mt-1 text-[22px] leading-snug font-semibold tracking-[-0.015em] text-ink">
-          {sujet.titre}
-        </h2>
-        <div className="mt-3 rounded-[9px] border border-brand-line bg-brand-soft px-3.5 py-3">
-          <p className="text-[11px] font-semibold tracking-[0.04em] text-brand-ink uppercase">La question que je suis</p>
-          <p className="mt-1 text-[15px] leading-snug font-medium text-ink">{presentation.question}</p>
-        </div>
-        <p className="mt-3 text-[13.5px] leading-[1.6] text-ink-2">{sujet.accroche}</p>
+    <section id="dossier-de-veille" aria-labelledby={`presentation-${sujet.id}`} className="rounded-[12px] border border-line bg-surface p-4 sm:p-5">
+      <p className="text-[11px] font-semibold tracking-[0.06em] text-brand-ink uppercase">
+        Thème {presentation.numero} · Suivi depuis {sujet.depuis}
+      </p>
+      <h2 id={`presentation-${sujet.id}`} className="mt-1 text-[22px] leading-snug font-semibold tracking-[-0.015em] text-ink">
+        {sujet.titre}
+      </h2>
+      <div className="mt-3">
+        <p className="text-[12px] font-semibold text-ink-3">Question suivie</p>
+        <p className="mt-1 text-[15px] leading-snug font-medium text-ink">{presentation.question}</p>
+      </div>
 
-        <h3 className="mt-4 mb-2 text-[12px] font-semibold text-ink-3">Mes trois axes de veille</h3>
-        <ol className="grid gap-2 sm:grid-cols-3">
-          {presentation.axes.map((axe, index) => (
-            <li key={axe.titre} className="rounded-[9px] border border-line bg-surface-2 p-3">
-              <p className="text-[13px] leading-snug font-semibold text-ink">
-                <span className="mr-1.5 text-brand-ink">{index + 1}.</span>
-                {axe.titre}
-              </p>
-              <p className="mt-1 text-[12.5px] leading-[1.5] text-ink-2">{axe.texte}</p>
-            </li>
-          ))}
-        </ol>
-        <p className="mt-4 border-t border-line pt-3 text-[13px] leading-[1.6] text-ink-2">
-          <span className="font-semibold text-ink">L’intérêt pour ma formation SLAM : </span>
-          {presentation.apport}
-        </p>
-      </section>
-
-      <details className="group mt-3 rounded-[12px] border border-line bg-surface">
-        <summary className="flex cursor-pointer list-none flex-wrap items-center gap-2 rounded-[12px] px-4 py-3 text-[13px] font-semibold text-ink transition-colors hover:bg-surface-2 [&::-webkit-details-marker]:hidden">
+      <h3 className="mt-4 mb-2 text-[12px] font-semibold text-ink-3">Ce que je surveille</h3>
+      <ul className="list-disc space-y-1.5 pl-4 text-[13px] leading-[1.55] text-ink-2 marker:text-brand-ink">
+        {presentation.axes.map((axe) => (
+          <li key={axe.titre}>
+            <span className="font-semibold text-ink">{axe.titre} : </span>
+            {axe.texte}
+          </li>
+        ))}
+      </ul>
+      <p className="mt-4 border-t border-line pt-3 text-[13px] leading-[1.6] text-ink-2">
+        <span className="font-semibold text-ink">L’intérêt pour ma formation SLAM : </span>
+        {presentation.apport}
+      </p>
+      <details className="group mt-4 border-t border-line">
+        <summary className="flex cursor-pointer list-none flex-wrap items-center gap-2 py-3 text-[13px] font-semibold text-brand-ink hover:underline [&::-webkit-details-marker]:hidden">
           <History aria-hidden size={16} className="shrink-0 text-brand-ink" />
           <span className="min-w-0 flex-1">Consulter la chronologie complète</span>
           <span className="text-[12px] font-normal text-ink-3">{sujet.faits.length} repères</span>
           <ChevronDown aria-hidden size={16} className="shrink-0 text-ink-3 transition-transform group-open:rotate-180" />
         </summary>
-        <div className="max-h-[32rem] overflow-y-auto border-t border-line p-3">
+        <div className="max-h-[32rem] overflow-y-auto">
           <Chronologie sujet={sujet} />
         </div>
       </details>
-    </div>
+    </section>
   );
 }
 
@@ -399,94 +391,106 @@ function Methode({ archive }: { archive: Archive | null }) {
 }
 
 export function VeilleTechnologique() {
-  const [onglet, setOnglet] = useState<string>(sujets[0].id);
+  const [themeActif, setThemeActif] = useState<Sujet['id']>(sujets[0].id);
   const [sujetFil, setSujetFil] = useState<Sujet['id']>(sujets[0].id);
   const { archive, erreur } = useArchive();
-  const sujet = sujets.find((s) => s.id === onglet);
+  const sujet = sujets.find((s) => s.id === themeActif) ?? sujets[0];
   const sujetDuFil = sujets.find((s) => s.id === sujetFil) ?? sujets[0];
   const compte = (id: Sujet['id']) => archive?.articles.filter((a) => a.domaine === id).length;
   const sommaireRef = useRef<HTMLDivElement>(null);
-  const isFirstRender = useRef(true);
 
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
+  function choisirTheme(id: Sujet['id']) {
+    setThemeActif(id);
+    setSujetFil(id);
     const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     sommaireRef.current?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-  }, [onglet]);
-
-  function choisirOnglet(id: string) {
-    setOnglet(id);
-    const theme = sujets.find((s) => s.id === id);
-    if (theme) setSujetFil(theme.id);
   }
 
   return (
     <div>
       <PageHeader
         title="Ma veille technologique"
-        description="Deux thèmes liés au développement et à la sécurité des services numériques. Retrouvez ma synthèse par sujet, puis les articles collectés automatiquement en bas de page."
-        actions={
-          <a href="#fil-de-veille" className={btn('secondary', 'sm')}>
-            <Rss size={14} />
-            Articles collectés
-          </a>
-        }
+        description="Deux thèmes à découvrir : la sécurité de l’IA et les usages de la blockchain. Choisissez un thème pour lire ma synthèse ; les articles collectés se trouvent ensuite en bas de page."
       />
 
       <div ref={sommaireRef} className="scroll-mt-20 lg:scroll-mt-6" />
-      <div className="sticky top-16 z-30 rounded-[12px] border border-brand-line bg-canvas p-3 shadow-card lg:top-3">
-        <div className="mb-2.5">
-          <h2 className="text-[14px] font-semibold text-ink">Sommaire de ma veille</h2>
-          <p className="mt-0.5 text-[12px] text-ink-2">Choisissez un thème ou découvrez ma méthode.</p>
+      <div className="sticky top-16 z-30 bg-canvas py-3 lg:top-3">
+        <h2 id="choix-themes-veille" className="mb-2 text-[14px] font-semibold text-ink">Deux thèmes à découvrir</h2>
+        <div className="grid grid-cols-2 gap-2 sm:gap-3" role="group" aria-labelledby="choix-themes-veille">
+          {sujets.map((theme) => {
+            const actif = theme.id === themeActif;
+            return (
+              <button
+                key={theme.id}
+                type="button"
+                aria-pressed={actif}
+                aria-controls="dossier-de-veille"
+                onClick={() => choisirTheme(theme.id)}
+                className={cx(
+                  'flex min-w-0 cursor-pointer flex-col items-start rounded-[10px] border px-3 py-3 text-left transition-[background-color,border-color,box-shadow] duration-150 sm:px-4',
+                  actif ? 'border-brand bg-brand-soft shadow-tab' : 'border-line-strong bg-surface hover:border-brand hover:bg-surface-2',
+                )}
+              >
+                <span className="text-[11px] font-medium text-ink-3">
+                  Thème {presentations[theme.id].numero}{actif ? ' · ouvert' : ''}
+                </span>
+                <span className="mt-1 text-[15px] leading-snug font-semibold text-ink sm:text-[17px]">
+                  {theme.id === 'ia' ? 'IA & sécurité' : 'Blockchain & IOTA'}
+                </span>
+                <span className="mt-2 inline-flex items-center gap-1.5 text-[12px] font-semibold text-brand-ink underline underline-offset-2">
+                  Lire ce thème
+                  <ArrowRight aria-hidden size={14} className="shrink-0" />
+                </span>
+              </button>
+            );
+          })}
         </div>
-        <Tabs
-          appearance="prominent"
-          label="Sommaire de la veille technologique"
-          value={onglet}
-          onChange={choisirOnglet}
-          items={[
-            { id: 'ia', label: '01 · IA & sécurité', tone: tons.ia },
-            { id: 'blockchain', label: '02 · Blockchain & IOTA', tone: tons.blockchain },
-            { id: METHODE, label: '03 · Méthode & sources' },
-          ]}
-        />
       </div>
 
-      <TabPanel key={onglet} id={onglet} className="mt-3">
-        {sujet ? <PresentationSujet sujet={sujet} /> : <Methode archive={archive} />}
-      </TabPanel>
+      <div key={sujet.id} className="mt-3">
+        <PresentationSujet sujet={sujet} />
+      </div>
 
-      <section id="fil-de-veille" aria-labelledby="titre-fil-de-veille" className="mt-6 scroll-mt-64 sm:scroll-mt-52 lg:scroll-mt-36">
+      <section id="fil-de-veille" aria-labelledby="titre-fil-de-veille" className="mt-6 scroll-mt-64 sm:scroll-mt-56 lg:scroll-mt-44">
         <div className="mb-3">
           <h2 id="titre-fil-de-veille" className="flex items-center gap-2 text-[19px] leading-snug font-semibold text-ink">
             <Rss aria-hidden size={19} className="shrink-0 text-brand-ink" />
-            Approfondir avec les articles collectés
+            Pour aller plus loin : les articles collectés
           </h2>
           <p className="mt-1 text-[13px] leading-[1.6] text-ink-2">
             Mon fil de veille se met à jour chaque jour. Choisissez un sujet, recherchez un article et explorez les archives par année.
           </p>
         </div>
-        <div className="mb-3 flex flex-wrap gap-2" role="group" aria-label="Choisir le sujet du fil de veille">
-          {sujets.map((theme) => (
-            <button
-              key={theme.id}
-              type="button"
-              aria-pressed={sujetFil === theme.id}
-              onClick={() => setSujetFil(theme.id)}
-              className={cx(btn(sujetFil === theme.id ? 'primary' : 'secondary'), 'flex-1')}
-            >
-              <span>{theme.id === 'ia' ? 'IA & sécurité' : 'Blockchain & IOTA'}</span>
-              {compte(theme.id) !== undefined && <span className="text-[11px] tabular-nums opacity-80">({compte(theme.id)})</span>}
-            </button>
-          ))}
-        </div>
+        <label className="mb-3 flex flex-wrap items-center gap-2 text-[13px] font-medium text-ink">
+          Sujet des articles
+          <select
+            value={sujetFil}
+            onChange={(event) => {
+              const choix = sujets.find((theme) => theme.id === event.target.value);
+              if (choix) setSujetFil(choix.id);
+            }}
+            className="h-9 max-w-full rounded-[8px] border border-line-strong bg-surface px-3 text-[13px] text-ink"
+          >
+            {sujets.map((theme) => (
+              <option key={theme.id} value={theme.id}>
+                {theme.id === 'ia' ? 'IA & sécurité' : 'Blockchain & IOTA'}{compte(theme.id) !== undefined ? ` (${compte(theme.id)})` : ''}
+              </option>
+            ))}
+          </select>
+        </label>
         <div className="h-[min(70dvh,720px)] min-h-[360px]">
           <FilDeVeille key={sujetDuFil.id} sujet={sujetDuFil} archive={archive} erreur={erreur} />
         </div>
       </section>
+
+      <details className="group mt-5 border-t border-line">
+        <summary className="flex cursor-pointer list-none items-center gap-2 py-3 text-[13px] font-medium text-brand-ink hover:underline [&::-webkit-details-marker]:hidden">
+          <Workflow aria-hidden size={15} className="shrink-0" />
+          <span className="min-w-0 flex-1">Méthode et sources de ma veille</span>
+          <ChevronDown aria-hidden size={15} className="shrink-0 transition-transform group-open:rotate-180" />
+        </summary>
+        <Methode archive={archive} />
+      </details>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
-import { FileText, Github, Loader2, Maximize2 } from 'lucide-react';
+import { ArrowDown, FileText, Github, Loader2, Maximize2 } from 'lucide-react';
 import { btn, cx, PageHeader, TabPanel, Tabs, type Tone } from './kit';
 import { DocumentDialog, type DocumentActif } from './DocumentDialog';
 
@@ -255,12 +255,24 @@ export function Missions() {
       <PageHeader
         title="Mes réalisations"
         description="Réalisations de l'épreuve E5, classées par contexte : formation, entreprise et projet tutoré."
-        actions={
-          <a href="#realisations-e5" className={btn('secondary', 'sm')}>
-            Explorer les projets
-          </a>
-        }
       />
+
+      <nav aria-label="Parcours de l'épreuve E5" className="mb-3 grid grid-cols-2 gap-2">
+        <a
+          href="#tableau-synthese"
+          className="flex min-h-11 min-w-0 items-center justify-between gap-2 rounded-[9px] border border-line-strong bg-surface px-3 py-2 text-[12.5px] leading-snug font-medium text-ink transition-colors hover:border-brand-line hover:bg-brand-soft hover:text-brand-ink"
+        >
+          <span>1. Consulter le tableau</span>
+          <ArrowDown aria-hidden size={15} className="shrink-0" />
+        </a>
+        <a
+          href="#realisations-e5"
+          className="flex min-h-11 min-w-0 items-center justify-between gap-2 rounded-[9px] border border-brand-line bg-brand-soft px-3 py-2 text-[12.5px] leading-snug font-semibold text-brand-ink transition-colors hover:bg-brand-line"
+        >
+          <span>2. Voir les {nombreRealisations} projets</span>
+          <ArrowDown aria-hidden size={15} className="shrink-0" />
+        </a>
+      </nav>
 
       <section id="tableau-synthese" className="mb-4 scroll-mt-24">
         <div className="overflow-hidden rounded-[12px] border border-line bg-surface">
@@ -293,7 +305,7 @@ export function Missions() {
             </div>
           </div>
 
-          <div className="max-h-[70vh] overflow-y-auto bg-surface-2 p-3">
+          <div className="max-h-[45vh] overflow-y-auto bg-surface-2 p-3">
             <Suspense
               fallback={
                 <div className="grid min-h-64 place-items-center rounded-[8px] border border-line bg-surface px-6 py-12 text-center">
@@ -308,9 +320,16 @@ export function Missions() {
             </Suspense>
           </div>
 
-          <p className="border-t border-line px-4 py-2 text-[11px] text-ink-4">
-            Le tableau officiel s'affiche directement dans la page. Utilisez « Agrandir » pour le consulter en plein écran.
-          </p>
+          <div className="flex flex-col gap-3 border-t border-brand-line bg-brand-soft px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-[14px] font-semibold text-ink">Les projets sont juste après</p>
+              <p className="mt-0.5 text-[12px] leading-snug text-ink-2">Découvrez les réalisations et ouvrez leur documentation.</p>
+            </div>
+            <a href="#realisations-e5" className={cx(btn('primary'), 'shrink-0')}>
+              Découvrir les {nombreRealisations} projets
+              <ArrowDown aria-hidden size={15} />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -318,14 +337,30 @@ export function Missions() {
       <div className="sticky top-16 z-30 rounded-[12px] border border-brand-line bg-canvas p-3 shadow-[0_6px_20px_rgba(6,27,49,0.08)] lg:top-3">
         <h2 className="text-[15px] font-semibold text-ink">Explorer les réalisations</h2>
         <p className="mt-0.5 mb-3 text-[12.5px] text-ink-3">
-          Choisissez un contexte pour afficher les projets.
+          Cliquez sur une catégorie pour afficher ses projets.
         </p>
         <Tabs
           appearance="prominent"
           label="Rubriques de l'épreuve E5"
           value={rubriqueActive}
           onChange={setRubriqueActive}
-          items={rubriques.map((r) => ({ id: r.id, label: r.contexte, tone: r.tone, count: r.realisations.length }))}
+          items={rubriques.map((r) => ({
+            id: r.id,
+            tone: r.tone,
+            label: (
+              <span className="block text-left">
+                <span className="block">{r.contexte}</span>
+                <span className="mt-0.5 block text-[11px] leading-snug font-medium">
+                  {rubriqueActive === r.id ? 'Projets affichés' : (
+                    <span className="underline underline-offset-2">
+                      {r.realisations.length === 1 ? 'Afficher le projet' : `Afficher les ${r.realisations.length} projets`}
+                      <span aria-hidden> →</span>
+                    </span>
+                  )}
+                </span>
+              </span>
+            ),
+          }))}
         />
       </div>
 
