@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-29T11:32:47.005Z",
- "derniereCollecte": "2026-10-29T11:32:47.005Z",
+ "miseAJour": "2026-10-30T11:25:27.757Z",
+ "derniereCollecte": "2026-10-30T11:25:27.757Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -71,7 +71,7 @@
    "site": "https://arxiv.org/list/cs.CR/recent",
    "flux": "https://rss.arxiv.org/rss/cs.CR",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "The Hacker News",
@@ -163,6 +163,114 @@
   }
  ],
  "articles": [
+  {
+   "id": "3e108ff7e4ff77be",
+   "domaine": "blockchain",
+   "titre": "Piratage de Binance : CZ demande à Elon Musk d’arrêter de troller et réclame son soutien",
+   "url": "https://journalducoin.com/exchanges/piratage-binance-cz-elon-musk-troller/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-30T11:21:47.000Z"
+  },
+  {
+   "id": "3738833ccb5df94d",
+   "domaine": "blockchain",
+   "titre": "Risque quantique : il faudrait beaucoup moins de matériel que prévu pour casser les clés cryptographiques de Bitcoin",
+   "url": "https://cryptoast.fr/risque-quantique-faudrait-beaucoup-moins-materiel-prevu-casser-cles-cryptographiques-bitcoin/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-30T11:15:04.000Z"
+  },
+  {
+   "id": "3d34fefad3db937e",
+   "domaine": "ia",
+   "titre": "Mistral AI ouvre les poids de son modèle Large 4",
+   "url": "https://www.lemondeinformatique.fr/actualites/lire-mistral-ai-ouvre-les-poids-de-son-modele-large-4-100889.html",
+   "source": "lemondeinformatique.fr",
+   "origine": "Le Monde Informatique — Sécurité",
+   "date": "2026-10-30T11:14:52.000Z"
+  },
+  {
+   "id": "d468d1ee3cf5807b",
+   "domaine": "blockchain",
+   "titre": "Crypto : Itaú Unibanco, première banque du Brésil à se déclarer au régulateur",
+   "url": "https://journalducoin.com/actualites/crypto-itau-unibanco-banque-bresil-regulateur/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-30T11:00:00.000Z"
+  },
+  {
+   "id": "bbaa306a78857741",
+   "domaine": "blockchain",
+   "titre": "Après Ledger, les wallets Trezor piégés à leur tour par des dispositifs espions",
+   "url": "https://cryptoast.fr/trezor-wallets-pieges-implant-cryptobilis-safe-5/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-30T09:53:33.000Z"
+  },
+  {
+   "id": "5c5e530ae396f776",
+   "domaine": "ia",
+   "titre": "Official Claude Code VS Code Extension Compromised to Install Persistent SSH Backdoor",
+   "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-30T08:55:47.000Z"
+  },
+  {
+   "id": "1123e04d70c90315",
+   "domaine": "blockchain",
+   "titre": "Trezor reports suspected hardware implant in Safe 5 sold by CryptoBilis",
+   "url": "https://www.theblock.co/news/ecosystems/2026-10-30-trezor-reports-suspected-hardware-implant-432196",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-30T08:55:39.000Z"
+  },
+  {
+   "id": "40b04de3f882a22e",
+   "domaine": "blockchain",
+   "titre": "Live updates: Binance finds more breaches in $6.3 billion hack; AI spending fears hit tech",
+   "url": "https://www.coindesk.com/markets/2026/10/30/live-news-binance-hack-rattles-crypto-as-intel-plunges-and-ai-spending-fears-hit-tech",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-30T08:36:52.000Z"
+  },
+  {
+   "id": "403070bbd30a0847",
+   "domaine": "blockchain",
+   "titre": "Binance hacker dumps a little-known 2017 token and it crashes 90%",
+   "url": "https://www.coindesk.com/markets/2026/10/30/binance-hacker-dumps-a-little-known-2017-token-and-it-crashes-90",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-30T07:54:07.000Z"
+  },
+  {
+   "id": "302d4e843ee8173d",
+   "domaine": "ia",
+   "titre": "Generation, Not Selection: LLM Proposals for Certified Access-Control Policy Mining",
+   "url": "https://arxiv.org/abs/2610.37716",
+   "source": "arxiv.org",
+   "origine": "arXiv — sécurité (cs.CR)",
+   "date": "2026-10-30T04:00:00.000Z"
+  },
+  {
+   "id": "d6031e16fdaeb504",
+   "domaine": "blockchain",
+   "titre": "Bitcoin slides below $77,000, BNB drops amid Binance hack",
+   "url": "https://www.theblock.co/news/markets/2026-10-29-bitcoin-slides-below-77000-binance-hack-432183",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-30T02:22:31.000Z"
+  },
+  {
+   "id": "aa6d56e104157694",
+   "domaine": "ia",
+   "titre": "Fake ChatGPT and Claude Apps Abuse Signed Executables to Deploy Crypto Miners",
+   "url": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-29T15:20:29.000Z"
+  },
   {
    "id": "f03bd722db7fbc19",
    "domaine": "blockchain",
