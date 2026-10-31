@@ -1,6 +1,6 @@
 {
- "miseAJour": "2026-10-30T11:25:27.757Z",
- "derniereCollecte": "2026-10-30T11:25:27.757Z",
+ "miseAJour": "2026-10-31T10:56:35.418Z",
+ "derniereCollecte": "2026-10-31T10:56:35.418Z",
  "domaines": {
   "ia": {
    "nom": "Sécurisation de l'IA",
@@ -71,7 +71,7 @@
    "site": "https://arxiv.org/list/cs.CR/recent",
    "flux": "https://rss.arxiv.org/rss/cs.CR",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "The Hacker News",
@@ -163,6 +163,105 @@
   }
  ],
  "articles": [
+  {
+   "id": "f2f2f7a9130dcf63",
+   "domaine": "blockchain",
+   "titre": "Piratage de Binance : le patron de la CFTC plaide pour l’enregistrement des plateformes offshore",
+   "url": "https://cryptoast.fr/piratage-binance-patron-cftc-plaide-pour-enregistrement-plateformes-offshore/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-31T10:30:32.000Z"
+  },
+  {
+   "id": "582941c3772523f8",
+   "domaine": "blockchain",
+   "titre": "Crypto : le Forum économique mondial dévoile ses 9 priorités pour les régulateurs",
+   "url": "https://cryptoast.fr/forum-economique-mondial-regulation-crypto-mica-europe/",
+   "source": "cryptoast.fr",
+   "origine": "Cryptoast",
+   "date": "2026-10-31T09:30:33.000Z"
+  },
+  {
+   "id": "8e9075539b6741f0",
+   "domaine": "blockchain",
+   "titre": "Hack crypto : Chainalysis piratée en pleine traque des milliards volés à Binance",
+   "url": "https://journalducoin.com/actualites/chainalysis-piratee-donnees-clients-agents-ia-binance/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-31T08:00:47.000Z"
+  },
+  {
+   "id": "23cbfa5d3a1925d7",
+   "domaine": "blockchain",
+   "titre": "Hack Binance : Trump, la CFTC et le Secret Service entrent dans la danse",
+   "url": "https://journalducoin.com/actualites/hack-binance-trump-cftc-secret-service/",
+   "source": "journalducoin.com",
+   "origine": "Journal du Coin",
+   "date": "2026-10-31T07:30:00.000Z"
+  },
+  {
+   "id": "f7d7bc66a1f75415",
+   "domaine": "ia",
+   "titre": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
+   "url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-31T05:33:41.000Z"
+  },
+  {
+   "id": "a671d01b31486c24",
+   "domaine": "blockchain",
+   "titre": "Inside the largest crypto hack on record: How attackers breached Binance for $6.3 billion",
+   "url": "https://www.theblock.co/news/business/2026-10-30-binance-hack-largest-crypto-hack-north-korea-432225",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-30T21:20:23.000Z"
+  },
+  {
+   "id": "ee322735ef65e5cb",
+   "domaine": "blockchain",
+   "titre": "President Trump says they’re looking into Binance hack as calls grow for crypto rules",
+   "url": "https://www.theblock.co/news/regulation/2026-10-30-trump-looking-into-binance-hack-calls-grow-for-crypto-rules-432236",
+   "source": "theblock.co",
+   "origine": "The Block",
+   "date": "2026-10-30T21:06:03.000Z"
+  },
+  {
+   "id": "ed1622a8747a0972",
+   "domaine": "blockchain",
+   "titre": "Experts divided over Binance hack asset freezes, warn recovery is another matter",
+   "url": "https://www.coindesk.com/business/2026/10/30/experts-divided-over-binance-hack-asset-freezes-warn-recovery-is-another-matter",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-30T19:55:00.000Z"
+  },
+  {
+   "id": "d55e20f774e910f7",
+   "domaine": "ia",
+   "titre": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
+   "url": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
+   "source": "thehackernews.com",
+   "origine": "The Hacker News",
+   "date": "2026-10-30T16:58:44.000Z"
+  },
+  {
+   "id": "d7cd9c9ae43a1d32",
+   "domaine": "blockchain",
+   "titre": "Binance uncovers wider breach in $6.3 billion exploit, targets Sunday withdrawal restart",
+   "url": "https://www.coindesk.com/tech/2026/10/30/binance-uncovers-wider-breach-in-usd6-3-billion-exploit-targets-sunday-withdrawal-restart",
+   "source": "coindesk.com",
+   "origine": "CoinDesk",
+   "date": "2026-10-30T16:31:17.000Z"
+  },
+  {
+   "id": "d4c34df89ebd365f",
+   "domaine": "blockchain",
+   "titre": "Blockchain intelligence firms link North Korea to $6.3B hack on Binance",
+   "url": "https://www.npr.org/2026/10/30/g-s1-150902/blockchain-intelligence-firms-link-north-korea-to-6-3b-hack-on-binance",
+   "source": "npr.org",
+   "origine": "Hacker News",
+   "date": "2026-10-30T15:39:05.000Z"
+  },
   {
    "id": "3e108ff7e4ff77be",
    "domaine": "blockchain",
